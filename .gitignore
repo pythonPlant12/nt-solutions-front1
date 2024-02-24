@@ -5,7 +5,8 @@
 .nitro
 .cache
 dist
-dev
+public/css/pictures/sobreNosotrosBackground.mp4
+public/css/videos
 # Node dependencies
 node_modules
 # Logs
