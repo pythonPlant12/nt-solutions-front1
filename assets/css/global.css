@@ -1,0 +1,16 @@
+body {
+  font-family: 'Figtree', sans-serif;
+    position: relative
+    /* Add any additional styling here */
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+
+:root {
+  --one: #ccdad1 !important;
+  --two: #9caea9 !important;
+  --three: #8E7154 !important;
+  --four: #6f6866 !important;
+  --five: #38302e !important;
+}
