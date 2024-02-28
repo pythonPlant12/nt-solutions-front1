@@ -44,7 +44,7 @@
 	padding: 0.5rem 0;
 	border-bottom: 2px solid rgb(255, 255, 255);
 	margin-bottom: 1rem;
-	color: orange;
+	color: var(--one);
 	opacity: 0;
 	animation: 1s apareciendo 2s forwards;
 }

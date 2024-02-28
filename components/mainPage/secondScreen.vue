@@ -7,7 +7,7 @@
 		max-width="80%"
 		width="100%"
 	>
-		<h2 class="titulo text-h3 font-weight-black text-orange">Empresa en un mundo digital</h2>
+		<h2 class="titulo text-h3 font-weight-black">Empresa en un mundo digital</h2>
 		<p class="texto text-sm-h6 text-caption mb-8 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
 			Si estás aqui es porque valoras la excelencia en la presencia digital de tu negocio. En
 			nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino también
@@ -18,7 +18,7 @@
 		</p>
 
 		<nuxt-link to="/servicios">
-			<v-btn color="orange buttonDescubrir" :ripple="false" size="x-large" :elevation="buttonElevation" @mouseenter="setElevation(24)" @mouseleave="setElevation(4)"
+			<v-btn color="var(--two)" :ripple="false" size="x-large" :elevation="buttonElevation" @mouseenter="setElevation(24)" @mouseleave="setElevation(4)"
 				>Descubrir</v-btn
 			>
 		</nuxt-link>
@@ -85,19 +85,26 @@
 </template>
 
 <style>
+.titulo {
+	color: var(--three);
+}
 @media screen and (max-width: 1100px) {
 	.titulo {
 		font-size: 2rem !important;
 		line-height: 2rem;
+		color: var(--three);
+
 	}
 	.subtitulo {
 		font-size: 1.4rem !important;
+		color: var(--three);
 	}
 }
 
 @media screen and (max-width: 668) {
 	.titulo {
 		font-size: 1rem !important;
+		color: var(--three);
 	}
 }
 
@@ -152,7 +159,7 @@ export default {
 				avatar: "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
 				name: "John Leider",
 				title: "Desarrollo Web Personalizado",
-				color: "orange",
+				color: "var(--three)",
 				excerpt: "¿Cómo beneficia un desarrollo web personalizado a mi empresa?",
 				text: "El desarrollo web personalizado ofrece soluciones adaptadas a las necesidades específicas, proporcionando flexibilidad y eficacia para un sitio web único.",
 				tag: 1,
@@ -169,7 +176,7 @@ export default {
 			{
 				icon: "mdi-tag",
 				name: "Promos",
-				color: "orange",
+				color: "var(--three)",
 				tag: 3,
 				total: 4,
 				title: "SEO Personalizado",
@@ -186,7 +193,7 @@ export default {
 				text: "Absolutamente, el desarrollo personalizado permite la integración de soluciones de comercio electrónico adaptadas a las necesidades específicas de tu empresa.",
 			},
 			{
-				color: "orange",
+				color: "var(--three)",
 				icon: "mdi-tag",
 				name: "Promos",
 				tag: 5,

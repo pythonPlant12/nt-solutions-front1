@@ -11,9 +11,13 @@
 							<span class="line line-buttom1"></span>
 						</div>
 					</li>
-						<nuxt-link to="/" >
-							<v-img src="/css/pictures/logo.svg" class="nav-link nav-link-logo logo-moviendose" width="30"></v-img>
-						</nuxt-link>
+					<nuxt-link to="/">
+						<v-img
+							src="/css/pictures/logo.svg"
+							class="nav-link nav-link-logo logo-moviendose"
+							width="30"
+						></v-img>
+					</nuxt-link>
 
 					<li class="nav-item">
 						<nuxt-link to="/contacto"
@@ -33,12 +37,17 @@
 					<li class="nav-item">
 						<nuxt-link to="/">
 							<v-img src="/css/pictures/logo.svg" class="nav-link nav-link-logo"></v-img>
-						</nuxt-link>						
+						</nuxt-link>
 					</li>
 
 					<li class="nav-item">
 						<nuxt-link to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
-							><v-btn :color="empresa" append-icon="mdi mdi-domain" size="large" variant="text"
+							><v-btn
+								:color="empresa"
+								:style="{ 'text-decoration': empresaUnder ? 'underline' : 'none' }"
+								append-icon="mdi mdi-domain"
+								size="large"
+								variant="text"
 								>NT Solutions</v-btn
 							></nuxt-link
 						>
@@ -49,7 +58,8 @@
 							class="nav-link nav-link-mobile"
 							@click.prevent="cerrarMenu()"
 							><v-btn
-								:color="servicios"
+							:color="servicios"
+							:style="{ 'text-decoration': serviciosUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-database-cog"
 								size="large"
 								variant="text"
@@ -64,6 +74,7 @@
 							@click.prevent="cerrarMenu()"
 							><v-btn
 								:color="tecnologias"
+								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-wifi-settings"
 								size="large"
 								variant="text"
@@ -78,6 +89,7 @@
 							@click.prevent="cerrarMenu()"
 							><v-btn
 								:color="sobreNosotros"
+								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-information-variant"
 								size="large"
 								variant="text"
@@ -89,6 +101,7 @@
 						<nuxt-link to="/contacto" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 							><v-btn
 								:color="contacto"
+								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none', 'text-underline-offset': tecnologiasUnder ? '15px' : 'auto' }"
 								append-icon="mdi mdi-account-box-outline"
 								variant="text"
 								size="large"
@@ -129,9 +142,7 @@
 				>
 			</v-row>
 			<v-row class="v-flex justify-center mt-8">
-				<nuxt-link to="/contacto"
-					><v-btn varian="plain" class="text-h6">Contacto</v-btn></nuxt-link
-				>
+				<nuxt-link to="/contacto"><v-btn varian="plain" class="text-h6">Contacto</v-btn></nuxt-link>
 			</v-row>
 			<v-row class="mt-sm-16"></v-row>
 			<v-row class="mt-xl-16"></v-row>
@@ -178,8 +189,7 @@
 				Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Se
 				le notificarán cambios significativos. Le recomendamos que revise periódicamente esta
 				política para estar informado sobre cómo estamos protegiendo su información. Gracias por
-				confiar en NT Solutions. NT Solutions Ltd. info@ntsolutions.com
-				+34 633 144 405
+				confiar en NT Solutions. NT Solutions Ltd. info@ntsolutions.com +34 633 144 405
 			</p>
 		</v-container>
 	</footer>
@@ -346,7 +356,6 @@ header {
 		display: flex;
 		justify-content: center;
 		align-content: center;
-
 	}
 
 	.nav-link-mobile {
@@ -431,7 +440,7 @@ header {
 		height: 4.8rem;
 		position: relative;
 		z-index: 15;
-		transition: opacity 3s
+		transition: opacity 3s;
 	}
 
 	.nav-link-bag {
@@ -481,7 +490,6 @@ header {
 	}
 }
 
-
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -495,7 +503,8 @@ header {
 @keyframes logoMoviendose {
 	from {
 		rotate: 0;
-	} to {
+	}
+	to {
 		rotate: 360deg;
 	}
 }
@@ -530,32 +539,47 @@ export default {
 		empresa() {
 			const currentPath = this.$route.path;
 			if (currentPath === "/") {
-				return "orange";
+				return "var(--three)";
 			}
+		},
+		empresaUnder() {
+			return this.$route.path === "/";
 		},
 		servicios() {
 			const currentPath = this.$route.path;
 			if (currentPath === "/servicios") {
-				return "orange";
+				return "var(--three)";
 			}
+		},
+		serviciosUnder() {
+			return this.$route.path === "/servicios";
 		},
 		tecnologias() {
 			const currentPath = this.$route.path;
 			if (currentPath === "/tecnologias") {
-				return "orange";
+				return "var(--three)";
 			}
+		},
+		tecnologiasUnder() {
+			return this.$route.path === "/tecnologias";
 		},
 		sobreNosotros() {
 			const currentPath = this.$route.path;
 			if (currentPath === "/sobre-nosotros") {
-				return "orange";
+				return "var(--three)";
 			}
+		},
+		sobreNosotrosUnder() {
+			return this.$route.path === "/sobre-nosotros";
 		},
 		contacto() {
 			const currentPath = this.$route.path;
 			if (currentPath === "/contacto") {
-				return "orange";
+				return "var(--three)";
 			}
+		},
+		contactoUnder() {
+			return this.$route.path === "/contacto";
 		},
 	},
 };
