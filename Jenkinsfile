@@ -31,7 +31,7 @@ pipeline {
             success {
                 // Something to do on success build
             }
-            failure {
+            failure { 
                 // Something to do on failure build
             }
         }
