@@ -10,7 +10,7 @@
 			</v-col>
 			<v-col cols="12" sm=""></v-col>
 			<v-col sm="5" col="12" class="my-16 mx-md-12 descripcion-title">
-				<h1 class="text-sm-h3 pb-16 mx-sm-4 text-orange-darken-2">Contenedores con Docker</h1>
+				<h1 class="text-sm-h3 pb-16 mx-sm-4" style="color: var(--two)">Contenedores con Docker</h1>
 				<p class="text-sm-h5 text-grey-darken-2 mx-sm-4 descripcion-text">
 					Utilizamos Docker para crear entornos de desarrollo y despliegue consistentes. La
 					virtualización a nivel de contenedor nos permite empaquetar aplicaciones y sus

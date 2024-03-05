@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<div class="carousel-button">
-					<v-btn @click="moverAlSegundoElemento()" :ripple="false" stacked prepend-icon="$vuetify" elevation="24" size="large" color="var(--three)">
+					<v-btn @click="moverAlSegundoElemento()" :ripple="false" stacked prepend-icon="$vuetify" elevation="24" size="large" color="var(--two)">
 						Conocer más
 					</v-btn>
 				</div>
@@ -68,7 +68,7 @@
 	font-size: 4rem !important;
 	font-weight: bold;
 	padding: 0.5rem;
-	background-color: var(--two);
+	background-color: var(--six);
 	opacity: 0;
 	animation: tituloApareciendo 3s forwards;
 }
@@ -80,7 +80,7 @@
 	width: fit-content;
 	max-width: 80%;
 	padding: 0.5rem;
-	background-color: var(--one);
+	background-color: var(--seven);
 	color: var(--four);
 	opacity: 0;
 	animation: subtituloApareciendo 1s forwards 3s;
@@ -181,6 +181,20 @@
 @media screen and (max-width: 1024px){
 	.heading-carousel-title {
 		font-size: 1.8rem;
+	}
+}
+
+@media screen and (max-width: 1281px){
+	.heading-carousel-title {
+		font-size: 3rem !important;
+		min-height: 15rem !important;
+	}
+}
+
+@media screen and (max-width: 681px){
+	.heading-carousel-title {
+		font-size: 1.6rem !important;
+		min-height: 15rem !important;
 	}
 }
 </style>

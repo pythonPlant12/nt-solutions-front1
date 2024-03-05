@@ -6,6 +6,7 @@
 				<ul class="nav-list nav-list-mobile">
 					<li class="nav-item">
 						<div class="mobile-menu">
+							<span class="line line-top1"></span>
 							<span class="line line-top"></span>
 							<span class="line line-buttom"></span>
 							<span class="line line-buttom1"></span>
@@ -28,6 +29,7 @@
 				<!-- /.nav-list nav-list-mobile -->
 				<!-- ! Navigation List of Options Bar COMPUTER -->
 				<ul class="nav-list nav-list-larger larger-mobile">
+				<v-btn-toggle class="nav-list nav-list-larger larger-mobile">
 					<li class="nav-item nav-item-hidden">
 						<div class="mobile-menu">
 							<span class="line line-top"></span>
@@ -46,12 +48,15 @@
 								:color="empresa"
 								:style="{ 'text-decoration': empresaUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-domain"
-								size="large"
+								size="small"
 								variant="text"
+								rounded="lg"
+								class="boton"
 								>NT Solutions</v-btn
 							></nuxt-link
 						>
 					</li>
+					
 					<li class="nav-item">
 						<nuxt-link
 							to="/servicios"
@@ -61,9 +66,12 @@
 							:color="servicios"
 							:style="{ 'text-decoration': serviciosUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-database-cog"
-								size="large"
 								variant="text"
+								size="small"
+								rounded="lg"
+								class="boton"
 								>Servicios</v-btn
+						
 							></nuxt-link
 						>
 					</li>
@@ -76,8 +84,10 @@
 								:color="tecnologias"
 								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-wifi-settings"
-								size="large"
+								size="small"
 								variant="text"
+								rounded="lg"
+								class="boton"
 								>Tecnologías</v-btn
 							></nuxt-link
 						>
@@ -91,8 +101,10 @@
 								:color="sobreNosotros"
 								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
 								append-icon="mdi mdi-information-variant"
-								size="large"
+								size="small"
 								variant="text"
+								rounded="lg"
+								class="boton"
 								>Sobre Nosotros</v-btn
 							></nuxt-link
 						>
@@ -100,15 +112,28 @@
 					<li class="nav-item">
 						<nuxt-link to="/contacto" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 							><v-btn
-								:color="contacto"
-								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none', 'text-underline-offset': tecnologiasUnder ? '15px' : 'auto' }"
 								append-icon="mdi mdi-account-box-outline"
 								variant="text"
-								size="large"
+								size="small"
+								rounded="lg"
+								class="boton"
 								>Contacto</v-btn
 							>
 						</nuxt-link>
 					</li>
+					<li class="nav-item mr-4">
+						<nuxt-link to="/contacto" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
+							><v-btn
+								append-icon="mdi mdi-account-box-outline"
+								variant="outlined"
+								size="small"
+								rounded="lg"
+								class="boton"
+								>Log In</v-btn
+							>
+						</nuxt-link>
+					</li>
+				</v-btn-toggle>
 				</ul>
 			</nav>
 		</div>
@@ -196,6 +221,9 @@
 </template>
 
 <style>
+.boton {
+	padding: 0.5rem !important;
+}
 a {
 	display: block;
 	text-decoration: none;
@@ -233,6 +261,7 @@ header {
 .nav-link {
 	font-size: 1.4rem;
 	color: #5f5a5a;
+	border-color: var(--two);
 	width: 100%;
 	padding: 0 1rem;
 	transition: opacity 0.5s;
@@ -258,7 +287,6 @@ header {
 }
 
 .nav-link-bag {
-	margin-right: 2rem;
 	align-self: center;
 	width: 1.4rem;
 	height: 4.4rem;
@@ -295,7 +323,15 @@ header {
 	}
 }
 
+/* ! CSS Styles for PHONE (Small Screen ) */
 @media screen and (max-width: 1100px) {
+	header {
+		height: 4.8rem;
+		transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
+			height 0.5s cubic-bezier(0.32, 0.08, 0.24, 1);
+		display: block; /* Use flexbox */
+	}
+
 	.hero {
 		height: 100rem;
 		background-size: auto 100rem;
@@ -303,47 +339,12 @@ header {
 		background-repeat: no-repeat;
 	}
 
-	header {
-		display: block; /* Use flexbox */
-	}
-	.title-heading {
-		font-size: 4.4rem;
-	}
-
-	.title-sub-heading {
-		font-size: 2.4rem;
-		color: white;
-	}
-
-	.cta-link:nth-child(2) {
-		margin-left: 2rem;
-	}
-
-	.title-heading-watch {
-		height: 6.2rem;
-		/* background-image: url("images/hero/watch/logo_watch_medium.png"); */
-		background-size: auto 6.2rem;
-	}
-}
-
-/* ! CSS Styles for PHONE (Small Screen ) */
-@media screen and (max-width: 1100px) {
-	header {
-		height: 4.8rem;
-		transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
-			height 0.5s cubic-bezier(0.32, 0.08, 0.24, 1);
-	}
-
 	header .container {
 		padding: 0;
 	}
 
-	.iphone-11-pro {
-		margin-top: 4.8rem;
-	}
-
 	.nav-list {
-		margin-top: 0;
+		margin-top: -1.5rem;
 	}
 
 	.nav-list-mobile {
@@ -385,9 +386,9 @@ header {
 	.line {
 		position: absolute;
 		width: 1.7rem;
-		height: 1.4px;
-		background-color: #413f3f;
-		color: #413f3f;
+		height: 2px;
+		background-color: #5f5a5a;
+		color: #5f5a5a;
 		transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 	}
 
@@ -400,6 +401,7 @@ header {
 		margin-top: -0.4px;
 		transform: rotate(0deg);
 		transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+		
 	}
 
 	.line-buttom1 {
@@ -407,16 +409,30 @@ header {
 		opacity: 1;
 		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 		transition: opacity 0.3192s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-		transition-delay: 0.1s;
+		transition-delay: 0.3s;
 	}
 
 	.active .line-buttom1 {
-		margin-top: 0px;
+		margin-top: -10px;
 		opacity: 0;
-		transition-delay: 0.1s;
+		transition-delay: 0.2s;
 		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 	}
+	.line-top1 {
+		margin-top: -10px;
+		opacity: 1;
+		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+		transition: opacity 0.3192s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+		transition-delay: 0.3s;
+	}
+
 	/* ! Mobile Menu Trigger transition/transform */
+	.active .line-top1 {
+		margin-top: 10px;
+		opacity: 0;
+		transition-delay: 0.2s;
+		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+	}
 
 	.active .line-top {
 		margin-bottom: 0;
@@ -440,23 +456,23 @@ header {
 		height: 4.8rem;
 		position: relative;
 		z-index: 15;
-		transition: opacity 3s;
+		transition: opacity 2s;
 	}
 
 	.nav-link-bag {
 		width: 1.6rem;
 		height: 4.8rem;
-		transition: opacity 3s;
+		transition: opacity 2s;
 	}
 
 	.nav {
 		position: relative;
+		padding: 2rem !important;
 	}
 
 	.nav-link {
 		font-size: 1.7rem;
 		padding: 0;
-		margin: auto 0;
 	}
 
 	.nav-list-larger {
@@ -487,6 +503,46 @@ header {
 	}
 	.nav-list-larger .nav-item:nth-child(9) {
 		border-bottom: none;
+	}
+
+	.title-heading {
+		font-size: 4.4rem;
+	}
+
+	.hero {
+		height: 100rem;
+		background-size: auto 100rem;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+	}
+	.title-sub-heading {
+		font-size: 2.4rem;
+		color: white;
+	}
+
+	.cta-link:nth-child(2) {
+		margin-left: 2rem;
+	}
+
+	.title-heading-watch {
+		height: 6.2rem;
+		/* background-image: url("images/hero/watch/logo_watch_medium.png"); */
+		background-size: auto 6.2rem;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.nav-list-larger {
+		position: fixed;
+		opacity: 0;
+		/* ! */
+		visibility: hidden;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		display: block;
+		padding: 4.5rem 5rem;
 	}
 }
 
@@ -536,51 +592,7 @@ export default {
 	},
 
 	computed: {
-		empresa() {
-			const currentPath = this.$route.path;
-			if (currentPath === "/") {
-				return "var(--three)";
-			}
-		},
-		empresaUnder() {
-			return this.$route.path === "/";
-		},
-		servicios() {
-			const currentPath = this.$route.path;
-			if (currentPath === "/servicios") {
-				return "var(--three)";
-			}
-		},
-		serviciosUnder() {
-			return this.$route.path === "/servicios";
-		},
-		tecnologias() {
-			const currentPath = this.$route.path;
-			if (currentPath === "/tecnologias") {
-				return "var(--three)";
-			}
-		},
-		tecnologiasUnder() {
-			return this.$route.path === "/tecnologias";
-		},
-		sobreNosotros() {
-			const currentPath = this.$route.path;
-			if (currentPath === "/sobre-nosotros") {
-				return "var(--three)";
-			}
-		},
-		sobreNosotrosUnder() {
-			return this.$route.path === "/sobre-nosotros";
-		},
-		contacto() {
-			const currentPath = this.$route.path;
-			if (currentPath === "/contacto") {
-				return "var(--three)";
-			}
-		},
-		contactoUnder() {
-			return this.$route.path === "/contacto";
-		},
+
 	},
 };
 </script>

@@ -8,7 +8,7 @@
 					variant="tonal"
 					class="mx-sm-16 mx-4 pa-4 rounded-xl card-1 mt-12"
 				>
-					<h1 class="text-center titulo">{{ title }}</h1>
+					<h1 class="text-center titulo" style="color: var(--six) !important;">{{ title }}</h1>
 					<h2 class="pa-4 pa-sm-16 pb-2 text-body-1 text-sm-h6 text-lg-h5">
 						{{ text }}
 					</h2>
@@ -59,16 +59,14 @@
 .imagen {
 	animation: 1s apareciendo 3s forwards;
 }
+.card-1:hover {
+	border: 3px solid var(--three);
+	border-color: var(--seven) !important;
+}
 
 @media screen and (min-width: 680px) {
 	.primer-row {
 		margin-top: -11rem !important;
-	}
-
-	.card-1:hover {
-		border: 3px solid orange;
-		border-color: orange !important;
-		background-color: rgba(255, 255, 255, 0.104) !important;
 	}
 
 @media screen and (max-width: 679) {

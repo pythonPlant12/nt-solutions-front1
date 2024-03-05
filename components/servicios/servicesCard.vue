@@ -12,12 +12,12 @@
 			>
 				<v-img :src="image" height="400px" class="services-database"></v-img>
 
-				<v-card-title> {{ tituloCard }} </v-card-title>
+				<v-card-title style="color: var(--four);"> {{ tituloCard }} </v-card-title>
 
 				<v-card-subtitle> {{ subTituloCard }} </v-card-subtitle>
 
 				<v-card-actions>
-					<v-btn variant="outlined" color="orange-lighten-1" class="mx-2" rounded="lg">
+					<v-btn variant="tonal" color="var(--three)" class="mx-2" rounded="lg">
 						Explorar
 					</v-btn>
 
@@ -30,7 +30,7 @@
 					<div v-show="show">
 						<v-divider></v-divider>
 
-						<v-card-text>
+						<v-card-text  style="color: var(--four);">
 							{{ textoCard }}
 						</v-card-text>
 					</div>
@@ -44,7 +44,7 @@
 	border: 3px solid transparent !important;
 }
 .border-coloring {
-	border: 3px solid orange !important;
+	border: 3px solid var(--two) !important;
 }
 </style>
 <script>

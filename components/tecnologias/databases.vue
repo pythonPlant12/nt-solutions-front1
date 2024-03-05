@@ -2,7 +2,7 @@
 	<v-window-item class="primera-ventana">
 		<v-card elevation="24" class="d-sm-flex justify-sm-center align-sm-center ma-2 primera-ventana descripcion-title">
 			<v-col sm="5" col="12" class="mt-16 mx-md-12">
-				<h1 class="text-sm-h3 pb-16 text-orange-darken-2 mx-sm-4">Bases de Datos Relacionales</h1>
+				<h1 class="text-sm-h3 pb-16 mx-sm-4" style="color: var(--two)">Bases de Datos Relacionales</h1>
 				<p class="text-sm-h5 text-grey-darken-2 mx-sm-4 descripcion-text">
 					Nuestra empresa se especializa en el diseño y administración de bases de datos
 					relacionales. Implementamos soluciones robustas para garantizar la integridad y eficiencia

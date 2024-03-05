@@ -3,7 +3,7 @@
 		class="d-flex align-center justify-center flex-column text-center mx-auto px-4 mt-sm-16 mt-6"
 		elevation="24"
 		height="80vh"
-		rounded
+		rounded="lg"
 		max-width="80%"
 		width="100%"
 	>
@@ -18,12 +18,12 @@
 		</p>
 
 		<nuxt-link to="/servicios">
-			<v-btn color="var(--two)" :ripple="false" size="x-large" :elevation="buttonElevation" @mouseenter="setElevation(24)" @mouseleave="setElevation(4)"
+			<v-btn color="var(--six)" class="mt-lg-16 mt-sm-8" :ripple="false" size="x-large" :elevation="buttonElevation" @mouseenter="setElevation(24)" @mouseleave="setElevation(4)"
 				>Descubrir</v-btn
 			>
 		</nuxt-link>
 	</v-sheet>
-	<h1 class="text-sm-h2 font-weight-black text-orange text-center mt-16">
+	<h1 class="subtitulo text-sm-h2 font-weight-black text-center mt-16">
 		Utilizando mismas tecnologías...
 	</h1>
 	<v-sheet
@@ -44,7 +44,7 @@
 		</v-slide-group>
 	</v-sheet>
 	<v-sheet elevation="24" height="auto" rounded width="100%" class="pb-16 mx-auto">
-		<h1 class="text-sm-h2 py-sm-16 py-8 font-weight-black text-orange px-8 text-center">
+		<h1 class="text-sm-h2 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
 			Preguntas más frecuentes...
 		</h1>
 
@@ -55,7 +55,7 @@
 						<v-col class="text-no-wrap text-left" cols="5" sm="3">
 							<v-chip
 								v-if="message.tag"
-								:color="`${message.color}-lighten-1`"
+								:color="'var(--three)'"
 								class="ms-0 me-2"
 								label
 								small
@@ -76,7 +76,7 @@
 				</v-expansion-panel-title>
 
 				<v-expansion-panel-text>
-					<h3 class="text-h6 text-center text-orange">{{ message.excerpt }}</h3>
+					<h3 class="text-h6 text-center subtitulo">{{ message.excerpt }}</h3>
 					<v-card-text v-text="message.text" class="text-center"></v-card-text>
 				</v-expansion-panel-text>
 			</v-expansion-panel>
@@ -85,19 +85,25 @@
 </template>
 
 <style>
+
 .titulo {
-	color: var(--three);
+	color: var(--two) !important;
 }
+.subtitulo {
+	color:var(--three);
+}
+.texto {
+	color: var(--four) !important;
+}
+
 @media screen and (max-width: 1100px) {
 	.titulo {
 		font-size: 2rem !important;
 		line-height: 2rem;
-		color: var(--three);
 
 	}
-	.subtitulo {
-		font-size: 1.4rem !important;
-		color: var(--three);
+	.texto {
+		font-size: 0.9rem !important;
 	}
 }
 
@@ -105,6 +111,9 @@
 	.titulo {
 		font-size: 1rem !important;
 		color: var(--three);
+	}
+	.texto {
+		font-size: 12px !important;
 	}
 }
 

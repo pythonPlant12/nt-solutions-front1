@@ -5,7 +5,7 @@
 		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
 			<v-row class="d-flex justify-center">
 				<v-card class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-					<h1 class="px-2 py-4 text-orange-darken-2 text-xl-h2 text-h4 text-md-h2">
+					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--four)">
 						Excelencia Digital, Adaptada para Ti
 					</h1>
 				</v-card>
@@ -13,7 +13,8 @@
 			<v-row class="mx-2 my-6 v-flex align-center">
 				<v-col cols="12" sm="5">
 					<v-card
-						class="mb-16 px-6 bg-orange-lighten-1 rounded-xl elementos-primera-pantalla"
+						class="mb-16 px-6 rounded-xl elementos-primera-pantalla"
+						style="background-color: var(--two)"
 						elevation="24"
 					>
 						<p

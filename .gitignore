@@ -10,7 +10,7 @@ node_modules
 # Logs
 logs
 *.log
-node_modules
+./node_modules
 # Misc
 .DS_Store
  
