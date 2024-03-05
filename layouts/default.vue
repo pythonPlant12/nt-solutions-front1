@@ -145,7 +145,7 @@
 	<footer class="footer mt-16">
 		<div class="primera-parte-footer mt-16">
 			<v-row class="v-flex justify-center">
-				<h2 class="text-orange-darken-2 sm:mt-10">NT Solutions</h2>
+				<h2 class="sm:mt-10" style="color: var(--two)">NT Solutions</h2>
 			</v-row>
 			<v-row class="mt-16"></v-row>
 			<v-row class="v-flex justify-center mt-16">
