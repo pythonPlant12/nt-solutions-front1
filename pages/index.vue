@@ -8,7 +8,7 @@
 			hide-delimiter-background
 			height="100vh"
 			cycle
-			show-arrows="hover"
+			:show-arrows="false"
 		>
 			<v-carousel-item
 				v-for="(slide, i) in slides"
