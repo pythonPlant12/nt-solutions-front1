@@ -38,7 +38,7 @@
 						</li>
 						<li class="nav-item">
 							<nuxt-link to="/">
-								<v-img src="/css/pictures/logo.svg" class="nav-link nav-link-logo"></v-img>
+								<v-img src="/css/pictures/logo.png" class="nav-link nav-link-logo"></v-img>
 							</nuxt-link>
 						</li>
 
