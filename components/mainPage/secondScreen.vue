@@ -24,7 +24,7 @@
 		</nuxt-link>
 	</v-sheet>
 	<h1 class="subtitulo text-sm-h2 font-weight-black text-center mt-16">
-		Utilizando mismas tecnologías...
+		COLABORADORES
 	</h1>
 	<v-sheet
 		width="100%"
@@ -32,20 +32,19 @@
 		rounded
 		class="d-flex align-center justify-center mx-auto my-16"
 	>
-		<v-slide-group v-model="model" class="pa-4">
-			<v-slide-group-item v-for="item in items" :key="item" v-slot="{ toggle }">
-				<v-card :class="['ma-4']" height="200" width="200" @click="toggle">
-					<h5 class="text-center">{{ item.nombre }}</h5>
+		<v-slide-group class="pa-4">
+			<v-slide-group-item v-for="item in items" :key="item">
+				<v-card :class="['ma-4']" height="200" width="200" class="elevation-0">
 					<div class="d-flex fill-height align-center justify-center">
-						<v-img :src="item.img" height="100" class="services-database"></v-img>
+						<v-img :src="item.img" height="100"></v-img>
 					</div>
 				</v-card>
 			</v-slide-group-item>
 		</v-slide-group>
 	</v-sheet>
 	<v-sheet elevation="24" height="auto" rounded width="100%" class="pb-16 mx-auto">
-		<h1 class="text-sm-h2 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
-			Preguntas más frecuentes...
+		<h1 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
+			PREGUNTAS FRECUENTES
 		</h1>
 
 		<v-expansion-panels variant="popout" class="pa-sm-4 px-0">
@@ -85,12 +84,16 @@
 </template>
 
 <style>
+.tecnologias-div {
+	border: 0px !important;
+	border-color: white !important;
+}
 
 .titulo {
 	color: var(--two) !important;
 }
 .subtitulo {
-	color:var(--three);
+	color:var(--two);
 }
 .texto {
 	color: var(--four) !important;

@@ -14,9 +14,9 @@
 					</li>
 					<nuxt-link to="/">
 						<v-img
-							src="/css/pictures/logo.svg"
+							src="/css/pictures/logo.png"
 							class="nav-link nav-link-logo logo-moviendose"
-							width="30"
+							width="50"
 						></v-img>
 					</nuxt-link>
 
@@ -29,111 +29,116 @@
 				<!-- /.nav-list nav-list-mobile -->
 				<!-- ! Navigation List of Options Bar COMPUTER -->
 				<ul class="nav-list nav-list-larger larger-mobile">
-				<v-btn-toggle class="nav-list nav-list-larger larger-mobile">
-					<li class="nav-item nav-item-hidden">
-						<div class="mobile-menu">
-							<span class="line line-top"></span>
-							<span class="line line-bottom"></span>
-						</div>
-					</li>
-					<li class="nav-item">
-						<nuxt-link to="/">
-							<v-img src="/css/pictures/logo.svg" class="nav-link nav-link-logo"></v-img>
-						</nuxt-link>
-					</li>
+					<v-btn-toggle class="nav-list nav-list-larger larger-mobile">
+						<li class="nav-item nav-item-hidden">
+							<div class="mobile-menu">
+								<span class="line line-top"></span>
+								<span class="line line-bottom"></span>
+							</div>
+						</li>
+						<li class="nav-item">
+							<nuxt-link to="/">
+								<v-img src="/css/pictures/logo.svg" class="nav-link nav-link-logo"></v-img>
+							</nuxt-link>
+						</li>
 
-					<li class="nav-item">
-						<nuxt-link to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
-							><v-btn
-								:color="empresa"
-								:style="{ 'text-decoration': empresaUnder ? 'underline' : 'none' }"
-								append-icon="mdi mdi-domain"
-								size="small"
-								variant="text"
-								rounded="lg"
-								class="boton"
-								>NT Solutions</v-btn
-							></nuxt-link
-						>
-					</li>
-					
-					<li class="nav-item">
-						<nuxt-link
-							to="/servicios"
-							class="nav-link nav-link-mobile"
-							@click.prevent="cerrarMenu()"
-							><v-btn
-							:color="servicios"
-							:style="{ 'text-decoration': serviciosUnder ? 'underline' : 'none' }"
-								append-icon="mdi mdi-database-cog"
-								variant="text"
-								size="small"
-								rounded="lg"
-								class="boton"
-								>Servicios</v-btn
-						
-							></nuxt-link
-						>
-					</li>
-					<li class="nav-item">
-						<nuxt-link
-							to="/tecnologias"
-							class="nav-link nav-link-mobile"
-							@click.prevent="cerrarMenu()"
-							><v-btn
-								:color="tecnologias"
-								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
-								append-icon="mdi mdi-wifi-settings"
-								size="small"
-								variant="text"
-								rounded="lg"
-								class="boton"
-								>Tecnologías</v-btn
-							></nuxt-link
-						>
-					</li>
-					<li class="nav-item">
-						<nuxt-link
-							to="/sobre-nosotros"
-							class="nav-link nav-link-mobile"
-							@click.prevent="cerrarMenu()"
-							><v-btn
-								:color="sobreNosotros"
-								:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
-								append-icon="mdi mdi-information-variant"
-								size="small"
-								variant="text"
-								rounded="lg"
-								class="boton"
-								>Sobre Nosotros</v-btn
-							></nuxt-link
-						>
-					</li>
-					<li class="nav-item">
-						<nuxt-link to="/contacto" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
-							><v-btn
-								append-icon="mdi mdi-account-box-outline"
-								variant="text"
-								size="small"
-								rounded="lg"
-								class="boton"
-								>Contacto</v-btn
+						<li class="nav-item">
+							<nuxt-link to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
+								><v-btn
+									:color="empresa"
+									:style="{ 'text-decoration': empresaUnder ? 'underline' : 'none' }"
+									append-icon="mdi mdi-domain"
+									size="small"
+									variant="text"
+									rounded="lg"
+									class="boton"
+									>NT Solutions</v-btn
+								></nuxt-link
 							>
-						</nuxt-link>
-					</li>
-					<li class="nav-item mr-4">
-						<nuxt-link to="/contacto" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
-							><v-btn
-								append-icon="mdi mdi-account-box-outline"
-								variant="outlined"
-								size="small"
-								rounded="lg"
-								class="boton"
-								>Log In</v-btn
+						</li>
+
+						<li class="nav-item">
+							<nuxt-link
+								to="/servicios"
+								class="nav-link nav-link-mobile"
+								@click.prevent="cerrarMenu()"
+								><v-btn
+									:color="servicios"
+									:style="{ 'text-decoration': serviciosUnder ? 'underline' : 'none' }"
+									append-icon="mdi mdi-database-cog"
+									variant="text"
+									size="small"
+									rounded="lg"
+									class="boton"
+									>Servicios</v-btn
+								></nuxt-link
 							>
-						</nuxt-link>
-					</li>
-				</v-btn-toggle>
+						</li>
+						<li class="nav-item">
+							<nuxt-link
+								to="/tecnologias"
+								class="nav-link nav-link-mobile"
+								@click.prevent="cerrarMenu()"
+								><v-btn
+									:color="tecnologias"
+									:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
+									append-icon="mdi mdi-wifi-settings"
+									size="small"
+									variant="text"
+									rounded="lg"
+									class="boton"
+									>Tecnologías</v-btn
+								></nuxt-link
+							>
+						</li>
+						<li class="nav-item">
+							<nuxt-link
+								to="/sobre-nosotros"
+								class="nav-link nav-link-mobile"
+								@click.prevent="cerrarMenu()"
+								><v-btn
+									:color="sobreNosotros"
+									:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
+									append-icon="mdi mdi-information-variant"
+									size="small"
+									variant="text"
+									rounded="lg"
+									class="boton"
+									>Sobre Nosotros</v-btn
+								></nuxt-link
+							>
+						</li>
+						<li class="nav-item">
+							<nuxt-link
+								to="/contacto"
+								class="nav-link nav-link-mobile"
+								@click.prevent="cerrarMenu()"
+								><v-btn
+									append-icon="mdi mdi-account-box-outline"
+									variant="text"
+									size="small"
+									rounded="lg"
+									class="boton"
+									>Contacto</v-btn
+								>
+							</nuxt-link>
+						</li>
+						<li class="nav-item mr-4">
+							<nuxt-link
+								to="/politica-privacidad"
+								class="nav-link nav-link-mobile"
+								@click.prevent="cerrarMenu()"
+								><v-btn
+									append-icon="mdi mdi-account-box-outline"
+									variant="outlined"
+									size="small"
+									rounded="lg"
+									class="boton"
+									>Log In</v-btn
+								>
+							</nuxt-link>
+						</li>
+					</v-btn-toggle>
 				</ul>
 			</nav>
 		</div>
@@ -142,82 +147,7 @@
 		<slot />
 		<extra-Cookies @aceptarCookies="updateCookieData" v-if="cookiesAceptadas" />
 	</div>
-	<footer class="footer mt-16">
-		<div class="primera-parte-footer mt-16">
-			<v-row class="v-flex justify-center">
-				<h2 class="sm:mt-10" style="color: var(--two)">NT Solutions</h2>
-			</v-row>
-			<v-row class="mt-16"></v-row>
-			<v-row class="v-flex justify-center mt-16">
-				<nuxt-link to="/"><v-btn varian="plain" class="text-h6">NT Solutions</v-btn></nuxt-link>
-			</v-row>
-			<v-row class="v-flex justify-center mt-8">
-				<nuxt-link to="/servicios"
-					><v-btn varian="plain" class="text-h6">Servicios</v-btn></nuxt-link
-				>
-			</v-row>
-			<v-row class="v-flex justify-center mt-8">
-				<nuxt-link to="/tecnologias"
-					><v-btn varian="plain" class="text-h6">Tecnologías</v-btn></nuxt-link
-				>
-			</v-row>
-			<v-row class="v-flex justify-center mt-8">
-				<nuxt-link to="/sobre-nosotros"
-					><v-btn varian="plain" class="text-h6">Sobre nosotros</v-btn></nuxt-link
-				>
-			</v-row>
-			<v-row class="v-flex justify-center mt-8">
-				<nuxt-link to="/contacto"><v-btn varian="plain" class="text-h6">Contacto</v-btn></nuxt-link>
-			</v-row>
-			<v-row class="mt-sm-16"></v-row>
-			<v-row class="mt-xl-16"></v-row>
-			<v-row class="mt-xl-16"></v-row>
-			<v-row class="v-flex justify-center align-center pt-16 mt-16">
-				<v-btn v-for="icon in icons" :key="icon" class="mx-4" :icon="icon" variant="text"></v-btn>
-			</v-row>
-		</div>
-		<v-container class="mt-sm-16 mb-sm-16 mb-4 segunda-parte">
-			<v-row class="mt-sm-16"></v-row>
-			<h4 class="mb-4 text-center text-grey-darken-2">1.2 Información Personal</h4>
-			<p class="text-grey-darken-1">
-				Además de la información recopilada a través de cookies, es posible que solicitemos ciertos
-				datos personales, como su nombre, dirección de correo electrónico y número de teléfono, solo
-				cuando sea necesario para proporcionar nuestros servicios.
-			</p>
-			<h4 class="mb-4 mt-4 text-center text-grey-darken-2">
-				2. Cómo Utilizamos la Información Utilizamos la información recopilada para:
-			</h4>
-			<p class="text-grey-darken-1">
-				Personalizar su experiencia en nuestro sitio web. Proporcionar servicios y responder a sus
-				consultas. Mejorar la calidad de nuestros servicios y desarrollar nuevos productos. Enviarle
-				comunicaciones relacionadas con nuestros servicios.
-			</p>
-			<h4 class="mb-4 mt-4 text-center text-grey-darken-2">3. Compartir Información</h4>
-			<p class="text-grey-darken-1">
-				No compartimos su información personal con terceros, excepto cuando sea necesario para la
-				prestación de nuestros servicios o cuando estemos legalmente obligados a hacerlo.
-			</p>
-			<h4 class="mb-4 mt-4 text-center text-grey-darken-2">4. Notificación de Cookies</h4>
-			<p class="text-grey-darken-1">
-				Al visitar nuestro sitio web, verá una notificación de cookies que le informa sobre el uso
-				de cookies y proporciona un enlace a esta Política de Privacidad. Al continuar navegando,
-				usted acepta el uso de cookies según lo descrito en esta política.
-			</p>
-			<h4 class="mb-4 mt-4 text-center text-grey-darken-2">5. Sus Derechos</h4>
-			<p class="text-grey-darken-1">
-				Usted tiene el derecho de acceder, corregir o eliminar su información personal. Si tiene
-				alguna pregunta o desea ejercer sus derechos de privacidad, no dude en ponerse en contacto
-				con nosotros.
-			</p>
-			<h4 class="mb-4 mt-4 text-center text-grey-darken-2">6. Cambios en Esta Política</h4>
-			<p class="text-grey-darken-1">
-				Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Se
-				le notificarán cambios significativos. Le recomendamos que revise periódicamente esta
-				política para estar informado sobre cómo estamos protegiendo su información. Gracias por
-				confiar en NT Solutions. NT Solutions Ltd. info@ntsolutions.com +34 633 144 405
-			</p>
-		</v-container>
-	</footer>
+
 </template>
 
 <style>
@@ -308,14 +238,14 @@ header {
 	border-top: 3px;
 	border-top-style: solid;
 	border-color: gray;
+	min-height: 100dvh;
+
 }
 
 .primera-parte-footer {
 	min-height: 100dvh;
 }
-.segunda-parte {
-	z-index: 500 !important;
-}
+
 
 @media screen and (min-width: 1100px) {
 	.primera-parte-footer {
@@ -385,8 +315,9 @@ header {
 
 	.line {
 		position: absolute;
-		width: 1.7rem;
-		height: 2px;
+		width: 1.5rem;
+		height: 2.5px;
+		border-radius: 20rem;
 		background-color: #5f5a5a;
 		color: #5f5a5a;
 		transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
@@ -401,11 +332,10 @@ header {
 		margin-top: -0.4px;
 		transform: rotate(0deg);
 		transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-		
 	}
 
 	.line-buttom1 {
-		margin-top: 10px;
+		margin-top: 12px;
 		opacity: 1;
 		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 		transition: opacity 0.3192s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
@@ -413,13 +343,13 @@ header {
 	}
 
 	.active .line-buttom1 {
-		margin-top: -10px;
+		margin-top: -12px;
 		opacity: 0;
 		transition-delay: 0.2s;
 		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 	}
 	.line-top1 {
-		margin-top: -10px;
+		margin-top: -12px;
 		opacity: 1;
 		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 		transition: opacity 0.3192s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
@@ -428,7 +358,7 @@ header {
 
 	/* ! Mobile Menu Trigger transition/transform */
 	.active .line-top1 {
-		margin-top: 10px;
+		margin-top: 12px;
 		opacity: 0;
 		transition-delay: 0.2s;
 		transition: margin-top 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
@@ -591,8 +521,6 @@ export default {
 		},
 	},
 
-	computed: {
-
-	},
+	computed: {},
 };
 </script>
