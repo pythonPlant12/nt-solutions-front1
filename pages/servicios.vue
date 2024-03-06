@@ -3,7 +3,7 @@
 	<div class="primera-pantalla">
 		<!-- ! CARD -->
 		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
-			<v-row class="d-flex justify-center">
+			<v-row class="mt-xs-12 d-flex justify-center">
 				<v-card class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
 					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--four)">
 						Excelencia Digital, Adaptada para Ti
@@ -26,7 +26,7 @@
 				</v-col>
 				<v-col cols="2"></v-col>
 				<v-col cols="5" v-if="$vuetify.display.smAndUp" class="mb-16 px-6 rotating-image">
-					<v-img src="/css/pictures/service-title.png" cover class="elementos-primera-pantalla"></v-img>
+					<v-img src="/css/pictures/logo.png" cover class="elementos-primera-pantalla"></v-img>
 				</v-col>
 			</v-row>
 		</v-container>
