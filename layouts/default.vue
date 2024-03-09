@@ -335,9 +335,6 @@ header {
 	border-bottom-width: 1px;
 }
 
-.main-div {
-	height: 100dvh;
-}
 .nav-list {
 	list-style: none;
 	display: flex;
@@ -394,23 +391,6 @@ header {
 	width: 100%;
 	height: 100vh;
 	visibility: visible;
-}
-
-.footer {
-	border-top: 3px;
-	border-top-style: solid;
-	border-color: gray;
-	min-height: 100dvh;
-}
-
-.primera-parte-footer {
-	min-height: 100dvh;
-}
-
-@media screen and (min-width: 1100px) {
-	.primera-parte-footer {
-		min-height: auto;
-	}
 }
 
 /* ! CSS Styles for PHONE (Small Screen ) */

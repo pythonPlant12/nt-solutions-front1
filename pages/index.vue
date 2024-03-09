@@ -14,6 +14,7 @@
 				v-for="(slide, i) in slides"
 				:key="i"
 				:src="slide.image"
+				class="h-100vh"
 				cover
 			>
 				<div class="carousel-items">
@@ -31,7 +32,7 @@
 		</v-carousel>
 	</div>
 	<!-- ? Here I will insert a component which is in another folder, in order to provide path I should do <folder>-<component> -->
-	<div id="segundoElementoHtml">
+	<div id="segundoElementoHtml" class="mt-16">
 		<mainPage-secondScreen />
 	</div>
 </template>
