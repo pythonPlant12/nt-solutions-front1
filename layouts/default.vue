@@ -1,4 +1,5 @@
 <template>
+	<!-- Header -->
 	<header class="border-gray-400">
 		<!-- ! Navigation Bar MOBILE-->
 		<div class="container">
@@ -29,7 +30,11 @@
 				<!-- /.nav-list nav-list-mobile -->
 				<!-- ! Navigation List of Options Bar COMPUTER -->
 				<ul class="nav-list nav-list-larger larger-mobile">
-					<v-btn-toggle class="nav-list nav-list-larger larger-mobile">
+					<v-btn-toggle
+						v-model="activeBtn"
+						mandatory
+						class="nav-list nav-list-larger larger-mobile"
+					>
 						<li class="nav-item nav-item-hidden">
 							<div class="mobile-menu">
 								<span class="line line-top"></span>
@@ -45,8 +50,7 @@
 						<li class="nav-item">
 							<nuxt-link to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 								><v-btn
-									:color="empresa"
-									:style="{ 'text-decoration': empresaUnder ? 'underline' : 'none' }"
+									value="/"
 									append-icon="mdi mdi-domain"
 									size="small"
 									variant="text"
@@ -63,8 +67,8 @@
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
 								><v-btn
-									:color="servicios"
-									:style="{ 'text-decoration': serviciosUnder ? 'underline' : 'none' }"
+									key="/servicios"
+									value="/servicios"
 									append-icon="mdi mdi-database-cog"
 									variant="text"
 									size="small"
@@ -80,8 +84,8 @@
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
 								><v-btn
-									:color="tecnologias"
-									:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
+									key="/tecnologias"
+									value="/tecnologias"
 									append-icon="mdi mdi-wifi-settings"
 									size="small"
 									variant="text"
@@ -97,8 +101,8 @@
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
 								><v-btn
-									:color="sobreNosotros"
-									:style="{ 'text-decoration': tecnologiasUnder ? 'underline' : 'none' }"
+									key="/sobre-nosotros"
+									value="/sobre-nosotros"
 									append-icon="mdi mdi-information-variant"
 									size="small"
 									variant="text"
@@ -114,6 +118,8 @@
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
 								><v-btn
+									key="/contacto"
+									value="/contacto"
 									append-icon="mdi mdi-account-box-outline"
 									variant="text"
 									size="small"
@@ -124,11 +130,10 @@
 							</nuxt-link>
 						</li>
 						<li class="nav-item mr-4">
-							<nuxt-link
-								to="/politica-privacidad"
-								class="nav-link nav-link-mobile"
-								@click.prevent="cerrarMenu()"
+							<nuxt-link to="/log-in" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 								><v-btn
+									key="/log-in"
+									value="/log-in"
 									append-icon="mdi mdi-account-box-outline"
 									variant="outlined"
 									size="small"
@@ -143,17 +148,174 @@
 			</nav>
 		</div>
 	</header>
+
 	<div class="mt-16">
 		<slot />
 		<extra-Cookies @aceptarCookies="updateCookieData" v-if="cookiesAceptadas" />
 	</div>
-
+	<footer class="bg-blue-grey-darken-3">
+		<v-container class="mt-12">
+			<v-row align="center">
+				<v-col align-self="center" class="text-center mt-8">
+					<h2 style="color: var(--one)">NT SOLUTIONS</h2>
+				</v-col>
+			</v-row>
+			<v-row>
+				<v-col class="mx-2 my-4" cols="12" md="3">
+					<h4 class="mb-4 mx-2" style="color: var(--three)">CONTACTO</h4>
+					<ul style="list-style-type: none">
+						<li>
+							<p class="text-body-2 my-1">
+								<v-icon class="mr-4" icon="mdi-email-outline"></v-icon>info@nt-solutions.es
+							</p>
+						</li>
+						<li>
+							<p class="text-body-2 my-1">
+								<v-icon class="mr-4" icon="mdi-map-marker-outline"></v-icon>Plaza de Castilla,
+								Madrid Spain
+							</p>
+						</li>
+						<li>
+							<p class="text-body-2 my-1">
+								<v-icon class="mr-4" icon="mdi-phone"></v-icon>+34 633 144 405
+							</p>
+						</li>
+						<li>
+							<p class="text-body-2 my-1">
+								<v-icon class="mr-4" icon="mdi-whatsapp"></v-icon>+34 622 100 031
+							</p>
+						</li>
+						<li>
+							<p class="text-body-2 my-1">
+								<v-icon class="mr-4" icon="mdi-translate-variant"></v-icon>ENG ESP RUS
+							</p>
+						</li>
+					</ul>
+				</v-col>
+				<v-col class="mx-2 my-4" cols="12" md="3">
+					<h4 class="mb-4 mx-2" style="color: var(--three)">MENÚ</h4>
+					<ul style="list-style-type: none">
+						<li>
+							<v-btn
+								append-icon="mdi mdi-domain"
+								size="small"
+								variant="text"
+								rounded="lg"
+								class="boton"
+							>
+								<nuxt-link to="/"></nuxt-link>NT Solutions</v-btn
+							>
+						</li>
+						<li>
+							<v-btn
+								append-icon="mdi mdi-database-cog"
+								size="small"
+								variant="text"
+								rounded="lg"
+								class="boton"
+							>
+								<nuxt-link to="/servicios"></nuxt-link>Servicios</v-btn
+							>
+						</li>
+						<li>
+							<v-btn
+								append-icon="mdi mdi-wifi-settings"
+								size="small"
+								variant="text"
+								rounded="lg"
+								class="boton"
+							>
+								<nuxt-link to="/tecnologias"></nuxt-link>Tecnologías</v-btn
+							>
+						</li>
+						<li>
+							<v-btn
+								append-icon="mdi mdi-information-variant"
+								size="small"
+								variant="text"
+								rounded="lg"
+								class="boton"
+							>
+								<nuxt-link to="/sobre-nosotros"></nuxt-link>Sobre Nosotros</v-btn
+							>
+						</li>
+						<li>
+							<v-btn
+								append-icon="mdi mdi-account-box-outline"
+								variant="text"
+								size="small"
+								rounded="lg"
+								class="boton"
+							>
+								<nuxt-link to="/log-in"></nuxt-link>Log In</v-btn
+							>
+						</li>
+						<li>
+							<v-btn
+								append-icon="mdi-account-eye-outline"
+								variant="text"
+								size="small"
+								rounded="lg"
+								class="boton"
+							>
+								<nuxt-link to="/politica-privacidad"></nuxt-link>Politica de privacidad</v-btn
+							>
+						</li>
+					</ul>
+				</v-col>
+				<v-col class="mx-2 my-4" cols="10" md="5">
+					<h4 class="mb-4 mx-2" style="color: var(--three)">NEWSLETTER</h4>
+					<v-text-field
+						:loading="loading"
+						append-inner-icon="mdi-email-check-outline"
+						label="Email address"
+						placeholder="johndoe@gmail.com"
+						variant="outlined"
+						hide-details
+						@click:append-inner="onClickNewsletter"
+					></v-text-field>
+					<p class="text-body-2 mt-2 text-grey-lighten-2">
+						Al suscribirte a nuestra newsletter, serás el primero en recibir actualizaciones
+						exclusivas, consejos expertos, y ofertas especiales que solo están disponibles para
+						nuestros suscriptores.
+					</p>
+				</v-col>
+			</v-row>
+			<v-row class="mt-12">
+				<v-col cols="2" sm="3"></v-col>
+				<v-col><v-icon icon="mdi-facebook"></v-icon></v-col>
+				<v-col><v-icon icon="mdi-linkedin"></v-icon></v-col>
+				<v-col><v-icon icon="mdi-github"></v-icon></v-col>
+				<v-col><v-icon icon="mdi-google-plus"></v-icon></v-col>
+				<v-col><v-icon icon="mdi-youtube"></v-icon></v-col>
+				<v-col cols="2" sm="3"></v-col>
+			</v-row>
+			<v-row>
+				<v-col>
+					<p class="my-8 mx-2 text-body-2 text-grey-lighten-2 text-center">
+						<b>© {{ currentYear }} NT-Solutions OÜ. </b> Empresa registrada oficialmente en Estonia.
+						Todos los derechos reservados. Comprometidos con la excelencia y la innovación en
+						soluciones tecnológicas.
+					</p>
+				</v-col>
+			</v-row>
+		</v-container>
+		<v-snackbar v-model="snackbar" color="grey-lighten-4" :timeout="5000">
+			<p class="text-grey-darken-2"><b>¡Gracias por suscribirte!</b> 
+				<br>
+				Nos alegra tenerte con nosotros. Recuerda que puedes desuscribirte de nuestro newsletter en cualquier momento siguiendo este enlace.</p>
+			<template v-slot:actions>
+				<v-btn color="var(--three)" variant="text" @click="snackbar = false"> Cerrar </v-btn>
+			</template>
+		</v-snackbar>
+	</footer>
 </template>
 
 <style>
 .boton {
 	padding: 0.5rem !important;
 }
+
 a {
 	display: block;
 	text-decoration: none;
@@ -239,13 +401,11 @@ header {
 	border-top-style: solid;
 	border-color: gray;
 	min-height: 100dvh;
-
 }
 
 .primera-parte-footer {
 	min-height: 100dvh;
 }
-
 
 @media screen and (min-width: 1100px) {
 	.primera-parte-footer {
@@ -496,21 +656,37 @@ header {
 }
 </style>
 <script>
+import { ref } from "vue";
+import { useField, useForm } from "vee-validate";
+
 export default {
 	mounted() {
 		this.cookiesAceptadas = true;
+		this.activeBtn = this.$route.path;
 		const selectElement = (element) => document.querySelector(element);
-
 		selectElement(".mobile-menu").addEventListener("click", () => {
 			selectElement("header").classList.toggle("active");
 		});
 	},
 	data() {
 		return {
+			activeBtn: "nt-solutions",
+			snackbar: false,
 			icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+			links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
 			cookiesAceptadas: false,
+			currentYear: new Date().getFullYear(),
+			loaded: false,
+			loading: false,
 		};
 	},
+	watch: {
+		// Observa los cambios en la ruta para actualizar el botón activo
+		"$route.path"(newPath) {
+			this.activeBtn = newPath;
+		},
+	},
+
 	methods: {
 		cerrarMenu() {
 			const selectElement = (element) => document.querySelector(element);
@@ -518,6 +694,15 @@ export default {
 		},
 		updateCookieData() {
 			this.cookiesAceptadas = true;
+		},
+		onClickNewsletter() {
+			this.loading = true;
+			setTimeout(() => {
+				this.loading = false;
+				this.loaded = true;
+				const that = this;
+				this.snackbar = true;
+			}, 1000);
 		},
 	},
 

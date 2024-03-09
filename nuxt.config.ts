@@ -2,7 +2,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   //...
   build: {
-    transpile: ['vuetify', 'gsap'],
+    transpile: ['vuetify', 'gsap', 'mdi-vue'],
     target: 'static'
   },
   modules: [

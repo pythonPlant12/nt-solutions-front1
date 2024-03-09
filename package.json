@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
+    "@mdi/font": "^7.4.47",
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.1.0",
     "nuxt": "^3.8.1",
@@ -23,7 +24,6 @@
   },
   "dependencies": {
     "@lordicon/element": "^1.4.2",
-    "@mdi/font": "^7.3.67",
     "gsap": "^3.12.2",
     "lottie-web": "^5.12.2",
     "vee-validate": "^4.11.8"
