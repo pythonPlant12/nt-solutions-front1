@@ -2,7 +2,7 @@
 	<v-sheet
 		class="d-flex align-center justify-center flex-column text-center mx-auto px-4 mt-sm-16 mt-6"
 		elevation="24"
-		height="80vh"
+		height="80lvh"
 		rounded="lg"
 		max-width="80%"
 		width="100%"
