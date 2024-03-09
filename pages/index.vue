@@ -6,7 +6,7 @@
 			:continuous="true"
 			interval="10000"
 			hide-delimiter-background
-			height="100dvh"
+			height="100vh"
 			cycle
 			:show-arrows="false"
 		>
