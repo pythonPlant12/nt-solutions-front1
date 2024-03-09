@@ -263,17 +263,23 @@
 						</li>
 					</ul>
 				</v-col>
-				<v-col class="mx-2 my-4" cols="10" md="5">
+				<v-col class="mx-2 my-4" cols="9" md="5">
 					<h4 class="mb-4 mx-2" style="color: var(--three)">NEWSLETTER</h4>
-					<v-text-field
-						:loading="loading"
-						append-inner-icon="mdi-email-check-outline"
-						label="Email address"
-						placeholder="johndoe@gmail.com"
-						variant="outlined"
-						hide-details
-						@click:append-inner="onClickNewsletter"
-					></v-text-field>
+					<v-row>
+						<v-col cols="10">
+							<v-text-field
+							label="Email address"
+							placeholder="johndoe@gmail.com"
+							variant="outlined"
+							hide-details
+							@click:append-inner="onClickNewsletter"
+						></v-text-field>
+						</v-col>
+						<v-col cols="2">
+							<v-btn :loading="loading" class="" @click="onClickNewsletter" size="x-large" variant="outlined"><v-icon icon="mdi-email-check-outline"></v-icon></v-btn>
+						</v-col>
+					</v-row>
+
 					<p class="text-body-2 mt-2 text-grey-lighten-2">
 						Al suscribirte a nuestra newsletter, serás el primero en recibir actualizaciones
 						exclusivas, consejos expertos, y ofertas especiales que solo están disponibles para
@@ -293,9 +299,11 @@
 			<v-row>
 				<v-col>
 					<p class="my-8 mx-2 text-body-2 text-grey-lighten-2 text-center">
-						<b>© {{ currentYear }} NT-Solutions OÜ. </b> Empresa registrada oficialmente en Estonia.
-						Todos los derechos reservados. Comprometidos con la excelencia y la innovación en
+						Empresa registrada oficialmente en Estonia.
+						Comprometidos con la excelencia y la innovación en
 						soluciones tecnológicas.
+						<br>
+						<b>© {{ currentYear }} NT-SOLUTIONS OÜ. </b> Todos los derechos reservados. 
 					</p>
 				</v-col>
 			</v-row>
@@ -636,9 +644,6 @@ header {
 }
 </style>
 <script>
-import { ref } from "vue";
-import { useField, useForm } from "vee-validate";
-
 export default {
 	mounted() {
 		this.cookiesAceptadas = true;

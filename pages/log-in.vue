@@ -57,7 +57,7 @@
 					<v-card class="mb-12" color="surface-variant" variant="tonal">
 						<v-card-text class="text-medium-emphasis text-caption">
 							Si no te acuerdas de la contraseña, también puedes hacer clic en "¿Olvidaste la contraseña?"
-							abajo para restablecer la contraseña de inicio de sesión.
+							para restablecer la contraseña de inicio de sesión.
 						</v-card-text>
 					</v-card>
 
