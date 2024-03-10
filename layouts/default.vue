@@ -129,17 +129,28 @@
 								>
 							</nuxt-link>
 						</li>
-						<li class="nav-item mr-4">
+						<li class="nav-item">
 							<nuxt-link to="/log-in" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 								><v-btn
-									key="/log-in"
-									value="/log-in"
-									append-icon="mdi mdi-account-box-outline"
+									append-icon="mdi mdi-lock-check"
 									variant="outlined"
 									size="small"
 									rounded="lg"
-									class="boton"
+									class="boton boton-sign-in"
 									>Log In</v-btn
+								>
+							</nuxt-link>
+						</li>
+
+						<li class="nav-item mr-4">
+							<nuxt-link to="/sign-up" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
+								><v-btn
+									append-icon="mdi mdi-account-check"
+									variant="outlined"
+									size="small"
+									rounded="lg"
+									class="boton boton-sign-up"
+									><b class="text-white">Sign up</b></v-btn
 								>
 							</nuxt-link>
 						</li>
@@ -261,24 +272,33 @@
 								<nuxt-link to="/politica-privacidad"></nuxt-link>Politica de privacidad</v-btn
 							>
 						</li>
+						<li>
+							<v-btn
+								append-icon="mdi mdi-lock-check"
+								variant="outlined"
+								size="small"
+								rounded="lg"
+								class="boton boton-sign-in mt-2"
+								><nuxt-link to="/log-in"></nuxt-link>Log In</v-btn
+							>
+							<v-btn
+								key="/log-in"
+								value="/log-in"
+								append-icon="mdi mdi-account-check"
+								variant="outlined"
+								size="small"
+								rounded="lg"
+								class="boton boton-sign-up mt-2 ml-6"
+								><b class="text-white"
+									><nuxt-link to="/politica-privacidad"></nuxt-link>Sign up</b
+								></v-btn
+							>
+						</li>
 					</ul>
 				</v-col>
 				<v-col class="mx-2 my-4" cols="9" md="5">
 					<h4 class="mb-4 mx-2" style="color: var(--three)">NEWSLETTER</h4>
-					<v-row>
-						<v-col cols="10">
-							<v-text-field
-							label="Email address"
-							placeholder="johndoe@gmail.com"
-							variant="outlined"
-							hide-details
-							@click:append-inner="onClickNewsletter"
-						></v-text-field>
-						</v-col>
-						<v-col cols="2">
-							<v-btn :loading="loading" class="" @click="onClickNewsletter" size="x-large" variant="outlined"><v-icon icon="mdi-email-check-outline"></v-icon></v-btn>
-						</v-col>
-					</v-row>
+					<extra-newsletter @newsletterToast="abrirSnackBar" />
 
 					<p class="text-body-2 mt-2 text-grey-lighten-2">
 						Al suscribirte a nuestra newsletter, serás el primero en recibir actualizaciones
@@ -299,19 +319,21 @@
 			<v-row>
 				<v-col>
 					<p class="my-8 mx-2 text-body-2 text-grey-lighten-2 text-center">
-						Empresa registrada oficialmente en Estonia.
-						Comprometidos con la excelencia y la innovación en
-						soluciones tecnológicas.
-						<br>
-						<b>© {{ currentYear }} NT-SOLUTIONS OÜ. </b> Todos los derechos reservados. 
+						Empresa registrada oficialmente en Estonia. Comprometidos con la excelencia y la
+						innovación en soluciones tecnológicas.
+						<br />
+						<b>© {{ currentYear }} NT-SOLUTIONS OÜ. </b> Todos los derechos reservados.
 					</p>
 				</v-col>
 			</v-row>
 		</v-container>
 		<v-snackbar v-model="snackbar" color="grey-lighten-4" :timeout="5000">
-			<p class="text-grey-darken-2"><b>¡Gracias por suscribirte!</b> 
-				<br>
-				Nos alegra tenerte con nosotros. Recuerda que puedes desuscribirte de nuestro newsletter en cualquier momento siguiendo este enlace.</p>
+			<p class="text-grey-darken-2">
+				<b>¡Gracias por suscribirte!</b>
+				<br />
+				Nos alegra tenerte con nosotros. Recuerda que puedes desuscribirte de nuestro newsletter en
+				cualquier momento siguiendo este enlace.
+			</p>
 			<template v-slot:actions>
 				<v-btn color="var(--three)" variant="text" @click="snackbar = false"> Cerrar </v-btn>
 			</template>
@@ -322,6 +344,17 @@
 <style>
 .boton {
 	padding: 0.5rem !important;
+	padding-right: 1rem !important;
+}
+
+.boton-sign-up {
+	background-color: #4f5676 !important;
+	color: white !important;
+}
+
+.boton-sign-in {
+	background-color: rgba(41, 51, 95, 0.424) !important;
+	color: white !important;
 }
 
 a {
@@ -671,7 +704,6 @@ export default {
 			this.activeBtn = newPath;
 		},
 	},
-
 	methods: {
 		cerrarMenu() {
 			const selectElement = (element) => document.querySelector(element);
@@ -680,14 +712,8 @@ export default {
 		updateCookieData() {
 			this.cookiesAceptadas = true;
 		},
-		onClickNewsletter() {
-			this.loading = true;
-			setTimeout(() => {
-				this.loading = false;
-				this.loaded = true;
-				const that = this;
-				this.snackbar = true;
-			}, 1000);
+		abrirSnackBar() {
+			this.snackbar = true;
 		},
 	},
 

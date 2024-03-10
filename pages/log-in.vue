@@ -61,17 +61,12 @@
 						</v-card-text>
 					</v-card>
 
-					<v-btn color="blue" :loading="loading" size="large" variant="tonal" block @click="login()"> Log In <span class="mdi mdi-login"></span></v-btn>
+					<v-btn class="bg-blue-grey-darken-3" :loading="loading" size="large" variant="tonal" block @click="login()"> Log In <span class="mdi mdi-login"></span></v-btn>
 
 					<v-card-text class="text-center">
-						<a
-							class="text-blue text-decoration-none"
-							href="#"
-							rel="noopener noreferrer"
-							target="_blank"
-						>
+						<p><nuxt-link to="/sign-up" class="text-blue-grey-darken-3">
 							Regístrate ahora <v-icon icon="mdi-chevron-right"></v-icon>
-						</a>
+						</nuxt-link></p>
 					</v-card-text>
 				</v-card>
 			</div>
