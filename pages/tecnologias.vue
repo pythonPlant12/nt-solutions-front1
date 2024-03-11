@@ -1,24 +1,21 @@
 <template>
-		<v-container class="mt-10 mt-xxl-16 primer-slide-container" style="background-color: #d8d7d7">
-			<v-row class="d-flex justify-center">
-				<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--four);"> 
-					Tecnologías
-				</h1>
-			</v-row>
-		</v-container>
-		<tecnologias-databases />
-		<tecnologias-cloud />
-		<tecnologias-docker />
-		<tecnologias-django />
-		<tecnologias-frontend />
+	<v-container class="mt-10 mt-xxl-16 primer-slide-container">
+		<v-row class="justify-center">
+			<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2">
+			Tecnologías
+			</h1>
+		</v-row>
+	</v-container>
+	<tecnologias-databases />
+	<tecnologias-cloud />
+	<tecnologias-docker />
+	<tecnologias-django />
+	<tecnologias-frontend />
 </template>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 <style>
-.style {
-	color: #d8d7d7;
-}
 .primer-slide-container {
 	opacity: 0;
 	animation: apareciendo 2s forwards;

@@ -1,7 +1,6 @@
 <template>
 <div class="toda-pagina">
 	<div class="primera-pantalla">
-		<!-- ! CARD -->
 		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
 			<v-row class="mt-xs-12 d-flex justify-center">
 				<v-card class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
