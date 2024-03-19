@@ -252,17 +252,6 @@
 						</li>
 						<li>
 							<v-btn
-								append-icon="mdi mdi-account-box-outline"
-								variant="text"
-								size="small"
-								rounded="lg"
-								class="boton"
-							>
-								<nuxt-link to="/log-in"></nuxt-link>Log In</v-btn
-							>
-						</li>
-						<li>
-							<v-btn
 								append-icon="mdi-account-eye-outline"
 								variant="text"
 								size="small"
@@ -278,7 +267,7 @@
 								variant="outlined"
 								size="small"
 								rounded="lg"
-								class="boton boton-sign-in mt-2"
+								class="boton mt-2 ml-2"
 								><nuxt-link to="/log-in"></nuxt-link>Log In</v-btn
 							>
 							<v-btn
@@ -288,9 +277,9 @@
 								variant="outlined"
 								size="small"
 								rounded="lg"
-								class="boton boton-sign-up mt-2 ml-6"
+								class="boton mt-2 ml-2"
 								><b class="text-white"
-									><nuxt-link to="/politica-privacidad"></nuxt-link>Sign up</b
+									><nuxt-link to="/sign-up"></nuxt-link>Sign up</b
 								></v-btn
 							>
 						</li>
