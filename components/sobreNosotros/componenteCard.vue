@@ -1,21 +1,21 @@
 <template>
-	<v-sheet class="primera-pantalla d-sm-flex align-sm-center justify-sm-center">
-		<v-row class="primer-row row-1 mt-sm-0">
+	<v-sheet class="d-sm-flex align-sm-center justify-sm-center">
+		<v-row class="primer-row row-1 mt-sm-0 mb-12">
 			<v-spacer></v-spacer>
 			<v-col cols="12" md="10" class="prueba my-4">
 				<v-card
 					elevation="24"
 					variant="tonal"
-					class="mx-sm-16 mx-4 pa-4 rounded-xl card-1 mt-12"
+					class="mx-4 pa-4 rounded-xl card-1 mt-12 mt-sm-0"
 				>
-					<h1 class="text-center titulo" style="color: var(--six) !important;">{{ title }}</h1>
-					<h2 class="pa-4 pa-sm-16 pb-2 text-body-1 text-sm-h6 text-lg-h5">
+					<h2 class="text-center titulo-card-sobre  rounded-xl text-amber-darken-2">{{ title }}</h2>
+					<p class="pa-4 pa-sm-16 pb-2 text-body-1 text-grey-darken-2 text-sm-h6 text-lg-h6">
 						{{ text }}
-					</h2>
+					</p>
 					<v-img
 						:src="image"
-						height="300"
-						class="slide-image imagen"
+						height="200"
+						class="slide-image imagen mt-12 mt-sm-0 mb-sm-12"
 						:class="animation"
 						hover
 					></v-img>
@@ -34,23 +34,21 @@
 .card-1 {
 	min-height: 100%;
 	backdrop-filter: blur(15px);
-	background-color: rgba(255, 255, 255, 0.373) !important;
-	border: 3px solid transparent !important;
+	border: 1px solid transparent !important;
 	animation: 1s apareciendo 1s forwards;
 	opacity: 0;
 }
 
-.titulo {
+.titulo-card-sobre {
 	padding: 0.5rem 0;
-	border-bottom: 2px solid rgb(255, 255, 255);
+	background-color: rgba(29, 29, 29, 0.657);
+	border: 1px solid rgb(248, 150, 12);
 	margin-bottom: 1rem;
-	color: var(--one);
 	opacity: 0;
 	animation: 1s apareciendo 2s forwards;
 }
 
 .text-body-1 {
-	color: rgb(77, 77, 77);
 	text-align: center;
 	opacity: 0;
 	animation: 1s apareciendo 2.5s forwards;
@@ -58,20 +56,6 @@
 
 .imagen {
 	animation: 1s apareciendo 3s forwards;
-}
-.card-1:hover {
-	border: 3px solid var(--three);
-	border-color: var(--seven) !important;
-}
-
-@media screen and (min-width: 680px) {
-	.primer-row {
-		margin-top: -11rem !important;
-	}
-
-@media screen and (max-width: 679) {
-
-}
 }
 
 @keyframes apareciendo {

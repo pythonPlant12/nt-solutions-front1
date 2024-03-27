@@ -1,31 +1,43 @@
 <template>
-	<v-sheet
-		class="d-flex align-center justify-center flex-column text-center mx-auto px-4 mt-sm-16 mt-6"
-		elevation="24"
-		height="80vh"
-		rounded="lg"
-		max-width="80%"
-		width="100%"
-	>
-		<h2 class="titulo text-h3 font-weight-black">Empresa en un mundo digital</h2>
-		<p class="texto text-sm-h6 text-caption mb-8 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
-			Si estás aqui es porque valoras la excelencia en la presencia digital de tu negocio. En
-			nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino también
-			soluciones tecnológicas personalizadas para potenciar el rendimiento de tu empresa. Desde la
-			implementación de bases de datos hasta la creación de portales especializados, nuestro
-			compromiso es impulsar tu éxito en línea. Con enfoque en el posicionamiento web y SEO, nos
-			esforzamos por llevar tu presencia digital a nuevas alturas.
-		</p>
-
-		<nuxt-link to="/servicios">
-			<v-btn color="var(--six)" class="mt-lg-16 mt-sm-8" :ripple="false" size="x-large" :elevation="buttonElevation" @mouseenter="setElevation(24)" @mouseleave="setElevation(4)"
-				>Descubrir</v-btn
-			>
-		</nuxt-link>
+	<v-sheet>
+		<v-card class="mx-sm-16 mx-4 px-2 mt-16" rounded="xl" elevation="24">
+			<h2 class="titulo text-h3 font-weight-black text-center mt-16">
+				Empresa en un mundo digital
+			</h2>
+			<div>
+				<Vue3Lottie
+					animationLink="https://lottie.host/07f15d94-ec6b-4555-8217-e3370c79cf50/OQWgd6MbXK.json"
+					:height="400"
+					:width="400"
+				/>
+				<p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
+					Si estás aqui es porque valoras la excelencia en la presencia digital de tu negocio. En
+					nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino
+					también soluciones tecnológicas personalizadas para potenciar el rendimiento de tu
+					empresa. Desde la implementación de bases de datos hasta la creación de portales
+					especializados, nuestro compromiso es impulsar tu éxito en línea. Con enfoque en el
+					posicionamiento web y SEO, nos esforzamos por llevar tu presencia digital a nuevas
+					alturas.
+				</p>
+			</div>
+			<div class="d-flex justify-center mb-12">
+				<nuxt-link to="/servicios">
+					<v-btn
+						color="var(--six)"
+						rounded="xl"
+						class="mt-lg-16 mt-sm-8"
+						:ripple="false"
+						size="x-large"
+						:elevation="buttonElevation"
+						@mouseenter="setElevation(24)"
+						@mouseleave="setElevation(4)"
+						>Descubrir</v-btn
+					>
+				</nuxt-link>
+			</div>
+		</v-card>
 	</v-sheet>
-	<h1 class="subtitulo text-sm-h2 font-weight-black text-center mt-16">
-		COLABORADORES
-	</h1>
+	<h1 class="subtitulo text-sm-h2 font-weight-black text-center mt-16">COLABORADORES</h1>
 	<v-sheet
 		width="100%"
 		elevation="24"
@@ -52,13 +64,7 @@
 				<v-expansion-panel-title>
 					<v-row align="center" class="spacer" no-gutters>
 						<v-col class="text-no-wrap text-left" cols="5" sm="3">
-							<v-chip
-								v-if="message.tag"
-								:color="'var(--three)'"
-								class="ms-0 me-2"
-								label
-								small
-							>
+							<v-chip v-if="message.tag" :color="'var(--three)'" class="ms-0 me-2" label small>
 								{{ message.tag }}
 							</v-chip>
 							<strong>{{ message.title }}</strong>
@@ -93,7 +99,7 @@
 	color: var(--two) !important;
 }
 .subtitulo {
-	color:var(--two);
+	color: var(--two);
 }
 .texto {
 	color: var(--four) !important;
@@ -103,7 +109,6 @@
 	.titulo {
 		font-size: 2rem !important;
 		line-height: 2rem;
-
 	}
 	.texto {
 		font-size: 0.9rem !important;
@@ -119,7 +124,6 @@
 		font-size: 12px !important;
 	}
 }
-
 </style>
 
 <script>
@@ -221,7 +225,7 @@ export default {
 	methods: {
 		setElevation(value) {
 			this.buttonElevation = value;
-		}
-	}
+		},
+	},
 };
 </script>

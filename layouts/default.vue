@@ -164,7 +164,7 @@
 		<slot />
 		<extra-Cookies @aceptarCookies="updateCookieData" v-if="cookiesAceptadas" />
 	</div>
-	<footer class="bg-blue-grey-darken-3">
+	<footer class="bg-blue-grey-darken-3 footer">
 		<v-container class="mt-12">
 			<v-row align="center">
 				<v-col align-self="center" class="text-center mt-8">
@@ -331,6 +331,11 @@
 </template>
 
 <style>
+.footer {
+	z-index: 200 !important;
+	position: relative;
+}
+
 .boton {
 	padding: 0.5rem !important;
 	padding-right: 1rem !important;

@@ -1,10 +1,13 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   //...
+  ssr: true, // Enable server-side rendering
   build: {
     transpile: ['vuetify', 'gsap', 'mdi-vue'],
-    target: 'static'
   },
+  plugins: [
+    { src: '~/plugins/vue3-lottie.js', mode: 'client' }
+  ],
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {

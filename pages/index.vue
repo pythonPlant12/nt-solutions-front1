@@ -24,7 +24,15 @@
 					</div>
 				</div>
 				<div class="carousel-button">
-					<v-btn @click="moverAlSegundoElemento()" :ripple="false" stacked prepend-icon="$vuetify" elevation="24" size="large" color="var(--two)">
+					<v-btn
+						@click="moverAlSegundoElemento()"
+						:ripple="false"
+						stacked
+						prepend-icon="$vuetify"
+						elevation="24"
+						size="large"
+						color="var(--two)"
+					>
 						Conocer más
 					</v-btn>
 				</div>
@@ -33,6 +41,7 @@
 	</div>
 	<!-- ? Here I will insert a component which is in another folder, in order to provide path I should do <folder>-<component> -->
 	<div id="segundoElementoHtml" class="mt-16">
+
 		<mainPage-secondScreen />
 	</div>
 </template>
@@ -125,7 +134,6 @@
 		opacity: 0.9;
 		transform: scale(1);
 		transform: translate(-50%, -50%);
-
 	}
 }
 
@@ -179,20 +187,20 @@
 	}
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
 	.heading-carousel-title {
 		font-size: 1.8rem;
 	}
 }
 
-@media screen and (max-width: 1281px){
+@media screen and (max-width: 1281px) {
 	.heading-carousel-title {
 		font-size: 3rem !important;
 		min-height: 15rem !important;
 	}
 }
 
-@media screen and (max-width: 681px){
+@media screen and (max-width: 681px) {
 	.heading-carousel-title {
 		font-size: 1.6rem !important;
 		min-height: 15rem !important;
@@ -203,15 +211,16 @@
 <!-- ! SCRIPT -->
 
 <script>
-import gsap from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'; // Import the ScrollToPlugin
-
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Import the ScrollToPlugin
+import { ref } from 'vue'
 // Register the plugin
 gsap.registerPlugin(ScrollToPlugin);
 
 export default {
 	data() {
 		return {
+			animationData: 'https://lottie.host/b5a297d9-6141-4f5b-9eb8-4d3abd44189f/qZMFZKxCkn.json',
 			slides: [
 				{
 					image: "/css/pictures/carousel-1.jpg",
@@ -226,12 +235,21 @@ export default {
 				{
 					image: "/css/pictures/carousel-3.jpg",
 					title: "Bases de Datos Potentes para su Negocio",
-					subtitle:
-						"Optimice el Manejo de Datos para Decisiones Más Inteligentes y Rápidas",
+					subtitle: "Optimice el Manejo de Datos para Decisiones Más Inteligentes y Rápidas",
 				},
 			],
 			headings: ["hey", "hello"],
 		};
+	},
+	setup() {
+    const options = ref({
+      loop: true,
+      autoplay: true,
+      animationLink: 'https://lottie.host/embed/f376a62a-6748-4402-a2df-0d0b5ec8f3da/zc7HmOzLy0.json',
+    })
+		return {
+      options,
+    }
 	},
 	methods: {
 		moverAlSegundoElemento() {
@@ -241,8 +259,8 @@ export default {
 			gsap.to(window, {
 				duration: 0.7,
 				scrollTo: { y: "#segundoElementoHtml", offsetY: 80 },
-			})
-		}	
-	}
+			});
+		},
+	},
 };
 </script>

@@ -4,7 +4,7 @@
 		<v-row class="mt-4 d-flex justify-center">
 			<div>
         
-				<v-card class="mx-auto pa-12 pb-8" elevation="24" max-width="448" rounded="lg">
+				<v-card class="mx-auto pa-12 pb-8" elevation="24" max-width="448" min-width="448" rounded="lg">
           <div class="col">
             <a href="#" class="fb btn">
               <v-icon icon="mdi-facebook" class="mr-6"></v-icon> Login with Facebook

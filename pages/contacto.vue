@@ -7,7 +7,7 @@
 				</h1>
 			</v-card>
 		</v-row>
-	</v-container>
+	</v-container> 
 	<v-container class="mt-16 ">
         <v-row class="d-flex justify-center">
 		<contacto-formularioComponent class="formulario" />

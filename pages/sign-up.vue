@@ -3,70 +3,99 @@
 		<v-container class="mt-sm-6 primer-slide-container">
 			<v-row class="mt-4 d-flex justify-center">
 				<div>
-					<v-card class="mx-2 mt-xl-6 mt-6 mt-6 sign-up" elevation="24" max-width="448">
-						<v-toolbar color="blue-grey-darken-3" cards dark flat>
-              <nuxt-link to="/log-in" class="text-white">
-              <v-btn icon class="ml-2">
-									<v-icon>mdi-arrow-left</v-icon>
-								</v-btn>
-              </nuxt-link>
-							<v-card-title class="text-h6 font-weight-regular"> Registrate </v-card-title>
-						</v-toolbar>
-						<v-form ref="form" v-model="isValid" class="pa-4 pt-6">
-							<v-text-field
-								v-model="email"
-								:rules="[rules.email]"
-								color="blue-grey-darken-3"
-								label="Correo electrónico"
-                class="mb-2"
-								type="email"
-								variant="outlined"
-							></v-text-field>
-							<v-text-field
-								v-model="password"
-								:rules="[rules.password, rules.length(6)]"
-								color="blue-grey-darken-3"
-                class="mb-2"
-								counter="6"
-								label="Contraseña"
-								style="min-height: 96px"
-								type="password"
-								variant="outlined"
-							></v-text-field>
-							<v-text-field
-								v-model="phone"
-                class="mb-2"
-								color="blue-grey-darken-3"
-								variant="outlined"
-								label="Número de teléfono"
-							></v-text-field>
-							<v-textarea
-								v-model="bio"
-								color="blue-grey-darken-3"
-                class="mb-2"
-								label="Sobre tí"
-								rows="1"
-								variant="outlined"
-								style="min-height: 200px"
-								auto-grow
-							></v-textarea>
-							<v-checkbox v-model="agreement" :rules="[rules.required]" color="blue-grey-darken-3">
-								<template v-slot:label>
-									<p>
-										Acepto las condiciones de:
-										<a href="/politica-privacidad" target="_blank"> Politica de privacidad</a>
-									</p>
-								</template>
-							</v-checkbox>
-						</v-form>
-						<v-divider></v-divider>
-						<v-card-actions>
-							<v-btn variant="text" @click="form.reset()"> Limpiar </v-btn>
-							<v-spacer></v-spacer>
-							<v-btn :disabled="!isValid" :loading="isLoading" color="blue-grey-darken-3">
-								Registrarse
-							</v-btn>
-						</v-card-actions>
+					<v-card
+						class="mx-8 pa-12 pb-8"
+						elevation="24"
+						max-width="448"
+						rounded="lg"
+					>
+						<v-card class="mb-4 bg-orange-lighten-4" variant="tonal">
+							<v-card-text class="text-medium-emphasis text-caption">
+								Únete a nuestra comunidad con solo un clic! Puedes registrarte fácilmente usando tus
+								<b>plataformas favoritas </b>como Facebook, Google y más.
+							</v-card-text>
+						</v-card>
+						<div class="d-flex justify-space-around">
+							<a href="#" class="fb sign-up">
+								<v-icon icon="mdi-facebook" class="mr-6"></v-icon>
+							</a>
+							<a href="#" class="twitter sign-up">
+								<v-icon icon="mdi-twitter" class="mr-6"></v-icon
+							></a>
+							<a href="#" class="google sign-up">
+								<v-icon icon="mdi-google" class="mr-6"></v-icon>
+							</a>
+							<a href="#" class="github sign-up">
+								<v-icon icon="mdi-github" class="mr-6"></v-icon>
+							</a>
+						</div>
+						<hr class="my-4" />
+						<div class="text-subtitle-1 text-medium-emphasis">Usuario</div>
+
+						<v-text-field
+							density="compact"
+							placeholder="Email address"
+							prepend-inner-icon="mdi-email-outline"
+							variant="outlined"
+						></v-text-field>
+
+						<div
+							class="text-subtitle-1 text-medium-emphasis d-flex align-center justify-space-between"
+						>
+							Contraseña
+
+							<a
+								class="text-caption text-decoration-none text-blue"
+								href="#"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								¿Olvidaste la contraseña?</a
+							>
+						</div>
+
+						<v-text-field
+							:append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+							:type="visible ? 'text' : 'password'"
+							density="compact"
+							placeholder="Escribe tu contraseña"
+							prepend-inner-icon="mdi-lock-outline"
+							variant="outlined"
+							@click:append-inner="visible = !visible"
+						></v-text-field>
+						<v-text-field
+							:append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+							:type="visible ? 'text' : 'password'"
+							density="compact"
+							placeholder="Confirma tu contraseña"
+							prepend-inner-icon="mdi-lock-outline"
+							variant="outlined"
+							@click:append-inner="visible = !visible"
+						></v-text-field>
+						<v-card class="mb-12" color="bg-blue" variant="tonal">
+							<v-card-text class="text-medium-emphasis text-caption">
+								Necesitas confirmar tu correo electrónico para poder acceder a todas las funciones de la plataforma
+							</v-card-text>
+						</v-card>
+
+						<v-btn
+							class="bg-brown-lighten-2"
+							:loading="loading"
+							size="large"
+							variant="tonal"
+							block
+							@click="login()"
+						>
+							Sign Up <span class="mdi mdi-login"></span
+						></v-btn>
+
+						<v-card-text class="text-center">
+							<p>
+								<nuxt-link to="/log-in" class="text-brown-lighten-2 mr-6 mt-4">
+									<v-icon icon="mdi-chevron-left"></v-icon>Devolver 
+								</nuxt-link>
+							</p>
+						</v-card-text>
 					</v-card>
 				</div>
 			</v-row>
@@ -75,35 +104,50 @@
 </template>
 <style>
 .sign-up {
-	min-width: 40rem !important;
+	padding: 0.5rem;
+	opacity: 0.85;
+	max-width: 39px;
+	border-radius: 25%;
 }
-@media screen and (max-width: 1100px) {
-	.sign-up {
-		min-width: 20rem !important;
-		margin: 0px important!;
-	}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+	background-color: #3b5998;
+	color: white;
+}
+
+.twitter {
+	background-color: #55acee;
+	color: white;
+}
+
+.google {
+	background-color: rgb(163, 118, 118);
+	color: white;
+}
+
+.github {
+	background-color: var(--five);
+	color: white;
+}
+
+.btn:hover {
+	opacity: 1;
 }
 </style>
-<script setup>
-import { ref } from "vue";
-
-const rules = {
-	email: (v) => !!(v || "").match(/@/) || "Please enter a valid email",
-	length: (len) => (v) => (v || "").length >= len || `Invalid character length, required ${len}`,
-	password: (v) =>
-		!!(v || "").match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/) ||
-		"Password must contain an upper case letter, a numeric character, and a special character",
-	required: (v) => !!v || "This field is required",
+<script>
+export default {
+	data: () => ({
+		visible: false,
+		loading: false,
+	}),
+	methods: {
+		login() {
+			this.loading = true;
+			setTimeout(() => {
+				this.loading = false;
+			}, 5000);
+		},
+	},
 };
-
-const form = ref();
-
-const agreement = ref(false);
-const bio = ref("");
-const dialog = ref(false);
-const email = ref();
-const isValid = ref(false);
-const isLoading = ref(false);
-const password = ref();
-const phone = ref();
 </script>
