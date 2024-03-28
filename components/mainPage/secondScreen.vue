@@ -5,11 +5,12 @@
 				Empresa en un mundo digital
 			</h2>
 			<div>
-				<Vue3Lottie
-					animationLink="https://lottie.host/07f15d94-ec6b-4555-8217-e3370c79cf50/OQWgd6MbXK.json"
+				<!-- <Vue3Lottie
+					animationData="/public/css/animations/json/database.json"
 					:height="400"
 					:width="400"
-				/>
+				/> -->
+				<v-img height="400" src="../../public/css/animations/gif/database-min.gif" alt=""></v-img>
 				<p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
 					Si estás aqui es porque valoras la excelencia en la presencia digital de tu negocio. En
 					nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino
