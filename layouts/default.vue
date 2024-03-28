@@ -22,7 +22,7 @@
 					</nuxt-link>
 
 					<li class="nav-item">
-						<nuxt-link to="/contacto"
+						<nuxt-link to="/log-in"
 							><v-icon icon="mdi mdi-account-box-outline" class="nav-link nav-link-bag"></v-icon
 						></nuxt-link>
 					</li>
