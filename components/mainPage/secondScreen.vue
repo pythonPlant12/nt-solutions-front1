@@ -10,7 +10,9 @@
 					:height="400"
 					:width="400"
 				/> -->
-				<v-img height="400" src="../../public/css/animations/gif/database-min.gif" alt=""></v-img>
+				<div class="d-flex justify-center">
+					<v-img max-width="500"  src="../../public/css/animations/gif/secondScreen.gif" alt=""></v-img>
+				</div>
 				<p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
 					Si estás aqui es porque valoras la excelencia en la presencia digital de tu negocio. En
 					nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino

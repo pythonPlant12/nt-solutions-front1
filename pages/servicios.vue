@@ -145,7 +145,7 @@ export default {
 			tituloCard2: "Soluciones Creativas de Diseño Web",
 			subTituloCard2: "Diseños Atractivos para un Mundo Digital",
 			textoCard2: "Sumerge a tu audiencia en experiencias en línea visualmente cautivadoras. Nuestros diseñadores expertos fusionan la estética con la funcionalidad, creando sitios web cautivadores que dejan una impresión duradera. Eleva tu marca con nuestras soluciones personalizadas de diseño web que reflejan tu identidad y resuenan con tu audiencia objetivo.",
-			imageCard2: "/css/pictures/servicios-webDesign.png",
+			imageCard2: "/css/animations/gif/services_webDesign.gif",
 
 			tituloCard3: "Arquitecturas de Aplicaciones Web",
 			subTituloCard3: "Construimos Arquitecturas Escalables para la Innovación",

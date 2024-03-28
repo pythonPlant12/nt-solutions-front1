@@ -1,15 +1,15 @@
 <template>
 	<div>
-		<v-container class="mt-sm-6 primer-slide-container">
+		<v-container class="mt-sm- primer-slide-container">
 			<v-row class="mt-4 d-flex justify-center">
 				<div>
 					<v-card
-						class="mx-8 pa-12 pb-8"
+						class="mx-2 pa-12 pb-8"
 						elevation="24"
 						max-width="448"
-						rounded="lg"
+						rounded="xl"
 					>
-						<v-card class="mb-4 bg-orange-lighten-4" variant="tonal">
+						<v-card class="mb-4 bg-orange-lighten-4 rounded-lg" variant="tonal">
 							<v-card-text class="text-medium-emphasis text-caption">
 								Únete a nuestra comunidad con solo un clic! Puedes registrarte fácilmente usando tus
 								<b>plataformas favoritas </b>como Facebook, Google y más.
@@ -72,7 +72,7 @@
 							variant="outlined"
 							@click:append-inner="visible = !visible"
 						></v-text-field>
-						<v-card class="mb-12" color="bg-blue" variant="tonal">
+						<v-card class="mb-12 rounded-lg" color="bg-blue" variant="tonal">
 							<v-card-text class="text-medium-emphasis text-caption">
 								Necesitas confirmar tu correo electrónico para poder acceder a todas las funciones de la plataforma
 							</v-card-text>
@@ -83,6 +83,7 @@
 							:loading="loading"
 							size="large"
 							variant="tonal"
+							rounded="xl"
 							block
 							@click="login()"
 						>
