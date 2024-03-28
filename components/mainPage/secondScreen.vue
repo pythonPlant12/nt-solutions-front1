@@ -62,7 +62,7 @@
 			PREGUNTAS FRECUENTES
 		</h1>
 
-		<v-expansion-panels variant="popout" class="pa-sm-4 px-0">
+		<v-expansion-panels class="pa-sm-4 px-0">
 			<v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions>
 				<v-expansion-panel-title>
 					<v-row align="center" class="spacer" no-gutters>
