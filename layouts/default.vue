@@ -1,6 +1,6 @@
 <template>
 	<!-- Header -->
-	<header class="border-gray-400">
+	<header class="border-gray-400 header">
 		<!-- ! Navigation Bar MOBILE-->
 		<div class="container">
 			<nav class="nav">
@@ -334,6 +334,9 @@
 .footer {
 	z-index: 200 !important;
 	position: relative;
+}
+.header {
+	z-index: 205 !important;
 }
 
 .boton {
