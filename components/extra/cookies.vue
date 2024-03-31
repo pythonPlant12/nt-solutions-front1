@@ -139,7 +139,7 @@
 	position: fixed !important;
 	border-top: 1px solid gray !important;
 	bottom: 0rem;
-	z-index: 1;
+	z-index: 205;
 }
 </style>
 

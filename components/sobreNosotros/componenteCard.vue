@@ -8,7 +8,7 @@
 					variant="tonal"
 					class="mx-4 pa-4 rounded-xl card-1 mt-12 mt-sm-0"
 				>
-					<h2 class="text-center titulo-card-sobre  rounded-xl text-amber-darken-2">{{ title }}</h2>
+					<h2 class="text-center titulo-card-sobre  rounded-xl text-white">{{ title }}</h2>
 					<p class="pa-4 pa-sm-16 pb-2 text-body-1 text-grey-darken-2 text-sm-h6 text-lg-h6">
 						{{ text }}
 					</p>
@@ -40,9 +40,8 @@
 }
 
 .titulo-card-sobre {
-	padding: 0.5rem 0;
-	background-color: rgba(29, 29, 29, 0.657);
-	border: 1px solid rgb(248, 150, 12);
+	padding: 0.5rem;
+	background-color: var(--six);
 	margin-bottom: 1rem;
 	opacity: 0;
 	animation: 1s apareciendo 2s forwards;

@@ -1,4 +1,5 @@
 <template>
+	<div class="pruebaGradientWindow d-flex flex-column justify-content-center">
 	<div>
 		<v-container class="mt-sm- primer-slide-container">
 			<v-row class="mt-4 d-flex justify-center">
@@ -102,6 +103,7 @@
 			</v-row>
 		</v-container>
 	</div>
+</div>
 </template>
 <style>
 .sign-up {

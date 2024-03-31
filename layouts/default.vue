@@ -288,7 +288,6 @@
 				<v-col class="mx-2 my-4" cols="9" md="5">
 					<h4 class="mb-4 mx-2" style="color: var(--three)">NEWSLETTER</h4>
 					<extra-newsletter @newsletterToast="abrirSnackBar" />
-
 					<p class="text-body-2 mt-2 text-grey-lighten-2">
 						Al suscribirte a nuestra newsletter, serás el primero en recibir actualizaciones
 						exclusivas, consejos expertos, y ofertas especiales que solo están disponibles para
@@ -362,7 +361,7 @@ header {
 	align-items: center; /* Center vertically */
 	position: fixed;
 	top: 0;
-	z-index: 14;
+	z-index: 300;
 	width: 100%;
 	height: 4.4rem;
 	background-color: rgba(248, 248, 248, 0.5);

@@ -1,4 +1,135 @@
 <template>
+	<div class="prueba1">
+	<div class="scroll" style="--time:20s">
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+</div>
+<div class="scroll" style="--time:30s">
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+</div>
+<div class="scroll" style="--time:25s">
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+</div>
+<div class="scroll" style="--time:40s">
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+		<div>
+				<span>HTML</span>
+				<span>CSS</span>
+				<span>JavaScript</span>
+				<span>ReactJS</span>
+				<span>Figma</span>
+				<span>Photoshop</span>
+				<span>Premiere Pro</span>
+				<span>Figma</span>
+				<span>Angular</span>
+				<span>Node JS</span>
+		</div>
+</div>
+
+<div class="scroll imgBox" style="--time:25s">
+		<div>
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+		</div>
+		<div>
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
+				<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+		</div>
+</div>
+</div>
 	<v-sheet>
 		<v-card class="mx-sm-16 mx-4 px-2 mt-16" rounded="xl" elevation="24">
 			<h2 class="titulo text-h3 font-weight-black text-center mt-16">
@@ -40,23 +171,7 @@
 			</div>
 		</v-card>
 	</v-sheet>
-	<h1 class="subtitulo text-sm-h2 font-weight-black text-center mt-16">COLABORADORES</h1>
-	<v-sheet
-		width="100%"
-		elevation="24"
-		rounded
-		class="d-flex align-center justify-center mx-auto my-16"
-	>
-		<v-slide-group class="pa-4">
-			<v-slide-group-item v-for="item in items" :key="item">
-				<v-card :class="['ma-4']" height="200" width="200" class="elevation-0">
-					<div class="d-flex fill-height align-center justify-center">
-						<v-img :src="item.img" height="100"></v-img>
-					</div>
-				</v-card>
-			</v-slide-group-item>
-		</v-slide-group>
-	</v-sheet>
+
 	<v-sheet elevation="24" height="auto" rounded width="100%" class="pb-16 mx-auto">
 		<h1 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
 			PREGUNTAS FRECUENTES
@@ -93,6 +208,84 @@
 </template>
 
 <style>
+
+
+.prueba1 {
+	display: flex;
+	padding: 2rem;
+	justify-content: center;
+	align-items: center;
+	min-height: 20vh;
+	background: white;
+	flex-direction: column;
+}
+
+.scroll {
+	position: relative;
+	display: flex;
+	max-width: 1400px;
+	overflow: hidden;
+	mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+	-webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+}
+
+.scroll div {
+	white-space: nowrap;
+	animation: scroll var(--time) linear infinite;
+	animation-delay: calc(var(--time)*-1);
+}
+
+.scroll div:nth-child(2) {
+	animation: scroll2 var(--time) linear infinite;
+	animation-delay: calc(var(--time)/-2);
+}
+
+@keyframes scroll {
+	0% {
+			transform: translateX(100%);
+	}
+
+	100% {
+			transform: translateX(-100%);
+	}
+}
+
+@keyframes scroll2 {
+	0% {
+			transform: translateX(0);
+	}
+
+	100% {
+			transform: translateX(-200%);
+	}
+}
+
+.scroll div span {
+	display: inline-flex;
+	margin: 10px;
+	letter-spacing: 0.2em;
+	background: var(--six);
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.scroll div span:hover {
+	background: #3fd2f9;
+	cursor: pointer;
+}
+
+.imgBox div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.imgBox img {
+	max-width: 100px;
+	scale: 0.8;
+}
 .tecnologias-div {
 	border: 0px !important;
 	border-color: white !important;

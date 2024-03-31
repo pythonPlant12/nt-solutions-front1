@@ -3,13 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
+},
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
     "@mdi/font": "^7.4.47",

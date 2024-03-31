@@ -14,7 +14,7 @@
 				</p>
 			</v-col>
 			<v-col md="5" cols="10" class="mx-md-12 descripcion-title">
-				<v-img src="/css/pictures/slide1-docker-logo.png" height="400" class="slide-image"></v-img>
+				<v-img src="/css/pictures/slide1-docker-logo.png" width="400" height="400" class="slide-image"></v-img>
 			</v-col>
 		</v-row>
 	</v-card>

@@ -1,19 +1,24 @@
 <template>
 <div class="toda-pagina">
+	<div class="pruebaServicios1">
+	<div class='box'>
+		<div class='wave -one'> </div>
+		<div class='wave -two'></div>
+	</div>
+</div>
 	<div class="primera-pantalla">
 		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
 			<v-row class="mt-xs-12 d-flex justify-center">
-				<v-card class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--four)">
+				<div class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
+					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-grey-darken-3" style="color: white">
 						Excelencia Digital, Adaptada para Ti
 					</h1>
-				</v-card>
+				</div>
 			</v-row>
 			<v-row class="mx-2 my-6 v-flex align-center">
 				<v-col cols="12" sm="5">
 					<v-card
-						class="mb-16 px-6 rounded-xl elementos-primera-pantalla"
-						style="background-color: var(--two)"
+						class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-grey-lighten-1"
 						elevation="24"
 					>
 						<p
@@ -66,9 +71,51 @@
 
 </template>
 <style>
-.primera-pantalla {
-	min-height: 100dvh;
+.pruebaServicios1 {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	background-color: #9c9485
 }
+
+.box {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg); 
+  left: 0;
+}
+
+.wave {
+  position: absolute;
+  opacity: 0.8;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  from {transform: rotate(360deg);}
+}
+
+.wave.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 5%;
+  background: white;
+}
+
+.wave.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 10%;
+  background: white;
+}
+
 
 .segunda-pantalla {
 	min-height: 100dvh;

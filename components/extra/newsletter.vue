@@ -1,6 +1,6 @@
 <template>
   <form ref="formularioNewsletterRef" @submit="submit">
-    <v-row class="newsletter">
+    <v-row>
       <v-col cols="10">
         <v-text-field
         required
@@ -20,12 +20,11 @@
 <style style="scss">
 .newsletter {
   .v-messages__message{
-    color: var(--three) !important;
+    color: var(--three);
   }
   .v-field--error .v-field__outline .newsletter {
-    color: var(--three) !important;;
+    color: var(--three);
   }
-
 }
 </style>
 <script setup>
