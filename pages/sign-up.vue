@@ -1,11 +1,11 @@
 <template>
 	<div class="pruebaGradientWindow d-flex flex-column justify-content-center">
 	<div>
-		<v-container class="mt-sm-6 mt-lg-12 primer-slide-container">
+		<v-container class="mt-sm-6 mt-xl-12 primer-slide-container">
 			<v-row class="mt-4 d-flex justify-center">
 				<div>
 					<v-card
-						class="mx-2 pa-12 pb-8"
+						class="mx-6 pa-12 pb-8"
 						elevation="24"
 						max-width="448"
 						rounded="xl"

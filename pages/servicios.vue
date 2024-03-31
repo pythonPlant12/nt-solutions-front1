@@ -10,7 +10,7 @@
 		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
 			<v-row class="mt-xs-12 d-flex justify-center">
 				<div class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-grey-darken-3" style="color: white">
+					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--three)">
 						Excelencia Digital, Adaptada para Ti
 					</h1>
 				</div>

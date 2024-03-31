@@ -13,14 +13,13 @@
 		rounded
 	>
 		<div>
-			<h1 class="text-h3 text-md-h2 font-weight-black text-orange">NT SOLUTIONS</h1>
+			<h1 class="text-h4 text-md-h2 font-weight-black" style="color: var(--one);">NT SOLUTIONS</h1>
 			<hr class="horizontal-line" />
-			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 text-blue-grey-darken-3">
+			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 text-blue-grey-darken-4 mx-8">
 				<b>Comprometidos con el proyecto y el cliente</b>
 			</div>
-
 			<p
-				class="text-body-2 text-md-body-1 mb-4 mt-4 sobreNosotrosTextoNtSolutions text-grey-lighten-2"
+				class="text-body-2 text-md-body-1 mb-4 mx-8 mt-4 sobreNosotrosTextoNtSolutions text-grey-lighten-2"
 			>
 				NT SOLUTIONS es una empresa con sede en Estonia que opera en toda Europa. Estamos
 				comprometidos con la utilización de las últimas tecnologías para proporcionar soluciones
@@ -88,7 +87,7 @@
 .horizontal-line {
 	margin-top: 1.5rem;
 	height: 8px;
-	background-color: orange;
+	background-color: var(--one);
 	border: 0;
 	border-radius: 5rem;
 }

@@ -165,7 +165,7 @@
 		<extra-Cookies @aceptarCookies="updateCookieData" v-if="cookiesAceptadas" />
 	</div>
 	<footer class="bg-blue-grey-darken-3 footer">
-		<v-container class="mt-12">
+		<v-container>
 			<v-row align="center">
 				<v-col align-self="center" class="text-center mt-8">
 					<h2 style="color: var(--one)">NT SOLUTIONS</h2>

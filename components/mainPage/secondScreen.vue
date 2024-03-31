@@ -1,146 +1,11 @@
 <template>
-	<div class="prueba1">
-	<div class="scroll" style="--time:20s">
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-</div>
-<div class="scroll" style="--time:30s">
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-</div>
-<div class="scroll" style="--time:25s">
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-</div>
-<div class="scroll" style="--time:40s">
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-		<div>
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>ReactJS</span>
-				<span>Figma</span>
-				<span>Photoshop</span>
-				<span>Premiere Pro</span>
-				<span>Figma</span>
-				<span>Angular</span>
-				<span>Node JS</span>
-		</div>
-</div>
 
-<div class="scroll imgBox" style="--time:25s">
-		<div>
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
-		</div>
-		<div>
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
-				<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
-		</div>
-</div>
-</div>
 	<v-sheet>
 		<v-card class="mx-sm-16 mx-4 px-2 mt-16" rounded="xl" elevation="24">
 			<h2 class="titulo text-h3 font-weight-black text-center mt-16">
 				Empresa en un mundo digital
 			</h2>
 			<div>
-				<!-- <Vue3Lottie
-					animationData="/public/css/animations/json/database.json"
-					:height="400"
-					:width="400"
-				/> -->
 				<div class="d-flex justify-center">
 					<v-img max-width="500"  src="../../public/css/animations/gif/secondScreen.gif" alt=""></v-img>
 				</div>
@@ -171,6 +36,137 @@
 			</div>
 		</v-card>
 	</v-sheet>
+	<div class="prueba1">
+		<div class="scroll" style="--time:20s">
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+	</div>
+	<div class="scroll" style="--time:30s">
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+	</div>
+	<div class="scroll" style="--time:25s">
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+	</div>
+	<div class="scroll" style="--time:40s">
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+			<div>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>ReactJS</span>
+					<span>Figma</span>
+					<span>Photoshop</span>
+					<span>Premiere Pro</span>
+					<span>Figma</span>
+					<span>Angular</span>
+					<span>Node JS</span>
+			</div>
+	</div>
+	
+	<div class="scroll imgBox" style="--time:25s">
+			<div>
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+			</div>
+			<div>
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
+					<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+			</div>
+	</div>
+	</div>
 
 	<v-sheet elevation="24" height="auto" class="pb-16 mt-12 mx-sm-16 mx-4" rounded="xl">
 		<h1 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
@@ -212,6 +208,7 @@
 
 .prueba1 {
 	display: flex;
+	margin-top: 2rem;
 	padding: 2rem;
 	justify-content: center;
 	align-items: center;

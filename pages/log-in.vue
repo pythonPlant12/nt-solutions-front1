@@ -1,11 +1,11 @@
 <template>
 	<div class="pruebaGradientWindow d-flex flex-column justify-content-center">
 		<div>
-			<v-container class="mt-sm-6 mt-lg-12 primer-slide-container">
+			<v-container class="mt-sm-6 mt-xl-12 mb-6 primer-slide-container">
 				<v-row class="mt-4 d-flex justify-center">
 					<div>
 						<v-card
-							class="mx-2 pa-12 pb-8"
+							class="mx-6 pa-12 pb-8"
 							elevation="24"
 							max-width="448"
 							rounded="xl"
@@ -95,12 +95,21 @@
 </template>
 <style>
 .pruebaGradientWindow {
-	background: linear-gradient(-45deg, #E65100, #37474F, var(--one));
+	background: linear-gradient(-45deg, var(--three), #37474F, var(--one));
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
-	height: 100vh;
+	position: static;
+	height: 140vh;
+	margin: 0; /* Remove margin */
+	box-sizing: border-box; /* Include padding and border in the element's total height */
 }
 
+@media screen and (min-width: 429) {
+	.pruebaGradientWindow {
+		height: 100vh;
+	}
+	
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
