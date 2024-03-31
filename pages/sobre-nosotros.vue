@@ -15,8 +15,8 @@
 		<div>
 			<h1 class="text-h3 text-md-h2 font-weight-black text-orange">NT SOLUTIONS</h1>
 			<hr class="horizontal-line" />
-			<div class="text-h5 text-md-h4 font-bold font-weight-medium mb-2 mt-4 text-brown-lighten-4">
-				Comprometidos con el proyecto y el cliente
+			<div class="text-h5 font-bold font-weight-medium mb-2 mt-4 text-grey-darken-3">
+				<b>Comprometidos con el proyecto y el cliente</b>
 			</div>
 
 			<p
