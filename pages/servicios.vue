@@ -18,11 +18,11 @@
 			<v-row class="mx-2 my-6 v-flex align-center">
 				<v-col cols="12" sm="5">
 					<v-card
-						class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-grey-lighten-1"
+						class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-blue-grey-darken-3"
 						elevation="24"
 					>
 						<p
-							class="px-2 py-4 text-md-h6 text-xl-h5 py-xl-16 px-xl-16 text-body-2 text-white typed-text"
+							class="px-2 py-4 text-md-h6 text-xl-h5 py-xl-16 px-xl-16 text-body-2 text-grey-lighten-1 typed-text"
 						>
 							{{ typedText }}
 						</p>
@@ -79,7 +79,7 @@
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
-	background-color: #9c9485
+	background-color: var(--two)
 }
 
 .box {

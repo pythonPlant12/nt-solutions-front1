@@ -1,7 +1,7 @@
 <template>
 	<div class="pruebaGradientWindow d-flex flex-column justify-content-center">
 		<div>
-			<v-container class="mt-sm-6 primer-slide-container">
+			<v-container class="mt-sm-6 mt-lg-12 primer-slide-container">
 				<v-row class="mt-4 d-flex justify-center">
 					<div>
 						<v-card

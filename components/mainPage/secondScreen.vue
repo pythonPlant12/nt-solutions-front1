@@ -172,13 +172,13 @@
 		</v-card>
 	</v-sheet>
 
-	<v-sheet elevation="24" height="auto" rounded width="100%" class="pb-16 mx-auto">
+	<v-sheet elevation="24" height="auto" class="pb-16 mt-12 mx-sm-16 mx-4" rounded="xl">
 		<h1 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
 			PREGUNTAS FRECUENTES
 		</h1>
 
 		<v-expansion-panels class="pa-sm-4 px-0">
-			<v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions>
+			<v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions rounded="xl">
 				<v-expansion-panel-title>
 					<v-row align="center" class="spacer" no-gutters>
 						<v-col class="text-no-wrap text-left" cols="5" sm="3">

@@ -1,7 +1,7 @@
 <template>
 	<div class="pruebaGradientWindow d-flex flex-column justify-content-center">
 	<div>
-		<v-container class="mt-sm- primer-slide-container">
+		<v-container class="mt-sm-6 mt-lg-12 primer-slide-container">
 			<v-row class="mt-4 d-flex justify-center">
 				<div>
 					<v-card
@@ -93,7 +93,7 @@
 
 						<v-card-text class="text-center">
 							<p>
-								<nuxt-link to="/log-in" class="text-brown-lighten-2 mr-6 mt-4">
+								<nuxt-link to="/log-in" class="text-brown-lighten-2 mr-6">
 									<v-icon icon="mdi-chevron-left"></v-icon>Devolver 
 								</nuxt-link>
 							</p>

@@ -25,7 +25,7 @@
 					<v-btn
 						class="text-none"
 						color="var(--three)"
-						rounded="0"
+						rounded="lg"
 						variant="outlined"
 						v-bind="props"
 					>
@@ -101,7 +101,7 @@
 						<v-btn
 							class="flex-grow-1 text-none"
 							color="var(--three)"
-							rounded="0"
+							rounded="lg"
 							variant="plain"
 							@click="dialog = false, aceptarCookies()"
 						>
@@ -111,7 +111,7 @@
 						<v-btn
 							class="text-white flex-grow-1 text-none"
 							color="var(--three)"
-							rounded="0"
+							rounded="lg"
 							variant="flat"
 							@click="dialog = false, aceptarCookies()"
 						>
@@ -124,7 +124,7 @@
 			<v-btn
 				class="text-none ms-4 text-white"
 				color="var(--three)"
-				rounded="0"
+				rounded="lg"
 				variant="flat"
 				@click="aceptarCookies()"
 			>
