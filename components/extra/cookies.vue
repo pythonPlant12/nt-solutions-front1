@@ -3,7 +3,7 @@
 	<v-banner
 		v-if="cookiesNoAceptadas"
 		class="cookies"
-		avatar="https://cdn.vuetifyjs.com/docs/images/logos/v.svg"
+		avatar="../../public/css/pictures/logo.png"
 		stacked
 	>
 		<template v-slot:text>
