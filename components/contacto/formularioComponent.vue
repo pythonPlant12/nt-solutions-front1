@@ -5,7 +5,7 @@
 		show-actions
 		prev-text="Volver"
 		next-text="Seguir"
-		class="formulario"
+		class="formulario rounded-xl"
 		editable
 	>
 		<template v-slot:item.1>
@@ -64,7 +64,7 @@
 					<v-list-subheader>General</v-list-subheader>
 
 					<v-list-item value="web">
-						<template v-slot:prepend="{ isActive }">
+						<template v-slot:prepend="{ isActive }" >
 							<v-list-item-action start>
 								<v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
 							</v-list-item-action>
@@ -136,9 +136,9 @@
 						<v-list-item-subtitle> Amplifica tu Presencia en Línea </v-list-item-subtitle>
 					</v-list-item>
 				</v-list>
-					<div class="d-flex justify-sm-end justify-center mb-2">
-							<v-btn @click="handleReset" class=""> Enviar </v-btn>
-					</div>
+					<v-container class="d-flex justify-center justify-center mb-2">
+							<v-btn @click="handleReset"> Enviar </v-btn>
+					</v-container>
 			</v-card>
 		</template>
 
@@ -265,7 +265,7 @@ const texto = useField("texto");
 const checkbox = useField("checkbox");
 
 const items = ref(["Datos Personales", "Solicitud"]);
-const tipos = ref(["Solicitar presupuesto", "Solicitar información"]);
+const tipos = ref(["Presupuesto", "Información"]);
 
 const submit = handleSubmit((values) => {
 	alert(JSON.stringify(values, null, 2));

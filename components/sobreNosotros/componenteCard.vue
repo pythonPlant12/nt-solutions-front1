@@ -41,7 +41,7 @@
 
 .titulo-card-sobre {
 	padding: 0.5rem;
-	background-color: var(--six);
+	background-color: var(--two);
 	margin-bottom: 1rem;
 	opacity: 0;
 	animation: 1s apareciendo 2s forwards;

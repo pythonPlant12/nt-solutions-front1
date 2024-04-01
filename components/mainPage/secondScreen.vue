@@ -37,7 +37,7 @@
 		</v-card>
 	</v-sheet>
 	<div class="prueba1">
-		<div class="scroll" style="--time:20s">
+		<div class="scroll" style="--time:30s">
 			<div>
 					<span>HTML</span>
 					<span>CSS</span>
@@ -63,7 +63,7 @@
 					<span>Node JS</span>
 			</div>
 	</div>
-	<div class="scroll" style="--time:30s">
+	<div class="scroll" style="--time:45s">
 			<div>
 					<span>HTML</span>
 					<span>CSS</span>
@@ -144,31 +144,31 @@
 	
 	<div class="scroll imgBox" style="--time:25s">
 			<div>
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/css.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/js.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/React.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
 			</div>
 			<div>
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/css.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/js.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/React.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
-					<img src="../../public/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/css.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/js.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/React.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
+					<img src="/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
 			</div>
 	</div>
 	</div>
 
-	<v-sheet elevation="24" height="auto" class="pb-16 mt-12 mx-sm-16 mx-4" rounded="xl">
+	<v-sheet elevation="24" height="auto" class="pb-16 mt-12 mx-sm-16 mx-4 mb-16" rounded="xl">
 		<h1 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
 			PREGUNTAS FRECUENTES
 		</h1>
@@ -220,7 +220,7 @@
 .scroll {
 	position: relative;
 	display: flex;
-	max-width: 1400px;
+	max-width: 95%;
 	overflow: hidden;
 	mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 	-webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)

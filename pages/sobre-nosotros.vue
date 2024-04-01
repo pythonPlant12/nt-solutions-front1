@@ -19,7 +19,7 @@
 				<b>Comprometidos con el proyecto y el cliente</b>
 			</div>
 			<p
-				class="text-body-2 text-md-body-1 mb-4 mx-8 mt-4 sobreNosotrosTextoNtSolutions text-grey-lighten-2"
+				class="text-body-1 text-md-body-1 mb-4 mx-8 mt-4 sobreNosotrosTextoNtSolutions text-grey-lighten-2"
 			>
 				NT SOLUTIONS es una empresa con sede en Estonia que opera en toda Europa. Estamos
 				comprometidos con la utilización de las últimas tecnologías para proporcionar soluciones
@@ -27,8 +27,7 @@
 				privacidad, y cumplimos con todas las prácticas y regulaciones relevantes para garantizar
 				que los datos de nuestros clientes estén siempre protegidos. Apostamos por infraestructuras
 				modernas y ágiles, lo que nos permite adaptarnos rápidamente a las necesidades cambiantes de
-				nuestros clientes y del mercado. Nuestro compromiso es con el proyecto y el cliente, y
-				trabajamos incansablemente para superar sus expectativas.
+				nuestros clientes y del mercado. 
 			</p>
 		</div>
 	</v-sheet>

@@ -10,19 +10,19 @@
 		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
 			<v-row class="mt-xs-12 d-flex justify-center">
 				<div class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--three)">
+					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center text-blue-grey-darken-3">
 						Excelencia Digital, Adaptada para Ti
 					</h1>
 				</div>
 			</v-row>
-			<v-row class="mx-2 my-6 v-flex align-center">
+			<v-row class="my-6 v-flex align-center">
 				<v-col cols="12" sm="5">
 					<v-card
-						class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-blue-grey-darken-3"
+						class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-transparent"
 						elevation="24"
 					>
 						<p
-							class="px-2 py-4 text-md-h6 text-xl-h5 py-xl-16 px-xl-16 text-body-2 text-grey-lighten-1 typed-text"
+							class="py-4 text-xl-h5 py-xl-16 px-xl-16 text-body-1 text-md-h6 text-white typed-text"
 						>
 							{{ typedText }}
 						</p>
@@ -128,7 +128,7 @@
 
 .elementos-primera-pantalla {
 	opacity: 0;
-	animation: apareciendo 5s forwards 0.3s;
+	animation: apareciendo 5s forwards;
 }
 
 .rotating-image {
