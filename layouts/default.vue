@@ -13,18 +13,18 @@
 							<span class="line line-buttom1"></span>
 						</div>
 					</li>
-					<nuxt-link to="/">
+					<NuxtLink to="/">
 						<v-img
 							src="/css/pictures/logo.png"
 							class="nav-link nav-link-logo logo-moviendose"
 							width="50"
 						></v-img>
-					</nuxt-link>
+					</NuxtLink>
 
 					<li class="nav-item">
-						<nuxt-link to="/log-in"
+						<NuxtLink to="/log-in"
 							><v-icon icon="mdi mdi-account-box-outline" class="nav-link nav-link-bag"></v-icon
-						></nuxt-link>
+						></NuxtLink>
 					</li>
 				</ul>
 				<!-- /.nav-list nav-list-mobile -->
@@ -42,13 +42,13 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<nuxt-link to="/">
+							<NuxtLink to="/">
 								<v-img src="/css/pictures/logo.png" class="nav-link nav-link-logo"></v-img>
-							</nuxt-link>
+							</NuxtLink>
 						</li>
 
 						<li class="nav-item">
-							<nuxt-link to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
+							<NuxtLink to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 								><v-btn
 									value="/"
 									append-icon="mdi mdi-domain"
@@ -57,12 +57,12 @@
 									rounded="lg"
 									class="boton"
 									>NT Solutions</v-btn
-								></nuxt-link
+								></NuxtLink
 							>
 						</li>
 
 						<li class="nav-item">
-							<nuxt-link
+							<NuxtLink
 								to="/servicios"
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
@@ -75,11 +75,11 @@
 									rounded="lg"
 									class="boton"
 									>Servicios</v-btn
-								></nuxt-link
+								></NuxtLink
 							>
 						</li>
 						<li class="nav-item">
-							<nuxt-link
+							<NuxtLink
 								to="/tecnologias"
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
@@ -92,11 +92,11 @@
 									rounded="lg"
 									class="boton"
 									>Tecnologías</v-btn
-								></nuxt-link
+								></NuxtLink
 							>
 						</li>
 						<li class="nav-item">
-							<nuxt-link
+							<NuxtLink
 								to="/sobre-nosotros"
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
@@ -109,11 +109,11 @@
 									rounded="lg"
 									class="boton"
 									>Sobre Nosotros</v-btn
-								></nuxt-link
+								></NuxtLink
 							>
 						</li>
 						<li class="nav-item">
-							<nuxt-link
+							<NuxtLink
 								to="/contacto"
 								class="nav-link nav-link-mobile"
 								@click.prevent="cerrarMenu()"
@@ -127,10 +127,10 @@
 									class="boton"
 									>Contacto</v-btn
 								>
-							</nuxt-link>
+							</NuxtLink>
 						</li>
 						<li class="nav-item">
-							<nuxt-link to="/log-in" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
+							<NuxtLink to="/log-in" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 								><v-btn
 									append-icon="mdi mdi-lock-check"
 									variant="outlined"
@@ -139,11 +139,11 @@
 									class="boton boton-sign-in"
 									>Log In</v-btn
 								>
-							</nuxt-link>
+							</NuxtLink>
 						</li>
 
 						<li class="nav-item mr-4">
-							<nuxt-link to="/sign-up" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
+							<NuxtLink to="/sign-up" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
 								><v-btn
 									append-icon="mdi mdi-account-check"
 									variant="outlined"
@@ -152,7 +152,7 @@
 									class="boton boton-sign-up"
 									><b class="text-white">Sign up</b></v-btn
 								>
-							</nuxt-link>
+							</NuxtLink>
 						</li>
 					</v-btn-toggle>
 				</ul>
@@ -162,7 +162,7 @@
 
 	<div class="mt-16">
 		<slot />
-		<extra-Cookies @aceptarCookies="updateCookieData" v-if="cookiesAceptadas" />
+		<extra-Cookies @aceptarCookies="updateCookieData" v-if="!cookiesAceptadas" />
 	</div>
 	<footer class="bg-blue-grey-darken-3 footer">
 		<v-container>
@@ -214,7 +214,7 @@
 								rounded="lg"
 								class="boton"
 							>
-								<nuxt-link to="/"></nuxt-link>NT Solutions</v-btn
+								<NuxtLink to="/"></NuxtLink>NT Solutions</v-btn
 							>
 						</li>
 						<li>
@@ -225,7 +225,7 @@
 								rounded="lg"
 								class="boton"
 							>
-								<nuxt-link to="/servicios"></nuxt-link>Servicios</v-btn
+								<NuxtLink to="/servicios"></NuxtLink>Servicios</v-btn
 							>
 						</li>
 						<li>
@@ -236,7 +236,7 @@
 								rounded="lg"
 								class="boton"
 							>
-								<nuxt-link to="/tecnologias"></nuxt-link>Tecnologías</v-btn
+								<NuxtLink to="/tecnologias"></NuxtLink>Tecnologías</v-btn
 							>
 						</li>
 						<li>
@@ -247,7 +247,7 @@
 								rounded="lg"
 								class="boton"
 							>
-								<nuxt-link to="/sobre-nosotros"></nuxt-link>Sobre Nosotros</v-btn
+								<NuxtLink to="/sobre-nosotros"></NuxtLink>Sobre Nosotros</v-btn
 							>
 						</li>
 						<li>
@@ -258,7 +258,7 @@
 								rounded="lg"
 								class="boton"
 							>
-								<nuxt-link to="/politica-privacidad"></nuxt-link>Politica de privacidad</v-btn
+								<NuxtLink to="/politica-privacidad"></NuxtLink>Politica de privacidad</v-btn
 							>
 						</li>
 						<li>
@@ -268,7 +268,7 @@
 								size="small"
 								rounded="lg"
 								class="boton mt-2 ml-2"
-								><nuxt-link to="/log-in"></nuxt-link>Log In</v-btn
+								><NuxtLink to="/log-in"></NuxtLink>Log In</v-btn
 							>
 							<v-btn
 								key="/log-in"
@@ -279,7 +279,7 @@
 								rounded="lg"
 								class="boton mt-2 ml-2"
 								><b class="text-white"
-									><nuxt-link to="/sign-up"></nuxt-link>Sign up</b
+									><NuxtLink to="/sign-up"></NuxtLink>Sign up</b
 								></v-btn
 							>
 						</li>
@@ -672,7 +672,7 @@ header {
 <script>
 export default {
 	mounted() {
-		this.cookiesAceptadas = true;
+		this.cookiesAceptadas = false;
 		this.activeBtn = this.$route.path;
 		const selectElement = (element) => document.querySelector(element);
 		selectElement(".mobile-menu").addEventListener("click", () => {
@@ -681,11 +681,11 @@ export default {
 	},
 	data() {
 		return {
+			cookiesAceptadas: false,
 			activeBtn: "nt-solutions",
 			snackbar: false,
 			icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
 			links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
-			cookiesAceptadas: false,
 			currentYear: new Date().getFullYear(),
 			loaded: false,
 			loading: false,

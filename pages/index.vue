@@ -223,17 +223,17 @@ export default {
 			animationData: 'https://lottie.host/b5a297d9-6141-4f5b-9eb8-4d3abd44189f/qZMFZKxCkn.json',
 			slides: [
 				{
-					image: "/css/pictures/carousel-1.jpg",
+					image: "/css/pictures/carousel-1.svg",
 					title: "Soluciones Tecnológicas para el Éxito Empresarial",
 					subtitle: "Mejora tu Rendimiento con Estrategias a la Medida",
 				},
 				{
-					image: "/css/pictures/carousel-2.jpg",
+					image: "/css/pictures/carousel-2.svg",
 					title: "Posicionamiento Estratégico en la Web",
 					subtitle: "Optimice su Visibilidad y Aumente su Alcance en la Web",
 				},
 				{
-					image: "/css/pictures/carousel-3.jpg",
+					image: "/css/pictures/carousel-3.svg",
 					title: "Bases de Datos Potentes para su Negocio",
 					subtitle: "Optimice el Manejo de Datos para Decisiones Más Inteligentes y Rápidas",
 				},

@@ -3,22 +3,23 @@
 		elevation="24"
 		rounded="xl"
 		class="mx-4 d-sm-flex mb-md-16 mt-8 my-sm-12 py-sm-16 px-6 justify-sm-center align-sm-center descripcion-title"
+		max-width="1200"
 	>
-		<v-row class="justify-center">
-			<v-col md="5" cols="10" class="mx-md-12 descripcion-title">
-				<v-img src="/css/pictures/slide2-django-logo.png" height="400" class="slide-image"></v-img>
-			</v-col>
-			<v-col md="5" cols="10" class="mx-md-12 mt-16 mt-sm-0">
-				<h1 class="text-sm-h3 pb-16 mx-sm-4 text-blue-grey-darken-3">Desarrollo Ágil con Django y DRF</h1>
-				<p class="text-sm-h5 text-grey-darken-2 mx-sm-4 descripcion-text pb-16">
-					Experimenta un desarrollo rápido y seguro con la combinación poderosa de Django y Django
-					Rest Framework (DRF). Con Django, obtienes eficiencia en la construcción de funcionalidades,
-					mientras que DRF facilita la creación de APIs potentes para una comunicación efectiva entre
-					el frontend y el backend. La seguridad está integrada en cada capa, gracias a las prácticas
-					seguras de Django.
-				</p>
-			</v-col>
-		</v-row>
+<v-row class="justify-center">
+  <v-col md="5" cols="10" class="d-flex justify-center mx-md-12 descripcion-title">
+    <v-img src="/css/pictures/slide2-django-logo.png" max-width="300" min-height="400" class="slide-image"></v-img>
+  </v-col>
+  <v-col md="5" cols="10" class="mx-md-12 mt-16 mt-sm-0">
+    <h1 class="text-sm-h3 pb-16 mx-sm-4 text-blue-grey-darken-3">Desarrollo Ágil con Django y DRF</h1>
+    <p class="text-sm-h5 text-grey-darken-2 mx-sm-4 descripcion-text pb-16">
+      Experimenta un desarrollo rápido y seguro con la combinación poderosa de Django y Django
+      Rest Framework (DRF). Con Django, obtienes eficiencia en la construcción de funcionalidades,
+      mientras que DRF facilita la creación de APIs potentes para una comunicación efectiva entre
+      el frontend y el backend. La seguridad está integrada en cada capa, gracias a las prácticas
+      seguras de Django.
+    </p>
+  </v-col>
+</v-row>
 	</v-card>
 </template>
 

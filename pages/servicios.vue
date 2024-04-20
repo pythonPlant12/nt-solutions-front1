@@ -1,5 +1,5 @@
 <template>
-<div class="toda-pagina">
+<div>
 	<div class="pruebaServicios1">
 	<div class='box'>
 		<div class='wave -one'> </div>
@@ -73,13 +73,12 @@
 <style>
 .pruebaServicios1 {
 	position: fixed;
-	z-index: -1;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
-	background-color: var(--two)
+	background-color: #90A4AE;
 }
 
 .box {

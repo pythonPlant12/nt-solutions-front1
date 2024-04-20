@@ -1,30 +1,28 @@
 <template>
-	<v-container class="mt-10 mt-xxl-16 primer-slide-container">
+	<v-container class="mt-10 mt-xxl-16">
 		<v-row class="justify-center">
 			<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2">
 			Tecnologías
 			</h1>
 		</v-row>
 	</v-container>
-	<tecnologias-databases />
+	<div class="tecnologias-card">
+		<tecnologias-databases />
 	<tecnologias-cloud />
 	<tecnologias-docker />
 	<tecnologias-django />
 	<tecnologias-frontend />
+	</div>
 </template>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 <style>
-.primer-slide-container {
-	opacity: 0;
-	animation: apareciendo 2s forwards;
-}
-
-@keyframes apareciendo {
-	to {
-		opacity: 1;
-	}
+.tecnologias-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 @media screen and (max-width: 680px) {
 	@keyframes slideImageScale {

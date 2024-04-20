@@ -1,7 +1,8 @@
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import vuetify from 'vite-plugin-vuetify'
+
 export default defineNuxtConfig({
   //...
-  ssr: true, // Enable server-side rendering
+  
   build: {
     transpile: ['vuetify', 'gsap', 'mdi-vue'],
   },
@@ -19,13 +20,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts'
     //...
   ],
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
-  },
   css: [
     '~/assets/css/global.css', // Include the global CSS file
   ],

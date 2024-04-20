@@ -3,6 +3,7 @@
 		elevation="24"
 		rounded="xl"
 		class="mx-4 mb-10 d-sm-flex mb-md-16 mt-8 my-sm-12 py-sm-16 px-6 justify-sm-center align-sm-center descripcion-title"
+		max-width="1200"
 	>
 		<v-row class="justify-center">
 			<v-col md="5" cols="10" class="mx-md-12 mt-16 mt-sm-0">
@@ -14,7 +15,7 @@
 				</p>
 			</v-col>
 			<v-col md="5" cols="10" class="mx-md-12 descripcion-title">
-				<v-img src="./../../public/css/pictures/slide1-frontend-logo.png" height="400" class="slide-image"></v-img>
+				<v-img src="/css/pictures/slide1-frontend-logo.png" height="400" class="slide-image"></v-img>
 			</v-col>
 		</v-row>
 	</v-card>

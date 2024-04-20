@@ -14,7 +14,8 @@
 			<br />
 
 			<v-sheet border>
-				<form @submit.prevent="submit">
+
+				<form @submit="onSubmit">
 					<v-text-field
 						v-model="name.value.value"
 						:counter="50"
@@ -137,7 +138,7 @@
 					</v-list-item>
 				</v-list>
 					<v-container class="d-flex justify-center justify-center mb-2">
-							<v-btn @click="handleReset"> Enviar </v-btn>
+							<v-btn type="submit"> Enviar </v-btn>
 					</v-container>
 			</v-card>
 		</template>
@@ -223,40 +224,49 @@ export default {
 import { ref } from "vue";
 import { useField, useForm } from "vee-validate";
 
+const ERROR_MESSAGES = {
+  NAME: "Nombre tiene que tenér mínimo 2 carácteres.",
+  PHONE: "Teléfono tiene que tenér mínimo 9 digitos.",
+  EMAIL: "Correo electrónico tiene que tener formato válido, por ejemplo: mail@gmail.com",
+  SELECT: "Select an item.",
+  CHECKBOX: "Must be checked.",
+  TEXT: "Descripción debe tener máximo 300 carácteres",
+};
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const { handleSubmit, handleReset } = useForm({
-	validationSchema: {
-		name(value) {
-			if (value?.length >= 2) return true;
-
-			return "Nombre tiene que tenér mínimo 2 carácteres.";
-		},
-		phone(value) {
-			if (value?.length > 8 && /[0-9-]+/.test(value)) return true;
-
-			return "Teléfono tiene que tenér mínimo 9 digitos.";
-		},
-		email(value) {
-			if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true;
-
-			return "Correo electrónico tiene que tener formato válido, por ejemplo: mail@gmail.com";
-		},
-		select(value) {
-			if (value) return true;
-
-			return "Select an item.";
-		},
-		checkbox(value) {
-			if (value === "1") return true;
-
-			return "Must be checked.";
-		},
-		texto(value) {
-			if (value?.length < 300) return true;
-
-			return "Descripción debe tener máximo 300 carácteres";
-		},
-	},
+  validationSchema: {
+    name(value) {
+      if (value?.length >= 2) return true;
+      return ERROR_MESSAGES.NAME;
+    },
+    phone(value) {
+      if (value?.length > 8 && /[0-9-]+/.test(value)) return true;
+      return ERROR_MESSAGES.PHONE;
+    },
+    email(value) {
+      if (EMAIL_REGEX.test(value)) return true;
+      return ERROR_MESSAGES.EMAIL;
+    },
+    select(value) {
+      if (value) return true;
+      return ERROR_MESSAGES.SELECT;
+    },
+    checkbox(value) {
+      if (value === "1") return true;
+      return ERROR_MESSAGES.CHECKBOX;
+    },
+    texto(value) {
+      if (value?.length < 300) return true;
+      return ERROR_MESSAGES.TEXT;
+    },
+  },
 });
+
+const onSubmit = handleSubmit(values => {
+  alert(JSON.stringify(values, null, 2));
+});
+
 const name = useField("name");
 const phone = useField("phone");
 const email = useField("email");
@@ -266,8 +276,4 @@ const checkbox = useField("checkbox");
 
 const items = ref(["Datos Personales", "Solicitud"]);
 const tipos = ref(["Presupuesto", "Información"]);
-
-const submit = handleSubmit((values) => {
-	alert(JSON.stringify(values, null, 2));
-});
 </script>

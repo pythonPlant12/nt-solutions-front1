@@ -33,6 +33,7 @@
 
 .card-1 {
 	min-height: 100%;
+	background-color: rgba(255, 255, 255, 0.43);
 	backdrop-filter: blur(15px);
 	border: 1px solid transparent !important;
 	animation: 1s apareciendo 1s forwards;
@@ -41,7 +42,7 @@
 
 .titulo-card-sobre {
 	padding: 0.5rem;
-	background-color: var(--two);
+	background-color: #90A4AE;
 	margin-bottom: 1rem;
 	opacity: 0;
 	animation: 1s apareciendo 2s forwards;
