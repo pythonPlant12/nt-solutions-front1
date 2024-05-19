@@ -19,8 +19,12 @@
 			>
 				<div class="carousel-items">
 					<div class="heading-carousel">
-						<h1 class="heading-carousel-title rounded-lg">{{ slide.title }}</h1>
-						<p class="heading-carousel-subtitle rounded-lg">{{ slide.subtitle }}</p>
+						<h1 class="heading-carousel-title text-blue-grey-darken-3 bg-grey-lighten-1 rounded-lg">
+							{{ slide.title }}
+						</h1>
+						<p class="heading-carousel-subtitle bg-blue-grey-darken-3 text-white rounded-lg">
+							{{ slide.subtitle }}
+						</p>
 					</div>
 				</div>
 				<div class="carousel-button">
@@ -41,7 +45,6 @@
 	</div>
 	<!-- ? Here I will insert a component which is in another folder, in order to provide path I should do <folder>-<component> -->
 	<div id="segundoElementoHtml" class="mt-16">
-
 		<mainPage-secondScreen />
 	</div>
 </template>
@@ -90,8 +93,6 @@
 	width: fit-content;
 	max-width: 80%;
 	padding: 0.5rem;
-	background-color: var(--seven);
-	color: var(--four);
 	opacity: 0;
 	animation: subtituloApareciendo 1s forwards 3s;
 }
@@ -187,6 +188,15 @@
 	}
 }
 
+@media screen and (min-width: 1100px) {
+	.heading-carousel-title {
+		padding: 1rem 1rem;
+	}
+	.heading-carousel-subtitle {
+		padding: 1rem 1rem;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.heading-carousel-title {
 		font-size: 1.8rem;
@@ -213,14 +223,15 @@
 <script>
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Import the ScrollToPlugin
-import { ref } from 'vue'
+import { ref } from "vue";
+
 // Register the plugin
 gsap.registerPlugin(ScrollToPlugin);
 
 export default {
 	data() {
 		return {
-			animationData: 'https://lottie.host/b5a297d9-6141-4f5b-9eb8-4d3abd44189f/qZMFZKxCkn.json',
+			animationData: "https://lottie.host/b5a297d9-6141-4f5b-9eb8-4d3abd44189f/qZMFZKxCkn.json",
 			slides: [
 				{
 					image: "/css/pictures/carousel-1.svg",
@@ -242,14 +253,15 @@ export default {
 		};
 	},
 	setup() {
-    const options = ref({
-      loop: true,
-      autoplay: true,
-      animationLink: 'https://lottie.host/embed/f376a62a-6748-4402-a2df-0d0b5ec8f3da/zc7HmOzLy0.json',
-    })
+		const options = ref({
+			loop: true,
+			autoplay: true,
+			animationLink:
+				"https://lottie.host/embed/f376a62a-6748-4402-a2df-0d0b5ec8f3da/zc7HmOzLy0.json",
+		});
 		return {
-      options,
-    }
+			options,
+		};
 	},
 	methods: {
 		moverAlSegundoElemento() {

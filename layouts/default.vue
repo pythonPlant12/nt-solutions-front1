@@ -278,9 +278,7 @@
 								size="small"
 								rounded="lg"
 								class="boton mt-2 ml-2"
-								><b class="text-white"
-									><NuxtLink to="/sign-up"></NuxtLink>Sign up</b
-								></v-btn
+								><b class="text-white"><NuxtLink to="/sign-up"></NuxtLink>Sign up</b></v-btn
 							>
 						</li>
 					</ul>
@@ -670,7 +668,18 @@ header {
 }
 </style>
 <script>
+import { useOneTap } from "vue3-google-signin";
+
 export default {
+	setup() {
+		useOneTap({
+			onSuccess: (response) => {
+				console.log("Success:", response);
+			},
+			onError: (error) => console.error("Error with One Tap Login", error),
+			// options
+		});
+	},
 	mounted() {
 		this.cookiesAceptadas = false;
 		this.activeBtn = this.$route.path;
@@ -678,6 +687,7 @@ export default {
 		selectElement(".mobile-menu").addEventListener("click", () => {
 			selectElement("header").classList.toggle("active");
 		});
+
 	},
 	data() {
 		return {
@@ -698,6 +708,16 @@ export default {
 		},
 	},
 	methods: {
+		// handle success google login event
+		handleLoginSuccess(response) {
+			const { credential } = response;
+			console.log("Access Token", credential);
+			this.postToBackendGoogleButton(credential);
+		},
+		// handle an error google login event
+		handleLoginError() {
+			console.error("Login failed");
+		},
 		cerrarMenu() {
 			const selectElement = (element) => document.querySelector(element);
 			selectElement("header").classList.remove("active");

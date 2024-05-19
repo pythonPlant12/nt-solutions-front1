@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs"
-},
+  },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
     "@mdi/font": "^7.4.47",
@@ -19,7 +19,7 @@
     "nuxt-gsap-module": "^2.0.0",
     "sass": "^1.69.5",
     "vite-plugin-vuetify": "^1.0.2",
-    "vue": "^3.3.8",
+    "vue": "^3.4.27",
     "vue-lottie-player": "^0.1.9",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.2"
@@ -28,6 +28,7 @@
     "@lordicon/element": "^1.4.2",
     "gsap": "^3.12.2",
     "lottie-web": "^5.12.2",
+    "nuxt-vue3-google-signin": "^0.0.11",
     "vee-validate": "^4.11.8",
     "vue3-lottie": "^3.3.0"
   }

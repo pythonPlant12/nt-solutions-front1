@@ -2,7 +2,7 @@ import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
   //...
-  
+
   build: {
     transpile: ['vuetify', 'gsap', 'mdi-vue'],
   },
@@ -17,9 +17,13 @@ export default defineNuxtConfig({
       })
     },
     '@hypernym/nuxt-gsap',
-    '@nuxtjs/google-fonts'
-    //...
+    '@nuxtjs/google-fonts',
+    'nuxt-vue3-google-signin'
+    //... here we will add another modules
   ],
+  googleSignIn: {
+    clientId: process.env.GOOGLE_CLIENT_ID_FRONT,
+  },
   css: [
     '~/assets/css/global.css', // Include the global CSS file
   ],
