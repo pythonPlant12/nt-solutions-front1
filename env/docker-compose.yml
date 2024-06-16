@@ -3,8 +3,8 @@ services:
   app:
     container_name: nuxt-app
     build:
-      context: ../src
-      dockerfile: ../env/Dockerfile
+      context: ..
+      dockerfile: ./env/Dockerfile
     ports:
       - "3000:3000"
      
