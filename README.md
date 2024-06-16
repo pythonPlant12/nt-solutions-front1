@@ -18,7 +18,7 @@ yarn install
 
 # bun
 bun install
-```
+```src
 
 ## Development Server
 
