@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     },
     '@hypernym/nuxt-gsap',
     '@nuxtjs/google-fonts',
-    'nuxt-vue3-google-signin'
+    // 'nuxt-vue3-google-signin'
     //... here we will add another modules
   ],
   // googleSignIn: {
