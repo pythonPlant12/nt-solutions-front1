@@ -180,15 +180,15 @@ export default {
 			this.postToBackendAuth();
 		},
 		// handle success google login event
-		handleLoginSuccess(response) {
-			const { credential } = response;
-			console.log("Access Token", credential);
-			this.postToBackendGoogleButton(credential);
-		},
+		// handleLoginSuccess(response) {
+		// 	const { credential } = response;
+		// 	console.log("Access Token", credential);
+		// 	this.postToBackendGoogleButton(credential);
+		// },
 		// handle an error google login event
-		handleLoginError() {
-			console.error("Login failed");
-		},
+		// handleLoginError() {
+		// 	console.error("Login failed");
+		// },
 		async postToBackendGoogleButton(accessToken) {
 			const response = await fetch(process.env.BACKEND_API + "log-in/", {
 				method: "POST",

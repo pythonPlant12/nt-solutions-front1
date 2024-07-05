@@ -668,7 +668,7 @@ header {
 }
 </style>
 <script>
-import { useOneTap } from "vue3-google-signin";
+// import { useOneTap } from "vue3-google-signin";
 
 export default {
 	setup() {
