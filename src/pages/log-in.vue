@@ -20,7 +20,7 @@
 									<v-icon icon="mdi-github" class="mr-6"></v-icon> Login with Github
 								</a>
 							</div>
-							<v-form v-model="form" @submit.prevent="onSubmit">
+							<v-form v-model="form" @submit.prevent="">
 								<hr class="my-4" />
 								<div class="text-subtitle-1 text-medium-emphasis">Usuario</div>
 
@@ -203,33 +203,33 @@ export default {
 			const data = await response;
 			console.log(data);
 		},
-		async postToBackendAuth() {
-			const response = await fetch(process.env.BACKEND_API + "auth/token/", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					accept: "application/json",
-				},
-				body: JSON.stringify({
-					grant_type: "password",
-					username: this.email,
-					password: this.password,
-					client_secret:
-						process.env.GOOGLE_CLIENT_SECRET,
-					client_id: process.env.GOOGLE_CLIENT_ID,
-				}),
-			});
-			const data = await response.json();
-		},
-		onSubmit() {
-			this.postToBackendAuth();
-			if (!this.form) {
-			}
-
-			this.loading = true;
-
-			setTimeout(() => (this.loading = false), 2000);
-		},
+		// async postToBackendAuth() {
+		// 	const response = await fetch(process.env.BACKEND_API + "auth/token/", {
+		// 		method: "POST",
+		// 		headers: {
+		// 			"Content-Type": "application/json",
+		// 			accept: "application/json",
+		// 		},
+		// 		body: JSON.stringify({
+		// 			grant_type: "password",
+		// 			username: this.email,
+		// 			password: this.password,
+		// 			client_secret:
+		// 				process.env.GOOGLE_CLIENT_SECRET,
+		// 			client_id: process.env.GOOGLE_CLIENT_ID,
+		// 		}),
+		// 	});
+		// 	const data = await response.json();
+		// },
+		// onSubmit() {
+		// 	this.postToBackendAuth();
+		// 	if (!this.form) {
+		// 	}
+    //
+		// 	this.loading = true;
+    //
+		// 	setTimeout(() => (this.loading = false), 2000);
+		// },
 		required(v) {
 			return !!v || "Field is required";
 		},
