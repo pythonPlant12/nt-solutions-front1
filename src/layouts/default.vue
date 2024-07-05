@@ -672,13 +672,13 @@ import { useOneTap } from "vue3-google-signin";
 
 export default {
 	setup() {
-		useOneTap({
-			onSuccess: (response) => {
-				console.log("Success:", response);
-			},
-			onError: (error) => console.error("Error with One Tap Login", error),
-			// options
-		});
+		// useOneTap({
+		// 	onSuccess: (response) => {
+		// 		console.log("Success:", response);
+		// 	},
+		// 	onError: (error) => console.error("Error with One Tap Login", error),
+		// 	// options
+		// });
 	},
 	mounted() {
 		this.cookiesAceptadas = false;

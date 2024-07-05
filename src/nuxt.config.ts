@@ -21,9 +21,9 @@ export default defineNuxtConfig({
     'nuxt-vue3-google-signin'
     //... here we will add another modules
   ],
-  googleSignIn: {
-    clientId: process.env.GOOGLE_CLIENT_ID_FRONT,
-  },
+  // googleSignIn: {
+  //   clientId: process.env.GOOGLE_CLIENT_ID_FRONT,
+  // },
   css: [
     '~/assets/css/global.css', // Include the global CSS file
   ],

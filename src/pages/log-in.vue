@@ -6,10 +6,10 @@
 					<div>
 						<v-card class="mx-6 pa-12 pb-8" elevation="24" max-width="448" rounded="xl">
 							<div class="col">
-								<GoogleSignInButton
-									@success="handleLoginSuccess"
-									@error="handleLoginError"
-								></GoogleSignInButton>
+<!--								<GoogleSignInButton-->
+<!--									@success="handleLoginSuccess"-->
+<!--									@error="handleLoginError"-->
+<!--								></GoogleSignInButton>-->
 								<a href="#" class="twitter btn rounded-xl">
 									<v-icon icon="mdi-twitter" class="mr-6"></v-icon> Login with Twitter
 								</a>
@@ -158,10 +158,10 @@
 }
 </style>
 <script>
-import { GoogleSignInButton } from "vue3-google-signin"; // import for Google Button
+// import { GoogleSignInButton } from "vue3-google-signin"; // import for Google Button
 export default {
 	components: {
-		GoogleSignInButton,
+		// GoogleSignInButton,
 	},
 	data: () => ({
 		form: false,
