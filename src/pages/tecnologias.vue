@@ -1,7 +1,7 @@
 <template>
 	<v-container class="mt-10 mt-xxl-16">
 		<v-row class="justify-center">
-			<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2" style="color: var(--blue-dark);">
+			<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 font-weight-medium" style="color: var(--blue-dark);">
 			Tecnologías
 			</h1>
 		</v-row>

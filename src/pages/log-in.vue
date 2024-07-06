@@ -66,13 +66,13 @@
 								</v-card>
 
 								<v-btn
-									class="bg-blue-grey-darken-3"
 									:loading="loading"
 									size="large"
 									type="submit"
 									variant="tonal"
 									rounded="xl"
 									block
+                  style="background-color: var(--blue); color: white;"
 								>
 									Log In <span class="mdi mdi-login"></span
 								></v-btn>

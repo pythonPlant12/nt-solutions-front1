@@ -7,7 +7,7 @@
 >
 	<v-row class="justify-center">
 		<v-col md="5" cols="10" class="mx-md-12 mt-16 mt-sm-0">
-			<h1 class="text-sm-h3 pb-16 mx-sm-4 text-blue-grey-darken-3">
+			<h1 class="text-sm-h3 pb-16 mx-sm-4" style="color: var(--gold)">
 				Contenedores con Docker
 			</h1>
 			<p class="text-sm-h5 text-grey-darken-2 mx-sm-4 descripcion-text">

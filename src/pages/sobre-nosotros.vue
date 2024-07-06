@@ -13,9 +13,9 @@
 		rounded
 	>
 		<div>
-			<h1 class="text-h4 text-md-h2 font-weight-black" style="color: var(--seven); text-shadow: 2px 2px 20px var(--blue-dark)">NT SOLUTIONS</h1>
+			<h1 class="text-h4 text-md-h2 font-weight-black" style="color: var(--seven); text-shadow: 2px 2px 20px black">NT SOLUTIONS</h1>
 			<hr class="horizontal-line" />
-			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 mx-8" style="color: white; text-shadow: 2px 2px 20px var(--gold)">
+			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 mx-8" style="color: white; text-shadow: 2px 2px 20px black">
 				<b>Comprometidos con el proyecto y el cliente</b>
 			</div>
 			<p

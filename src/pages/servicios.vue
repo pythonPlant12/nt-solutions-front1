@@ -79,7 +79,7 @@
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
-	background-color: #d5d5df;
+	background-color: rgba(186, 185, 185, 0.6);
 }
 
 .box {

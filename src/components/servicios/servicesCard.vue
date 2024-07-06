@@ -17,7 +17,7 @@
 				<v-card-subtitle> {{ subTituloCard }} </v-card-subtitle>
 
 				<v-card-actions>
-					<v-btn variant="tonal" color="var(--three)" class="mx-2" rounded="lg">
+					<v-btn variant="tonal" color="var(--blue)" class="mx-2" rounded="lg">
 						Explorar
 					</v-btn>
 

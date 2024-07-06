@@ -7,7 +7,7 @@
 	>
 		<v-row class="justify-center">
 			<v-col md="5" cols="10" class="mx-md-12 mt-16 mt-sm-0">
-				<h1 class="text-sm-h3 pb-16 mx-sm-4 text-blue-grey-darken-3">Desarrollo Frontend con Angular y Vue</h1>
+				<h1 class="text-sm-h3 pb-16 mx-sm-4" style="color: var(--gold)">Desarrollo Frontend con Angular y Vue</h1>
 				<p class="text-sm-h5 text-grey-darken-2 mx-sm-4 descripcion-text pb-16">
 					Para la creación de interfaces de usuario dinámicas y robustas, empleamos Angular y Vue.js.
 				Estas tecnologías frontend permiten el desarrollo de aplicaciones web interactivas y

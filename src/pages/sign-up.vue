@@ -80,13 +80,13 @@
 						</v-card>
 
 						<v-btn
-							class="bg-brown-lighten-2"
 							:loading="loading"
 							size="large"
 							variant="tonal"
 							rounded="xl"
 							block
 							@click="login()"
+              style="background-color: var(--gold); color: white;"
 						>
 							Sign Up <span class="mdi mdi-login"></span
 						></v-btn>

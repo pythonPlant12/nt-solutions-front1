@@ -164,11 +164,11 @@
 		<slot />
 		<extra-Cookies @aceptarCookies="updateCookieData" v-if="!cookiesAceptadas" />
 	</div>
-	<footer class="bg-blue-grey-darken-3 footer">
+	<footer class="footer">
 		<v-container>
 			<v-row align="center">
 				<v-col align-self="center" class="text-center mt-8">
-					<h2 style="color: var(--one)">NT SOLUTIONS</h2>
+					<h2 style="color: var(--blue)">NT SOLUTIONS</h2>
 				</v-col>
 			</v-row>
 			<v-row>
@@ -329,8 +329,10 @@
 
 <style>
 .footer {
+  background-color: white;
 	z-index: 200 !important;
 	position: relative;
+  box-shadow: 0px -35px 30px -35px black;
 }
 
 .boton {
@@ -339,13 +341,14 @@
 }
 
 .boton-sign-up {
-	background-color: #4f5676 !important;
-	color: white !important;
+  border-color: #A1887F !important;
+	background-color: var(--gold) !important;
+  color: white !important;
 }
 
 .boton-sign-in {
-	background-color: rgba(41, 51, 95, 0.424) !important;
-	color: white !important;
+  color: white;
+	background-color: var(--blue) !important;
 }
 
 a {
@@ -354,7 +357,8 @@ a {
 }
 /* ! Header */
 header {
-	display: flex; /* Use flexbox */
+  box-shadow: 0px 4px 8px 4px rgba(128, 128, 128, 0.5);
+  display: flex; /* Use flexbox */
 	justify-content: center; /* Center horizontally */
 	align-items: center; /* Center vertically */
   position: fixed;
@@ -430,7 +434,7 @@ header {
 	header {
 		height: 4.8rem;
 		transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
-			height 0.5s cubic-bezier(0.32, 0.08, 0.24, 1);
+			height 0.3s cubic-bezier(0.32, 0.08, 0.24, 1);
 		display: block; /* Use flexbox */
 	}
 
