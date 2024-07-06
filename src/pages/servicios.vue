@@ -10,7 +10,7 @@
 		<v-container class="mt-10 mt-xxl-16 ">
 			<v-row class="mt-xs-12 d-flex justify-center">
 				<div class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center" style="color: var(--blue-dark);">
+					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center" style="color: var(--gold);">
 						Excelencia Digital,<br>
             Adaptada para Ti
 					</h1>
@@ -23,7 +23,7 @@
 						elevation="24"
 					>
 						<p
-							class="py-4 text-xl-h5 py-xl-16 px-xl-16 text-md-h6 text-white typed-text"
+							class="py-4 text-xl-h5 py-xl-16 px-xl-16 text-md-h6 typed-text"
 						>
 							{{ typedText }}
 						</p>
@@ -79,7 +79,7 @@
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
-	background-color: var(--three);
+	background-color: #d5d5df;
 }
 
 .box {
@@ -133,6 +133,10 @@
 
 .rotating-image {
 	animation: rotate 10s linear infinite; /* Adjust the duration as needed */
+}
+
+.typed-text {
+    color: var(--blue-dark);
 }
 
 /* Optional: add styles for better readability or customization */
