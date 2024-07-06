@@ -6,12 +6,13 @@
 		<div class='wave -two'></div>
 	</div>
 </div>
-	<div class="primera-pantalla">
-		<v-container class="mt-10 mt-xxl-16 primer-slide-container">
+	<div class="primera-pantalla elementos-primera-pantalla">
+		<v-container class="mt-10 mt-xxl-16 ">
 			<v-row class="mt-xs-12 d-flex justify-center">
 				<div class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center text-blue-grey-darken-3">
-						Excelencia Digital, Adaptada para Ti
+					<h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center" style="color: var(--blue-dark);">
+						Excelencia Digital,<br>
+            Adaptada para Ti
 					</h1>
 				</div>
 			</v-row>
@@ -22,7 +23,7 @@
 						elevation="24"
 					>
 						<p
-							class="py-4 text-xl-h5 py-xl-16 px-xl-16 text-body-1 text-md-h6 text-white typed-text"
+							class="py-4 text-xl-h5 py-xl-16 px-xl-16 text-md-h6 text-white typed-text"
 						>
 							{{ typedText }}
 						</p>
@@ -78,7 +79,7 @@
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
-	background-color: #90A4AE;
+	background-color: var(--three);
 }
 
 .box {

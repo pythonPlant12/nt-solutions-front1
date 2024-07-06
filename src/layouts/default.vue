@@ -357,12 +357,12 @@ header {
 	display: flex; /* Use flexbox */
 	justify-content: center; /* Center horizontally */
 	align-items: center; /* Center vertically */
-	position: fixed;
+  position: fixed;
 	top: 0;
 	z-index: 300;
 	width: 100%;
 	height: 4.4rem;
-	background-color: rgba(248, 248, 248, 0.5);
+	background-color: white;
 	backdrop-filter: blur(2rem);
 	border-bottom-width: 1px;
 }

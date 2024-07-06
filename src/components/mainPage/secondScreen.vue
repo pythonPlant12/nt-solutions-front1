@@ -3,7 +3,7 @@
 	<v-sheet>
 		<v-card class="mx-sm-16 mx-4 px-2 mt-16" rounded="xl" elevation="24">
 			<h2 class="titulo text-h3 font-weight-black text-center mt-16">
-				Empresa en un mundo digital
+		  Mundo digital a tu alcance
 			</h2>
 			<div>
 				<div class="d-flex justify-center">
@@ -22,15 +22,15 @@
 			<div class="d-flex justify-center mb-12">
 				<nuxt-link to="/servicios">
 					<v-btn
-						color="var(--six)"
-						rounded="xl"
+						color="var(--gold)"
+						rounded="lg"
 						class="mt-lg-16 mt-sm-8"
 						:ripple="false"
 						size="x-large"
 						:elevation="buttonElevation"
 						@mouseenter="setElevation(24)"
 						@mouseleave="setElevation(4)"
-						>Descubrir</v-btn
+						><span style="color: white;">Descubrir</span></v-btn
 					>
 				</nuxt-link>
 			</div>
@@ -289,10 +289,10 @@
 }
 
 .titulo {
-	color: var(--two) !important;
+	color: var(--blue-dark) !important;
 }
 .subtitulo {
-	color: var(--two);
+	color: var(--blue-dark);
 }
 .texto {
 	color: var(--four) !important;

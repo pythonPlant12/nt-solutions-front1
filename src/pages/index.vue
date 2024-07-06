@@ -15,7 +15,7 @@
           @click="moverAlSegundoElemento()"
           :ripple="false"
           stacked
-          prepend-icon="$vuetify"
+          rounded="lg"
           elevation="24"
           size="large"
           color="#936d24"
@@ -86,7 +86,7 @@
 
 .carousel-button {
   position: absolute;
-  top: 75%;
+  top: 70%;
   left: 50%;
   /* This helps me to always maintain the button on the center */
   transform: translate(-50%, -50%);
