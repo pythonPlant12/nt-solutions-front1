@@ -8,6 +8,10 @@ export default defineNuxtConfig({
       meta: [
         {charset: 'utf-8'},
         {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+        {
+          name: 'description',
+          content: 'Soluciones informáticas para tu empresa. Desarrollo de software, diseño web, marketing digital y más. Creamos tu presencia en el mundo digital.'
+        },
       ],
       link: [
         {rel: 'icon', type: 'image/x-icon', href: '/favicon.png'},
