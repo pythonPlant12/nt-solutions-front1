@@ -10,7 +10,11 @@ export default defineNuxtConfig({
         {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       ],
       link: [
-        {rel: 'icon', type: 'image/x-icon', href: '/favicon.png'}
+        {rel: 'icon', type: 'image/x-icon', href: '/favicon.png'},
+        {
+          rel: 'stylesheet',
+          href: 'htps://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+        }
       ]
     },
   },
@@ -40,8 +44,12 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      // Roboto: true,
-      // "Source Sans 3": true
+      Raleway: {
+        // weights
+        wght: [100, 400],
+        // italic
+        ital: [100]
+      },
     }
   }
 

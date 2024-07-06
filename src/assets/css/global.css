@@ -1,19 +1,22 @@
 body {
-  font-family: 'Figtree', sans-serif;
-    position: relative
+    position: relative;
+    font-family: 'Raleway', sans-serif;
     /* Add any additional styling here */
-  }
-  html, body {
+}
+
+html, body {
     overflow-x: hidden;
-  }
+}
 
 :root {
-  --one: #ccdad1 !important;
-  --two: #9caea9 !important;
-  --three: #8E7154 !important;
-  --four: #6f6866 !important;
-  --five: #38302e !important;
-  --six: #8e8d8da7 !important;
-  --seven: #f1f1f1a7 !important;
-  --blue: #6c90fca7 !important;
+    --one: #ccdad1 !important;
+    --two: #9caea9 !important;
+    --three: #8E7154 !important;
+    --four: #6f6866 !important;
+    --five: #38302e !important;
+    --six: #8e8d8da7 !important;
+    --seven: #f1f1f1a7 !important;
+    --blue: #6c90fca7 !important;
+    --gold: #936d24 !important;
+    --blue-dark: #162659 !important;
 }
