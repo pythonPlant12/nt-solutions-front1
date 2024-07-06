@@ -174,7 +174,7 @@
 		</h1>
 
 		<v-expansion-panels class="pa-sm-4 px-0">
-			<v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions rounded="xl">
+			<v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions rounded="xl" ref="vExpansionPanel">
 				<v-expansion-panel-title>
 					<v-row align="center" class="spacer" no-gutters>
 						<v-col class="text-no-wrap text-left" cols="5" sm="3">
@@ -415,7 +415,9 @@ export default {
 		lorem:
 			"Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.",
 	}),
-	methods: {
+  mounted() {
+  },
+  methods: {
 		setElevation(value) {
 			this.buttonElevation = value;
 		},
