@@ -7,7 +7,7 @@
 		stacked
 	>
 		<template v-slot:text>
-			Bienvenido/a a <b color="var(--three)">NT Solutions</b>, una empresa dedicada
+			Bienvenido/a a <b>NT Solutions</b>, una empresa dedicada
 			al desarrollo de páginas web. Valoramos la privacidad de nuestros usuarios y clientes y nos
 			comprometemos a proteger la información personal que puedan proporcionarnos. La presente
 			describe
@@ -24,7 +24,7 @@
 				<template v-slot:activator="{ props }">
 					<v-btn
 						class="text-none"
-						color="var(--three)"
+						color="var(--gold)"
 						rounded="lg"
 						variant="outlined"
 						v-bind="props"
@@ -61,7 +61,7 @@
 						<v-switch
 							v-model="performance"
 							:label="performance ? 'On' : 'Off'"
-							color="var(--three)"
+							color="var(--blue)"
 							density="compact"
 							hide-details
 							inline
@@ -81,7 +81,7 @@
 						<v-switch
 							v-model="advertising"
 							:label="advertising ? 'On' : 'Off'"
-							color="var(--three)"
+							color="var(--blue)"
 							density="compact"
 							hide-details
 							inline
@@ -100,7 +100,7 @@
 					<v-card-actions class="justify-center px-6 py-3">
 						<v-btn
 							class="flex-grow-1 text-none"
-							color="var(--three)"
+							color="var(--gold)"
 							rounded="lg"
 							variant="plain"
 							@click="dialog = false, aceptarCookies()"
@@ -110,7 +110,7 @@
 
 						<v-btn
 							class="text-white flex-grow-1 text-none"
-							color="var(--three)"
+							color="var(--gold)"
 							rounded="lg"
 							variant="flat"
 							@click="dialog = false, aceptarCookies()"
@@ -123,7 +123,7 @@
 
 			<v-btn
 				class="text-none ms-4 text-white"
-				color="var(--three)"
+				color="var(--gold)"
 				rounded="lg"
 				variant="flat"
 				@click="aceptarCookies()"
@@ -137,6 +137,7 @@
 <style>
 .cookies {
 	position: fixed !important;
+  background-color: white !important;
 	border-top: 1px solid gray !important;
 	bottom: 0rem;
 	z-index: 205;

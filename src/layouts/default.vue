@@ -296,16 +296,6 @@
               >
             </li>
             <li>
-              <!--
-                            <v-btn
-                              append-icon="mdi mdi-lock-check"
-                              variant="outlined"
-                              size="small"
-                              rounded="lg"
-                              class="boton mt-2 ml-2"
-                              ><NuxtLink to="/log-in"></NuxtLink>Log In</v-btn
-                            >
-              -->
               <v-btn
                   append-icon="mdi mdi-lock-check"
                   variant="outlined"
@@ -321,18 +311,7 @@
                   rounded="lg"
                   class="boton boton-sign-up"
               ><b class="text-white">Sign up</b></v-btn
-              ><!--
-							<v-btn
-								key="/log-in"
-								value="/log-in"
-								append-icon="mdi mdi-account-check"
-								variant="outlined"
-								size="small"
-								rounded="lg"
-								class="boton mt-2 ml-2"
-								><b class="text-white"><NuxtLink to="/sign-up"></NuxtLink>Sign up</b></v-btn
-							>
--->
+              >
             </li>
           </ul>
         </v-col>
