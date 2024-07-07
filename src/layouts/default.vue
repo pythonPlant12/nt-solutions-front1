@@ -745,7 +745,7 @@ export default {
   },
   data() {
     return {
-      cookiesAceptadas: false,
+      cookiesAceptadas: true,
       activeBtn: "nt-solutions",
       snackbar: false,
       icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
