@@ -1,7 +1,7 @@
 <template>
 	<v-stepper
 		v-model="step"
-		:items="tipos"
+		:items="[tipos, companySizeItems]"
 		show-actions
 		prev-text="Volver"
 		next-text="Seguir"
@@ -47,6 +47,12 @@
 						:items="tipos"
 						:error-messages="select.errorMessage.value"
 						label="Tipo"
+					></v-select>
+          <v-select
+						v-model="companySize.value.value"
+						:items="companySizeItems"
+						:error-messages="companySize.errorMessage.value"
+						label="Tamaño de empresa"
 					></v-select>
 
 					<v-btn @click="handleReset" class="mb-6 mx-4"> Limpiar formulario </v-btn>
@@ -138,7 +144,7 @@
 					</v-list-item>
 				</v-list>
 					<v-container class="d-flex justify-center justify-center mb-2">
-							<v-btn type="submit"> Enviar </v-btn>
+							<v-btn type="submit" style="background-color: var(--blue); color: white;"> Enviar </v-btn>
 					</v-container>
 			</v-card>
 		</template>
@@ -228,7 +234,7 @@ const ERROR_MESSAGES = {
   NAME: "Nombre tiene que tenér mínimo 2 carácteres.",
   PHONE: "Teléfono tiene que tenér mínimo 9 digitos.",
   EMAIL: "Correo electrónico tiene que tener formato válido, por ejemplo: mail@gmail.com",
-  SELECT: "Select an item.",
+  SELECT: "Selecciona una de siguientes opciones.",
   CHECKBOX: "Must be checked.",
   TEXT: "Descripción debe tener máximo 300 carácteres",
 };
@@ -252,6 +258,10 @@ const { handleSubmit, handleReset } = useForm({
       if (value) return true;
       return ERROR_MESSAGES.SELECT;
     },
+    companySizeSelect(value) {
+      if (value) return true;
+      return ERROR_MESSAGES.SELECT;
+    },
     checkbox(value) {
       if (value === "1") return true;
       return ERROR_MESSAGES.CHECKBOX;
@@ -271,9 +281,11 @@ const name = useField("name");
 const phone = useField("phone");
 const email = useField("email");
 const select = useField("select");
+const companySize = useField("companySize");
 const texto = useField("texto");
 const checkbox = useField("checkbox");
 
 const items = ref(["Datos Personales", "Solicitud"]);
 const tipos = ref(["Presupuesto", "Información"]);
+const companySizeItems = ref(["Autónomo", "1 - 5 empleados", "5-9 empleados", "10-49 empleados", "50-99 empleados", "100-499 empleados", "500+ empleados"]);
 </script>

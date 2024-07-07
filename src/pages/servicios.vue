@@ -17,7 +17,7 @@
           </div>
         </v-row>
         <v-row class="my-6 v-flex align-center">
-          <v-col cols="12" sm="5">
+          <v-col cols="12" lg="5">
             <v-card
                 class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-transparent"
                 elevation="24"
@@ -30,7 +30,7 @@
             </v-card>
           </v-col>
           <v-col cols="2"></v-col>
-          <v-col cols="5" v-if="$vuetify.display.smAndUp" class="mb-16 px-6 rotating-image">
+          <v-col cols="5" v-if="$vuetify.display.lgAndUp" class="mb-16 px-6 rotating-image">
             <v-img src="/css/pictures/logo.png" cover class="elementos-primera-pantalla"></v-img>
           </v-col>
         </v-row>
@@ -39,14 +39,14 @@
     <div class="segunda-pantalla mb-16">
       <v-container>
         <v-row>
-          <v-col cols="12" sm="5" class="mb-16 servicesCard hidden left">
+          <v-col cols="12" lg="5" class="mb-16 servicesCard hidden left">
             <servicios-servicesCard :tituloCard="tituloCard1"
                                     :subTituloCard="subTituloCard1"
                                     :textoCard="textoCard1"
                                     :image="imageCard1"/>
           </v-col>
           <v-spacer></v-spacer>
-          <v-col cols="12" sm="5" class="mb-16 servicesCard hidden right">
+          <v-col cols="12" lg="5" class="mb-16 servicesCard hidden right">
             <servicios-servicesCard :tituloCard="tituloCard2"
                                     :subTituloCard="subTituloCard2"
                                     :textoCard="textoCard2"
@@ -54,14 +54,14 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" sm="5" class="mt-16 mb-16 servicesCard hidden left">
+          <v-col cols="12" lg="5" class="mt-16 mb-16 servicesCard hidden left">
             <servicios-servicesCard :tituloCard="tituloCard3"
                                     :subTituloCard="subTituloCard3"
                                     :textoCard="textoCard3"
                                     :image="imageCard3"/>
           </v-col>
           <v-spacer></v-spacer>
-          <v-col cols="12" sm="5" class="mt-16 mb-16 servicesCard hidden right">
+          <v-col cols="12" lg="5" class="mt-16 mb-16 servicesCard hidden right">
             <servicios-servicesCard :tituloCard="tituloCard4"
                                     :subTituloCard="subTituloCard4"
                                     :textoCard="textoCard4"
@@ -69,14 +69,14 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" sm="5" class="mt-16 mb-16 servicesCard hidden left">
+          <v-col cols="12" lg="5" class="mt-16 mb-16 servicesCard hidden left">
             <servicios-servicesCard :tituloCard="tituloCard5"
                                     :subTituloCard="subTituloCard5"
                                     :textoCard="textoCard5"
                                     :image="imageCard5"/>
           </v-col>
           <v-spacer></v-spacer>
-          <v-col cols="12" sm="5" class="mt-16 mb-16 servicesCard hidden right">
+          <v-col cols="12" lg="5" class="mt-16 mb-16 servicesCard hidden right">
             <servicios-servicesCard :tituloCard="tituloCard6"
                                     :subTituloCard="subTituloCard6"
                                     :textoCard="textoCard6"
@@ -225,8 +225,6 @@
 </style>
 
 <script>
-import * as querystring from "node:querystring";
-
 let observer;
 export default {
   data() {
@@ -268,19 +266,6 @@ export default {
 
     };
   },
-  /*
-    mounted: {
-      observer: new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show')
-          } else {
-            entry.target.classList.remove('show')
-          }
-        });
-      })
-    },
-  */
   methods: {
     typeText() {
       let index = 0;
