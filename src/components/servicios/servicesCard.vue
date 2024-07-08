@@ -41,10 +41,10 @@
 </template>
 <style>
 .border {
-	border: 3px solid transparent !important;
+	border: 2px solid transparent !important;
 }
 .border-coloring {
-	border: 3px solid var(--two) !important;
+	border: 2px solid var(--gold) !important;
 }
 </style>
 <script>

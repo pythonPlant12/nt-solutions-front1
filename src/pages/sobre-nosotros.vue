@@ -1,25 +1,18 @@
 <template>
-	<div id="video-container">
-		<video id="video" autoplay loop muted playsinline>
-			<!-- Add your video source here -->
-			<source src="/css/pictures/sobreNosotrosBackground.mp4" type="video/mp4" />
-			Your browser does not support the video tag.
-		</video>
-	</div>
 	<v-sheet
-		class="sheet-Title mx-0 mt-24 d-flex align-center justify-center flex-wrap text-center px-4"
+		class="sheet-Title mx-0 d-flex align-center justify-center flex-wrap text-center px-4"
 		color="transparent"
 		elevation="24"
 		rounded
 	>
 		<div>
-			<h1 class="text-h4 text-md-h2 font-weight-black" style="color: var(--seven); text-shadow: 2px 2px 20px black">NT SOLUTIONS</h1>
+			<h1 class="text-h4 text-md-h2 font-weight-black mt-16" style="color: var(--gold);">NT SOLUTIONS</h1>
 			<hr class="horizontal-line" />
-			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 mx-8" style="color: white; text-shadow: 2px 2px 20px black">
+			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 mx-8">
 				<b>Comprometidos con el proyecto y el cliente</b>
 			</div>
 			<p
-				class="text-body-1 text-md-body-1 mb-4 mx-8 mt-4 sobreNosotrosTextoNtSolutions text-grey-lighten-2"
+				class="text-body-1 text-md-body-1 mb-4 mx-8 mt-4 sobreNosotrosTextoNtSolutions text-grey-darken-2"
 			>
 				NT SOLUTIONS es una empresa con sede en Estonia que opera en toda Europa. Estamos
 				comprometidos con la utilización de las últimas tecnologías para proporcionar soluciones
@@ -77,36 +70,15 @@
 
 .sheet-Title {
 	animation: apareciendoFondoPantalla 2s forwards;
-	z-index: 2;
-	backdrop-filter: blur(0.2rem);
-	min-height: 100vh;
 	opacity: 0;
-	background-color: rgba(37, 37, 37, 0.516) !important; /* 50% transparent black */
+  min-height: 100vh;
 }
 .horizontal-line {
 	margin-top: 1.5rem;
 	height: 8px;
-	background-color: var(--one);
+	background-color: var(--four);
 	border: 0;
 	border-radius: 5rem;
-}
-#video-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100dvh;
-	overflow: hidden;
-	opacity: 0;
-	animation: apareciendoFondoPantalla 2s forwards;
-}
-
-#video {
-	width: 100%;
-	height: 100%;
-	object-fit: cover; /* Ensure the video covers the entire container */
-	opacity: 0;
-	animation: apareciendoFondoPantalla 2s forwards;
 }
 @keyframes apareciendoFondoPantalla {
 	to {
