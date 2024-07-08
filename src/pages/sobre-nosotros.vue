@@ -6,7 +6,7 @@
 		rounded
 	>
 		<div>
-			<h1 class="text-h4 text-md-h2 font-weight-black mt-16" style="color: var(--gold);">NT SOLUTIONS</h1>
+			<h1 class="text-h4 text-md-h2 font-weight-black" style="color: var(--gold);">NT SOLUTIONS</h1>
 			<hr class="horizontal-line" />
 			<div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 mx-8">
 				<b>Comprometidos con el proyecto y el cliente</b>
