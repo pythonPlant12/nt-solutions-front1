@@ -24,7 +24,7 @@
           <li class="nav-item">
             <NuxtLink to="/log-in"
             >
-              <v-icon icon="mdi mdi-account-box-outline" class="nav-link nav-link-bag hidden"></v-icon
+              <v-icon icon="mdi mdi-account-box-outline" ref="nav-link-bag" class="nav-link nav-link-bag"></v-icon
               >
             </NuxtLink>
           </li>
@@ -723,7 +723,6 @@ header {
 </style>
 <script>
 // import { useOneTap } from "vue3-google-signin";
-
 export default {
   setup() {
     // useOneTap({
