@@ -109,19 +109,21 @@
 .sign-up {
 	padding: 0.5rem;
 	opacity: 0.85;
-	max-width: 39px;
+  max-width: 43px;
 	border-radius: 25%;
+  color: var(--blue);
+  border: 1px solid var(--blue);
 }
 
-/* add appropriate colors to fb, twitter and google buttons */
+/*
+!* add appropriate colors to fb, twitter and google buttons *!
 .fb {
 	background-color: #3b5998;
 	color: white;
 }
 
 .twitter {
-	background-color: #55acee;
-	color: white;
+  border-radius: 5px;
 }
 
 .google {
@@ -133,6 +135,7 @@
 	background-color: var(--five);
 	color: white;
 }
+*/
 
 .btn:hover {
 	opacity: 1;

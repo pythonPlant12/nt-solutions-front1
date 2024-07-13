@@ -14,8 +14,15 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'htps://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
         }
-      ]
+      ],
+      script: [{
+        src: 'https://unpkg.com/boxicons@2.1.4/dist/boxicons.js',
+      }]
     },
   },
   build: {

@@ -24,7 +24,7 @@
           <li class="nav-item">
             <NuxtLink to="/log-in"
             >
-              <v-icon icon="mdi mdi-account-box-outline" class="nav-link nav-link-bag"></v-icon
+              <v-icon icon="mdi mdi-account-box-outline" class="nav-link nav-link-bag hidden"></v-icon
               >
             </NuxtLink>
           </li>
