@@ -1,30 +1,27 @@
 <template>
-  <v-sheet
-      class="sheet-Title mx-0 d-flex align-center justify-center flex-wrap text-center px-4"
-      color="transparent"
-      elevation="24"
-      rounded
-  >
-    <div>
-      <h1 class="text-h4 text-md-h2 font-weight-black" style="color: var(--gold);">NT SOLUTIONS</h1>
-      <hr class="horizontal-line"/>
-      <div class="text-h5 mt-12 font-bold font-weight-medium mb-2 mt-4 mx-8">
-        <b>Comprometidos con el proyecto y el cliente</b>
-      </div>
-      <p
-          class="text-body-1 text-md-body-1 mb-4 mx-8 mt-4 sobreNosotrosTextoNtSolutions text-grey-darken-2"
-      >
-        NT SOLUTIONS es una empresa con sede en Estonia que opera en toda Europa. Estamos
-        comprometidos con la utilización de las últimas tecnologías para proporcionar soluciones
-        innovadoras y eficientes a nuestros clientes. Nuestra prioridad es la seguridad y la
-        privacidad, y cumplimos con todas las prácticas y regulaciones relevantes para garantizar
-        que los datos de nuestros clientes estén siempre protegidos. Apostamos por infraestructuras
-        modernas y ágiles, lo que nos permite adaptarnos rápidamente a las necesidades cambiantes de
-        nuestros clientes y del mercado.
-      </p>
+  <div class="main-div">
+    <img src="/css/pictures/about-us/about-us-1.jpg" alt="Imagen-sobre-nosotros" id="about-us-main-image">
+    <div class="overlay-content">
+      <h1 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h1>
     </div>
-  </v-sheet>
+    <div class="overlay-button">
+      <v-btn
+          class="main-button"
+          @click="moverAlSegundoElemento()"
+          :ripple="false"
+          stacked
+          rounded="lg"
+          color="white"
+          @mouseenter="setElevation(24)"
+          @mouseleave="setElevation(4)"
 
+      >
+        <span style="color: var(--gold);">Quienes somos</span>
+      </v-btn>
+    </div>
+
+  </div>
+<div id="elementosSobreNosotros">
   <sobreNosotros-componenteCard
       :title="title1"
       :text="text1"
@@ -61,17 +58,50 @@
       :image="image6"
       :animation="animation1"
   />
+</div>
 </template>
-<style>
-.sobreNosotrosTextoNtSolutions {
-  max-width: 800px;
-  margin: 0 auto;
+<style scoped>
+.main-div {
+  position: relative;
+  transition: opacity 0.5s ease;
 }
 
-.sheet-Title {
+#about-us-main-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Cover the whole screen without distortion */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  min-width: 300px;
+}
+
+.overlay-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  min-width: 100px;
+}
+
+.overlay-title {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 4px 4px 20px rgb(0, 0, 0);
+}
+
+.main-title {
   animation: apareciendoFondoPantalla 2s forwards;
   opacity: 0;
-  min-height: 100vh;
 }
 
 .horizontal-line {
@@ -90,6 +120,8 @@
 </style>
 
 <script>
+import gsap from "gsap";
+
 export default {
   data() {
     return {
@@ -125,5 +157,19 @@ export default {
       image6: "",
     };
   },
+  methods: {
+    setElevation(value) {
+      this.buttonElevation = value;
+    },
+    moverAlSegundoElemento() {
+      gsap.to(window, {
+        duration: 0.7,
+        scrollTo: {y: "#elementosSobreNosotros", offsetY: 80},
+      });
+    },
+
+  },
+
+
 };
 </script>

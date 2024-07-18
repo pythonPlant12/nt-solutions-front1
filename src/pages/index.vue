@@ -31,24 +31,10 @@
 
 <!-- ! STYLE -->
 
-<style>
+<style scoped>
 .main-div {
   position: relative;
   transition: opacity 0.5s ease;
-}
-
-.loading {
-  position: fixed; /* or 'absolute' if you prefer */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it's above other content */
 }
 
 #segundoElementoHtml {
@@ -69,12 +55,16 @@
   color: white; /* Choose a color that stands out against your video */
   font-size: 2.5rem;
   text-shadow: 5px 5px 15px rgba(0, 0, 0, 2);
+  opacity: 0;
+  animation: apareciendo 1s forwards;
 }
 
 .overlay-subtitle {
   color: #162659;
   font-size: 2rem;
   text-shadow: 4px 4px 20px rgba(255, 255, 255, 2);
+  opacity: 0;
+  animation: apareciendo 2s forwards;
 }
 
 #backgroundVideo {
