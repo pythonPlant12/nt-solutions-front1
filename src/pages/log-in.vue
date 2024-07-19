@@ -117,7 +117,7 @@
   box-sizing: border-box; /* Include padding and border in the element's total height */
 }
 
-@media screen and (min-width: 429) {
+@media screen and (min-width: 429px) {
   .pruebaGradientWindow {
     height: 100vh;
   }
@@ -125,38 +125,21 @@
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
-.btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
-  text-decoration: none; /* remove underline from anchors */
-}
-
-/* add appropriate colors to fb, twitter and google buttons */
-.btn:hover {
-  opacity: 1;
-}
 .log-in-icon {
-	padding: 0.5rem;
-	opacity: 0.85;
+  padding: 0.5rem;
+  opacity: 0.85;
   max-width: 43px;
-	border-radius: 25%;
+  border-radius: 25%;
   color: var(--gold);
   border: 1px solid var(--gold);
 }

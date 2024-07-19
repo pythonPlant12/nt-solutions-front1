@@ -7,8 +7,8 @@
       Your browser does not support the video tag. Try downloading the video <a href="/index-main.mp4">here</a>.
     </video>
     <div class="overlay-content">
-      <h1 class="overlay-title">tu BUSINESS </h1>
-      <h1 class="overlay-subtitle">nuestra prioridad</h1>
+      <h1 class="overlay-title">tu BUSINESS
+        <span class="overlay-subtitle">nuestra prioridad</span></h1>
     </div>
     <div class="carousel-button">
       <v-btn
@@ -28,8 +28,6 @@
     <mainPage-secondScreen/>
   </div>
 </template>
-
-<!-- ! STYLE -->
 
 <style scoped>
 .main-div {
@@ -58,6 +56,7 @@
 }
 
 .overlay-subtitle {
+  font-weight: bold;
   color: #162659;
   font-size: 2rem;
   text-shadow: 4px 4px 20px rgba(255, 255, 255, 2);
@@ -127,8 +126,8 @@ import { ref } from "vue";
 gsap.registerPlugin(ScrollToPlugin);
 
 export default {
-mounted() {
-},
+  mounted() {
+  },
   data() {
     return {};
   },

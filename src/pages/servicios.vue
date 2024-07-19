@@ -9,14 +9,14 @@
     <div class="primera-pantalla elementos-primera-pantalla">
       <v-container class="mt-10 mt-xxl-16 ">
         <v-row class="mt-xs-12 d-flex justify-center">
-          <div class="mb-6 px-6 mt-xxl-16 rounded-xl mx-2" elevation="0">
-            <h1 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center" style="color: var(--gold);">
+          <div class="mb-2 mb-lg-6 px-6 mt-xxl-16 rounded-xl mx-2">
+            <h2 class="px-2 py-4 text-xl-h2 text-h4 text-md-h2 text-center" style="color: var(--gold);">
               Excelencia Digital,<br>
               Adaptada para Ti
-            </h1>
+            </h2>
           </div>
         </v-row>
-        <v-row class="my-6 v-flex align-center">
+        <v-row class="mb-4 v-flex align-center">
           <v-col cols="12" lg="5">
             <v-card
                 class="mb-16 px-6 rounded-xl elementos-primera-pantalla bg-transparent"

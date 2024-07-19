@@ -1,6 +1,9 @@
 <template>
   <div class="main-div">
-    <img src="/css/pictures/about-us/about-us-1.jpg" alt="Imagen-sobre-nosotros" id="about-us-main-image">
+    <img src="/css/pictures/about-us/about-us-1.jpg"
+         alt="Imagen sobre nosotros"
+         id="about-us-main-image"
+         fetchpriority="high">
     <div class="overlay-content">
       <h1 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h1>
     </div>
@@ -21,44 +24,44 @@
     </div>
 
   </div>
-<div id="elementosSobreNosotros">
-  <sobreNosotros-componenteCard
-      :title="title1"
-      :text="text1"
-      :image="image1"
-      :animation="animation1"
-  />
-  <sobreNosotros-componenteCard
-      :title="title2"
-      :text="text2"
-      :image="image2"
-      :animation="animation1"
-  />
-  <sobreNosotros-componenteCard
-      :title="title3"
-      :text="text3"
-      :image="image3"
-      :animation="animation1"
-  />
-  <sobreNosotros-componenteCard
-      :title="title4"
-      :text="text4"
-      :image="image4"
-      :animation="animation1"
-  />
-  <sobreNosotros-componenteCard
-      :title="title5"
-      :text="text5"
-      :image="image5"
-      :animation="animation1"
-  />
-  <sobreNosotros-componenteCard
-      :title="title6"
-      :text="text6"
-      :image="image6"
-      :animation="animation1"
-  />
-</div>
+  <div id="elementosSobreNosotros">
+    <sobreNosotros-componenteCard
+        :title="title1"
+        :text="text1"
+        :image="image1"
+        :animation="animation1"
+    />
+    <sobreNosotros-componenteCard
+        :title="title2"
+        :text="text2"
+        :image="image2"
+        :animation="animation1"
+    />
+    <sobreNosotros-componenteCard
+        :title="title3"
+        :text="text3"
+        :image="image3"
+        :animation="animation1"
+    />
+    <sobreNosotros-componenteCard
+        :title="title4"
+        :text="text4"
+        :image="image4"
+        :animation="animation1"
+    />
+    <sobreNosotros-componenteCard
+        :title="title5"
+        :text="text5"
+        :image="image5"
+        :animation="animation1"
+    />
+    <sobreNosotros-componenteCard
+        :title="title6"
+        :text="text6"
+        :image="image6"
+        :animation="animation1"
+    />
+  </div>
 </template>
 <style scoped>
 .main-div {
@@ -102,14 +105,6 @@
 .main-title {
   animation: apareciendoFondoPantalla 2s forwards;
   opacity: 0;
-}
-
-.horizontal-line {
-  margin-top: 1.5rem;
-  height: 8px;
-  background-color: var(--four);
-  border: 0;
-  border-radius: 5rem;
 }
 
 @keyframes apareciendoFondoPantalla {
