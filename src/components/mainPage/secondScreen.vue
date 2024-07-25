@@ -7,10 +7,10 @@
       </h2>
       <div>
         <div class="d-flex justify-center">
-          <v-img max-width="500" src="/css/animations/gif/secondScreen.gif" alt=""></v-img>
+          <v-img max-width="500" src="/css/animations/gif/secondScreen.gif" alt="mundo digital"></v-img>
         </div>
         <p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
-          Si estás aqui es porque valoras la excelencia en la presencia digital de tu negocio. En
+          Si estás aquí es porque valoras la excelencia en la presencia digital de tu negocio. En
           nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino
           también soluciones tecnológicas personalizadas para potenciar el rendimiento de tu
           empresa. Desde la implementación de bases de datos hasta la creación de portales
@@ -92,26 +92,26 @@
 
     <div class="scroll imgBox" style="--time:25s">
       <div>
-        <img src="/css/pictures/carousel-secondScreen/./images/css.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/js.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/React.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+        <img src="/css/pictures/carousel-secondScreen/./images/css.png" alt="css">
+        <img src="/css/pictures/carousel-secondScreen/./images/js.png" alt="javascript">
+        <img src="/css/pictures/carousel-secondScreen/./images/React.png" alt="react">
+        <img src="/css/pictures/carousel-secondScreen/./images/angular.png" alt="angular">
+        <img src="/css/pictures/carousel-secondScreen/./images/figma.png" alt="figma">
+        <img src="/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="photoshop">
+        <img src="/css/pictures/carousel-secondScreen/./images/mui.png" alt="mui">
+        <img src="/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="tailwind">
+        <img src="/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="premierePro">
       </div>
       <div>
-        <img src="/css/pictures/carousel-secondScreen/./images/css.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/js.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/React.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/angular.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/figma.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/mui.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="">
-        <img src="/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="">
+        <img src="/css/pictures/carousel-secondScreen/./images/css.png" alt="css">
+        <img src="/css/pictures/carousel-secondScreen/./images/js.png" alt="javascript">
+        <img src="/css/pictures/carousel-secondScreen/./images/React.png" alt="reacti">
+        <img src="/css/pictures/carousel-secondScreen/./images/angular.png" alt="angular">
+        <img src="/css/pictures/carousel-secondScreen/./images/figma.png" alt="figma">
+        <img src="/css/pictures/carousel-secondScreen/./images/photoshop.png" alt="photoshop">
+        <img src="/css/pictures/carousel-secondScreen/./images/mui.png" alt="mui">
+        <img src="/css/pictures/carousel-secondScreen/./images/tailwind.png" alt="tailwind">
+        <img src="/css/pictures/carousel-secondScreen/./images/premierePro.png" alt="premierePro">
       </div>
     </div>
   </div>

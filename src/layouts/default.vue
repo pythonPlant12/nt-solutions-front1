@@ -291,7 +291,7 @@
                   class="boton"
               >
                 <NuxtLink to="/privacy-policy"></NuxtLink>
-                Politica de privacidad
+                Política de privacidad
               </v-btn
               >
             </li>

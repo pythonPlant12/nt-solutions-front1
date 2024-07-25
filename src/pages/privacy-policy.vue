@@ -1,6 +1,6 @@
 <template>
     <v-container class="mt-16 mb-sm-16 mb-4 segunda-parte">
-            <h3 class="text-center mb-4">Politica de privacidad</h3>
+            <h3 class="text-center mb-4">Política de privacidad</h3>
             <hr>
         <v-row class="mt-16"></v-row>
         <h4 class="mb-4 text-center text-grey-darken-2">1.2 Información Personal</h4>
