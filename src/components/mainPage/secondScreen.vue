@@ -20,7 +20,7 @@
         </p>
       </div>
       <div class="d-flex justify-center mb-12">
-        <nuxt-link to="/servicios">
+        <nuxt-link to="/services">
           <v-btn
               color="var(--gold)"
               rounded="lg"
@@ -117,9 +117,9 @@
   </div>
 
   <v-sheet elevation="24" height="auto" class="pb-16 mt-12 mx-sm-16 mx-4 mb-16" rounded="xl">
-    <h1 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
+    <h3 class="text-sm-h4 py-sm-16 py-8 font-weight-black px-8 text-center subtitulo">
       PREGUNTAS FRECUENTES
-    </h1>
+    </h3>
 
     <v-expansion-panels class="pa-sm-4 px-0">
       <v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions rounded="xl" ref="vExpansionPanel">

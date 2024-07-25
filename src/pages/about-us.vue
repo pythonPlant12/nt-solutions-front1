@@ -5,7 +5,7 @@
          id="about-us-main-image"
          fetchpriority="high">
     <div class="overlay-content">
-      <h1 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h1>
+      <h2 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h2>
     </div>
     <div class="overlay-button">
       <v-btn

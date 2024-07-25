@@ -1,8 +1,8 @@
 <template>
-	<div class="pruebaGradientWindow d-flex flex-column justify-content-center">
-	<div>
-		<v-container class="mt-sm-6 mt-xl-12 primer-slide-container">
-			<v-row class="mt-4 d-flex justify-center">
+  <div class="pruebaGradientWindow d-flex flex-column justify-content-center">
+    <div>
+      <v-container class="mt-sm-6 mt-xl-12 mb-12 primer-slide-container">
+        <v-row class="mt-4 d-flex justify-center">
 				<div>
 					<v-card
 						class="mx-6 pa-12 pb-8"

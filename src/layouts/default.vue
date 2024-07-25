@@ -68,13 +68,13 @@
 
             <li class="nav-item">
               <NuxtLink
-                  to="/servicios"
+                  to="/services"
                   class="nav-link nav-link-mobile"
                   @click.prevent="cerrarMenu()"
               >
                 <v-btn
-                    key="/servicios"
-                    value="/servicios"
+                    key="/services"
+                    value="/services"
                     append-icon="mdi mdi-database-cog"
                     variant="text"
                     size="small"
@@ -88,13 +88,13 @@
             </li>
             <li class="nav-item">
               <NuxtLink
-                  to="/tecnologias"
+                  to="/tecnologies"
                   class="nav-link nav-link-mobile"
                   @click.prevent="cerrarMenu()"
               >
                 <v-btn
-                    key="/tecnologias"
-                    value="/tecnologias"
+                    key="/tecnologies"
+                    value="/tecnologies"
                     append-icon="mdi mdi-wifi-settings"
                     size="small"
                     variant="text"
@@ -108,13 +108,13 @@
             </li>
             <li class="nav-item">
               <NuxtLink
-                  to="/sobre-nosotros"
+                  to="/about-us"
                   class="nav-link nav-link-mobile"
                   @click.prevent="cerrarMenu()"
               >
                 <v-btn
-                    key="/sobre-nosotros"
-                    value="/sobre-nosotros"
+                    key="/about-us"
+                    value="/about-us"
                     append-icon="mdi mdi-information-variant"
                     size="small"
                     variant="text"
@@ -128,13 +128,13 @@
             </li>
             <li class="nav-item">
               <NuxtLink
-                  to="/contacto"
+                  to="/contact-us"
                   class="nav-link nav-link-mobile"
                   @click.prevent="cerrarMenu()"
               >
                 <v-btn
-                    key="/contacto"
-                    value="/contacto"
+                    key="/contact-us"
+                    value="/contact-us"
                     append-icon="mdi mdi-account-box-outline"
                     variant="text"
                     size="small"
@@ -251,7 +251,7 @@
                   rounded="lg"
                   class="boton"
               >
-                <NuxtLink to="/servicios"></NuxtLink>
+                <NuxtLink to="/services"></NuxtLink>
                 Servicios
               </v-btn
               >
@@ -264,7 +264,7 @@
                   rounded="lg"
                   class="boton"
               >
-                <NuxtLink to="/tecnologias"></NuxtLink>
+                <NuxtLink to="/tecnologies"></NuxtLink>
                 Tecnologías
               </v-btn
               >
@@ -277,7 +277,7 @@
                   rounded="lg"
                   class="boton"
               >
-                <NuxtLink to="/sobre-nosotros"></NuxtLink>
+                <NuxtLink to="/about-us"></NuxtLink>
                 Sobre Nosotros
               </v-btn
               >
@@ -290,7 +290,7 @@
                   rounded="lg"
                   class="boton"
               >
-                <NuxtLink to="/politica-privacidad"></NuxtLink>
+                <NuxtLink to="/privacy-policy"></NuxtLink>
                 Politica de privacidad
               </v-btn
               >

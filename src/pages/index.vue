@@ -7,8 +7,9 @@
       Your browser does not support the video tag. Try downloading the video <a href="/index-main.mp4">here</a>.
     </video>
     <div class="overlay-content">
-      <h1 class="overlay-title">tu BUSINESS
-        <span class="overlay-subtitle">nuestra prioridad</span></h1>
+      <h1 class="overlay-title">tu BUSINESS<br>
+        <span class="overlay-subtitle">nuestra prioridad</span>
+      </h1>
     </div>
     <div class="carousel-button">
       <v-btn
