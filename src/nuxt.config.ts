@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'NT Solutions',
+      ogTitle: 'NT Solutions',
+      description: 'Soluciones informáticas para tu empresa. Desarrollo de software, diseño web, marketing digital y más. Creamos tu presencia en el mundo digital.',
+      ogDescription: 'Soluciones informáticas para tu empresa. Desarrollo de software, diseño web, marketing digital y más. Creamos tu presencia en el mundo digital.',
       meta: [
         {charset: 'utf-8'},
         {name: 'viewport', content: 'width=device-width, initial-scale=1'},
