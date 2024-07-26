@@ -302,22 +302,21 @@ export default {
     },
   },
   mounted() {
-    this.$nextTick(() => {
-      observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
       });
-
-      const hiddenElements = document.querySelectorAll(".servicesCard");
-      hiddenElements.forEach((element) => observer.observe(element));
-      this.typeText();
     });
+
+    const hiddenElements = document.querySelectorAll(".servicesCard");
+    hiddenElements.forEach((element) => observer.observe(element));
+    this.typeText();
   },
+
   computed: {
     columnCount() {
       // Adjust the breakpoint as needed
