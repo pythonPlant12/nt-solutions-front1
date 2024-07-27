@@ -238,16 +238,16 @@
 }
 
 .show {
-  opacity: 1;
-  transform: translateX(0);
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 </style>
 
 <script>
-let observer;
 export default {
   data() {
     return {
+      observer: null,
       show: false,
       typedText: "",
       fullText:
@@ -300,20 +300,25 @@ export default {
         }
       }, 15);
     },
+
+    setupObserver() {
+      // Observer for the services cards appearing
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".servicesCard");
+      hiddenElements.forEach((element) => this.observer.observe(element));
+    },
   },
   mounted() {
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
-        }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll(".servicesCard");
-    hiddenElements.forEach((element) => observer.observe(element));
+    this.setupObserver();
     this.typeText();
   },
 
