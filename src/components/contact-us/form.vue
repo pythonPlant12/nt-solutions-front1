@@ -286,7 +286,7 @@ const {handleSubmit, handleReset} = useForm({
 
 const onSubmit = handleSubmit(async values => {
   try {
-    const response = await fetch(base_url1 + '/send-contact-form/', {
+    const response = await fetch(base_url + '/send-contact-form/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
