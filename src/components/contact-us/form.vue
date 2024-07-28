@@ -200,6 +200,7 @@
 
 <script>
 const base_url = 'https://nt-solutions-backend.onrender.com'
+const base_url1 = 'http://nt-solutions-backend:10000'
 const local_url = 'http://127.0.0.1:8000'
 export default {
   data: () => ({
@@ -285,7 +286,7 @@ const {handleSubmit, handleReset} = useForm({
 
 const onSubmit = handleSubmit(async values => {
   try {
-    const response = await fetch(base_url + '/send-contact-form/', {
+    const response = await fetch(base_url1 + '/send-contact-form/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
