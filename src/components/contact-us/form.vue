@@ -215,7 +215,7 @@ export default {
         quantity: 10,
       },
     ],
-    url1: "http://nt-solutions-backend:10000/testapp/",
+    url1: "https://nt-solutions-backend:10000/testapp/",
     url2: "https://nt-solutions-backend.onrender.com/testapp/",
     url3: "http://127.0.0.1:8000/testapp/"
   }),
