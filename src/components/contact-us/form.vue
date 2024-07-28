@@ -230,17 +230,24 @@ export default {
   },
   methods: {
     async sendTestRequest() {
-     try {
-       const response = await fetch(this.url2);
-       if (!response.ok) {
-         throw new Error(`HTTP error!:${response.status}`)
-       }
-       const data = await response.json();
-       console.log(response)
-       console.log(data);
-     } catch(error) {
-       console.log("Error fetching data", error);
-     }
+      try {
+        const response = await fetch(this.url2, {
+          method: 'GET', // or 'POST', etc.
+          headers: {
+            'Content-Type': 'application/json', // Set the content type to JSON
+            'Accept': 'application/json',       // Set the accept header to JSON
+            // 'Authorization': 'Bearer YOUR_TOKEN' // Include if authentication is required
+          }
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error!:${response.status}`)
+        }
+        const data = await response.json();
+        console.log(response)
+        console.log(data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+      }
     },
   }
 };
