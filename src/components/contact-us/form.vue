@@ -145,7 +145,8 @@
           </v-list-item>
         </v-list>
         <v-container class="d-flex justify-center justify-center mb-2">
-          <v-btn type="submit" style="background-color: var(--blue); color: white;"> Enviar</v-btn>
+          <!--          type="submit" For submitting form add to v-btn-->
+          <v-btn style="background-color: var(--blue); color: white;" @click="sendTestRequest()"> Enviar</v-btn>
         </v-container>
       </v-card>
     </template>
@@ -214,6 +215,9 @@ export default {
         quantity: 10,
       },
     ],
+    url1: "nt-solutions-backend:10000",
+    url2: "https://nt-solutions-backend.onrender.com",
+    url3: "http://127.0.0.1:8000/testapp/"
   }),
 
   computed: {
@@ -224,6 +228,20 @@ export default {
       return this.subtotal + Number(this.shipping ?? 0);
     },
   },
+  methods: {
+    async sendTestRequest() {
+     try {
+       const response = await fetch(this.url1);
+       if (!response.ok) {
+         throw new Error(`HTTP error!:${response.status}`)
+       }
+       const data = await response.json();
+       console.log(data);
+     } catch(error) {
+       console.log("Error fetching data", error);
+     }
+    },
+  }
 };
 </script>
 
