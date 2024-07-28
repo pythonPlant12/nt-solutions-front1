@@ -231,7 +231,7 @@ export default {
   methods: {
     async sendTestRequest() {
       try {
-        const response = await fetch(this.url2, {
+        const response = await fetch(this.url1, {
           method: 'GET', // or 'POST', etc.
           headers: {
             'Content-Type': 'application/json', // Set the content type to JSON
