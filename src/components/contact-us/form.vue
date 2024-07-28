@@ -231,7 +231,7 @@ export default {
   methods: {
     async sendTestRequest() {
      try {
-       const response = await fetch(this.url1);
+       const response = await fetch(this.url2);
        if (!response.ok) {
          throw new Error(`HTTP error!:${response.status}`)
        }
