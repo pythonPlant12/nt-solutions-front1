@@ -1,5 +1,5 @@
 <template>
-  <form @submit="onSubmit">
+  <form @submit="onSubmit" class="flex justify-center align-center">
 
     <v-stepper
         v-model="step"
@@ -7,7 +7,7 @@
         show-actions
         prev-text="Volver"
         next-text="Seguir"
-        class="formulario rounded-xl"
+        class="rounded-xl"
         editable
     >
       <template v-slot:item.1>
@@ -146,98 +146,30 @@
           </v-list>
           <v-container class="d-flex justify-center justify-center mb-2">
             <!--           For submitting form add to v-btn  @click="sendTestRequest()"-->
-            <v-btn style="background-color: var(--blue); color: white;" type="submit"> Enviar</v-btn>
+            <v-btn style="background-color: var(--blue); color: white;" type="submit" :loading="loadingFormButton">
+              Enviar
+            </v-btn>
           </v-container>
         </v-card>
-      </template>
-
-      <template v-slot:item.3>
-        <h3 class="text-h6">Confirm</h3>
-
-        <br/>
-
-        <v-sheet border>
-          <v-table>
-            <thead>
-            <tr>
-              <th>Description</th>
-              <th class="text-end">Quantity</th>
-              <th class="text-end">Price</th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr v-for="(product, index) in products" :key="index">
-              <td v-text="product.name"></td>
-              <td class="text-end" v-text="product.quantity"></td>
-              <td class="text-end" v-text="product.quantity * product.price"></td>
-            </tr>
-
-            <tr>
-              <td>Shipping</td>
-              <td></td>
-              <td class="text-end" v-text="shipping"></td>
-            </tr>
-
-            <tr>
-              <th>Total</th>
-              <th></th>
-              <th class="text-end">${{ total }}</th>
-            </tr>
-            </tbody>
-          </v-table>
-        </v-sheet>
       </template>
     </v-stepper>
   </form>
 </template>
-
 <style lang="scss">
 .formulario {
   width: 90%;
 }
 </style>
 
-<script>
-const base_url = 'https://nt-solutions-backend.onrender.com'
-const base_url1 = 'http://nt-solutions-backend:10000'
-const local_url = 'http://127.0.0.1:8000'
-export default {
-  data: () => ({
-    shipping: 0,
-    step: 1,
-    items: ['Review Order', 'Select Shipping', 'Submit'],
-    products: [
-      {
-        name: 'Product 1',
-        price: 10,
-        quantity: 2,
-      },
-      {
-        name: 'Product 2',
-        price: 15,
-        quantity: 10,
-      },
-    ],
-
-  }),
-
-  computed: {
-    subtotal() {
-      return this.products.reduce((acc, product) => acc + product.quantity * product.price, 0);
-    },
-    total() {
-      return this.subtotal + Number(this.shipping ?? 0);
-    },
-  },
-  methods: {
-  }
-};
-</script>
-
 <script setup>
 import { ref } from 'vue';
 import { useField, useForm } from 'vee-validate';
+
+const emit = defineEmits(['formSubmitted'])
+
+const base_url = 'https://nt-solutions-backend.onrender.com';
+const base_url1 = 'http://nt-solutions-backend:10000';
+const local_url = 'http://127.0.0.1:8000';
 
 const ERROR_MESSAGES = {
   NAME: 'Nombre tiene que tenér mínimo 2 carácteres.',
@@ -250,6 +182,7 @@ const ERROR_MESSAGES = {
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const {handleSubmit, handleReset} = useForm({
   validationSchema: {
     name(value) {
@@ -268,15 +201,10 @@ const {handleSubmit, handleReset} = useForm({
       if (value) return true;
       return ERROR_MESSAGES.SELECT;
     },
-
     companySize(value) {
       if (value) return true;
       return ERROR_MESSAGES.COMPANY_SIZE;
     },
-    // checkbox(value) {
-    //   if (value === "1") return true;
-    //   return ERROR_MESSAGES.CHECKBOX;
-    // },
     texto(value) {
       if (value?.length < 300) return true;
       return ERROR_MESSAGES.TEXT;
@@ -284,27 +212,9 @@ const {handleSubmit, handleReset} = useForm({
   },
 });
 
-const onSubmit = handleSubmit(async values => {
-  try {
-    const response = await fetch(base_url + '/send-contact-form/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        // 'Authorization': 'Bearer YOUR_TOKEN' // Include if authentication is required
-      },
-      body: JSON.stringify(values)
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error!:${response.status}`)
-    }
-    const data = await response.json();
-    console.log(response)
-    console.log(data);
-  } catch (error) {
-    console.log('Error fetching data', error);
-  }
-});
+const loadingFormButton = ref(false);
+const step = ref(1);
+const items = ref(['Contacto', 'Servicios']);
 
 const name = useField('name');
 const phone = useField('phone');
@@ -314,7 +224,34 @@ const companySize = useField('companySize');
 const texto = useField('texto');
 const checkbox = useField('checkbox');
 
-const items = ref(['Datos Personales', 'Solicitud']);
 const tipos = ref(['Presupuesto', 'Información']);
 const companySizeItems = ref(['Autónomo', '1 - 5 empleados', '5-9 empleados', '10-49 empleados', '50-99 empleados', '100-499 empleados', '500+ empleados']);
+
+function emitSubmittedForm(sent) {
+  emit('formSubmitted', sent);
+}
+
+const onSubmit = handleSubmit(async values => {
+  loadingFormButton.value = true;
+  try {
+    const response = await fetch(base_url + '/send-contact-form/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(values)
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error!:${response.status}`);
+    }
+    const data = await response.json();
+    loadingFormButton.value = false;
+    emitSubmittedForm(true);
+  } catch (error) {
+    console.log('Error fetching data', error);
+    loadingFormButton.value = false;
+    emitSubmittedForm(false);
+  }
+});
 </script>
