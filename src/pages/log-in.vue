@@ -143,6 +143,10 @@
   color: var(--gold);
   border: 1px solid var(--gold);
 }
+.log-in-icon:hover {
+  background-color: var(--blue);
+  color: white;
+}
 </style>
 <script>
 // import { GoogleSignInButton } from "vue3-google-signin"; // import for Google Button

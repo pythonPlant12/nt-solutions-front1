@@ -3,7 +3,8 @@
     <img src="/css/pictures/about-us/about-us-1.jpg"
          alt="Imagen sobre nosotros"
          id="about-us-main-image"
-         fetchpriority="high">
+         fetchpriority="high"
+    >
     <div class="overlay-content">
       <h2 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h2>
     </div>
@@ -24,43 +25,82 @@
     </div>
 
   </div>
+  <v-container>
+    <v-row justify="center">
+      <v-col cols="12" md="12" lg="10">
+        <v-timeline side="end">
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title1"
+                :text="text1"
+                :image="image1"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title2"
+                :text="text2"
+                :image="image2"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title1"
+                :text="text1"
+                :image="image1"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title3"
+                :text="text3"
+                :image="image3"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title4"
+                :text="text4"
+                :image="image4"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title5"
+                :text="text5"
+                :image="image5"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title5"
+                :text="text5"
+                :image="image5"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+          <v-timeline-item size="small">
+            <sobreNosotros-componenteCard
+                :title="title6"
+                :text="text6"
+                :image="image6"
+                :animation="animation1"
+            />
+          </v-timeline-item>
+        </v-timeline>
+      </v-col>
+    </v-row>
+  </v-container>
   <div id="elementosSobreNosotros">
-    <sobreNosotros-componenteCard
-        :title="title1"
-        :text="text1"
-        :image="image1"
-        :animation="animation1"
-    />
-    <sobreNosotros-componenteCard
-        :title="title2"
-        :text="text2"
-        :image="image2"
-        :animation="animation1"
-    />
-    <sobreNosotros-componenteCard
-        :title="title3"
-        :text="text3"
-        :image="image3"
-        :animation="animation1"
-    />
-    <sobreNosotros-componenteCard
-        :title="title4"
-        :text="text4"
-        :image="image4"
-        :animation="animation1"
-    />
-    <sobreNosotros-componenteCard
-        :title="title5"
-        :text="text5"
-        :image="image5"
-        :animation="animation1"
-    />
-    <sobreNosotros-componenteCard
-        :title="title6"
-        :text="text6"
-        :image="image6"
-        :animation="animation1"
-    />
+
+
   </div>
 </template>
 <style scoped>
@@ -107,6 +147,10 @@
   opacity: 0;
 }
 
+.timeline {
+  max-width: 800px;
+}
+
 @keyframes apareciendoFondoPantalla {
   to {
     opacity: 1;
@@ -120,6 +164,18 @@ import gsap from "gsap";
 export default {
   data() {
     return {
+      items: [
+        {
+          id: 1,
+          color: 'info',
+          icon: 'mdi-information',
+        },
+        {
+          id: 2,
+          color: 'error',
+          icon: 'mdi-alert-circle',
+        },
+      ],
       title1: "Líderes en la Revolución Digital Global",
       text1:
           "Forjamos el camino hacia la revolución digital desde el epicentro de la innovación. Nuestra empresa lidera con tecnologías avanzadas que transforman la manera en que el mundo abraza la innovación.",

@@ -114,7 +114,10 @@
   color: var(--blue);
   border: 1px solid var(--blue);
 }
-
+.sign-up:hover {
+  background-color: var(--gold);
+  color: white;
+}
 /*
 !* add appropriate colors to fb, twitter and google buttons *!
 .fb {
