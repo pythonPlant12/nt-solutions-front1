@@ -7,26 +7,26 @@
 		stacked
 	>
 		<template v-slot:text>
-			Bienvenido/a a <b>NT Solutions</b>, una empresa dedicada
+			Bienvenido/a a <b style="color: var(--blue)">NT Solutions</b>, una empresa dedicada
 			al desarrollo de páginas web. Valoramos la privacidad de nuestros usuarios y clientes y nos
 			comprometemos a proteger la información personal que puedan proporcionarnos. La presente
 			describe
 
-			<a ref="https://www.iubenda.com/privacy-policy/76325752/cookie-policy" target="_blank"
-			><b>Política de Privacidad</b></a
+			<nuxt-link to="/privacy-policy"
+			><b style="color: var(--blue)">Política de Privacidad</b></nuxt-link
 			>
 			cómo recopilamos, utilizamos y compartimos la información que obtenemos a través de nuestros
 			servicios en línea.
 		</template>
 
 		<template v-slot:actions>
-			<v-dialog v-model="dialog" max-width="500">
+			<v-dialog v-model="dialog" max-width="700">
 				<template v-slot:activator="{ props }">
 					<v-btn
 						class="text-none"
-						color="var(--gold)"
+						color="var(--blue)"
 						rounded="lg"
-						variant="outlined"
+						variant="tonal"
 						v-bind="props"
 					>
 						Configurar Cookies
@@ -100,20 +100,20 @@
 					<v-card-actions class="justify-center px-6 py-3">
 						<v-btn
 							class="flex-grow-1 text-none"
-							color="var(--gold)"
+							color="var(--blue)"
 							rounded="lg"
-							variant="plain"
-							@click="dialog = false, aceptarCookies()"
+              variant="tonal"
+							@click="dialog = false; aceptarCookies()"
 						>
 							Rechazar todas
 						</v-btn>
 
 						<v-btn
-							class="text-white flex-grow-1 text-none"
-							color="var(--gold)"
+							class="flex-grow-1 text-none"
+							color="var(--blue)"
 							rounded="lg"
-							variant="flat"
-							@click="dialog = false, aceptarCookies()"
+              variant="tonal"
+							@click="dialog = false; aceptarCookies()"
 						>
 							Guardar y aceptar
 						</v-btn>
@@ -122,10 +122,10 @@
 			</v-dialog>
 
 			<v-btn
-				class="text-none ms-4 text-white"
-				color="var(--gold)"
+				class="text-none ms-4"
+				color="var(--blue)"
 				rounded="lg"
-				variant="flat"
+				variant="tonal"
 				@click="aceptarCookies()"
 			>
 				Aceptar Cookies

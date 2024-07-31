@@ -18,7 +18,6 @@
           color="white"
           @mouseenter="setElevation(24)"
           @mouseleave="setElevation(4)"
-
       >
         <span style="color: var(--gold);">Quienes somos</span>
       </v-btn>
@@ -29,12 +28,13 @@
     <v-row justify="center">
       <v-col cols="12" lg="10">
         <v-timeline side="end" class="timeline">
-          <v-timeline-item size="small" dot-color="var(--gold)" v-for="card in aboutUsCards">
+          <v-timeline-item size="small" v-for="card in aboutUsCards" dot-color="white">
             <sobreNosotros-componenteCard
                 :title="card.title"
                 :text="card.text"
                 :image="card.image"
                 :animation="animation1"
+                class="sobreNosotrosComponentCard hidden"
             />
           </v-timeline-item>
 
@@ -87,8 +87,23 @@
   opacity: 0;
 }
 
+.show {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
 .timeline {
   margin: 0 0 0 -20px;
+}
+
+.sobreNosotrosComponentCard {
+  margin-left: -20px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-3rem);
 }
 
 @keyframes apareciendoFondoPantalla {
@@ -159,19 +174,34 @@ export default {
       animation1: "moviendose",
     };
   },
+  mounted() {
+    this.setupObserver();
+  },
   methods: {
     setElevation(value) {
       this.buttonElevation = value;
     },
     moverAlSegundoElemento() {
       gsap.to(window, {
-        duration: 0.7,
+        duration: 0.4,
         scrollTo: {y: "#elementosSobreNosotros", offsetY: 80},
       });
     },
+    setupObserver() {
+      // Observer for the services cards appearing
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
 
+      const hiddenElements = document.querySelectorAll(".sobreNosotrosComponentCard");
+      hiddenElements.forEach((element) => this.observer.observe(element));
+    },
   },
-
-
 };
 </script>

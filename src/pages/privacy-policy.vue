@@ -10,7 +10,7 @@
             cuando sea necesario para proporcionar nuestros servicios.
         </p>
         <h4 class="mb-4 mt-4 text-center text-grey-darken-2">
-            2. Cómo Utilizamos la Información Utilizamos la información recopilada para:
+            2. Utilizamos la información recopilada para:
         </h4>
         <p class="text-grey-darken-1">
             Personalizar su experiencia en nuestro sitio web. Proporcionar servicios y responder a sus

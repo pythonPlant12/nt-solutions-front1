@@ -147,7 +147,7 @@ export default {
       // Utilizando $refs accedemos al elemento html,
       // smoother.scrollTo(segundoElemento)
       gsap.to(window, {
-        duration: 0.7,
+        duration: 0.4,
         scrollTo: {y: "#segundoElementoHtml", offsetY: 80},
       });
     },

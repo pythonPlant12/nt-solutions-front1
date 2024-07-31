@@ -7,7 +7,7 @@
       </h2>
       <div>
         <div class="d-flex justify-center">
-          <v-img max-width="500" src="/css/animations/gif/secondScreen.gif" alt="mundo digital"></v-img>
+          <v-img max-width="500" src="/css/animations/gif/secondScreen.gif" alt="mundo digital" fetchpriority="high"></v-img>
         </div>
         <p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
           Si estás aquí es porque valoras la excelencia en la presencia digital de tu negocio. En
