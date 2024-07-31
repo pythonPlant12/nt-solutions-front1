@@ -12,21 +12,21 @@
     <v-row class="d-flex justify-center">
       <contact-us-form @formSubmitted="handleSubmittedForm" class="formulario"/>
     </v-row>
-        <v-dialog
-      v-model="dialog"
-      width="auto"
+    <v-dialog
+        v-model="dialog"
+        width="auto"
     >
       <v-card
-        max-width="400"
-        prepend-icon="mdi-update"
-        text="Proximamente nos pondremos en contacto con usted para darle seguimiento a su solicitud."
-        title="Solicitud enviada"
+          max-width="400"
+          prepend-icon="mdi-update"
+          text="Proximamente nos pondremos en contacto con usted para darle seguimiento a su solicitud."
+          title="Solicitud enviada"
       >
         <template v-slot:actions>
           <v-btn
-            class="ms-auto"
-            text="Ok"
-            @click="dialog = false"
+              class="ms-auto"
+              text="Ok"
+              @click="dialog = false"
           ></v-btn>
         </template>
       </v-card>
@@ -53,6 +53,7 @@
 </style>
 <script setup>
 let dialog = ref(false)
+
 function handleSubmittedForm(submitted) {
   dialog.value = true;
 }

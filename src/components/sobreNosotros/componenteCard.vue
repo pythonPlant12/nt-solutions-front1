@@ -2,20 +2,19 @@
 	<v-sheet class="d-sm-flex align-sm-center justify-sm-center">
 		<v-row class="primer-row row-1 mt-sm-0 mb-12">
 			<v-spacer></v-spacer>
-			<v-col cols="12" md="10" class="prueba my-4">
+			<v-col cols="12" md="10" class="my-4">
 				<v-card
 					elevation="24"
-					variant="tonal"
-					class="mx-4 pa-4 rounded-xl card-1 mt-12 mt-sm-0"
+					class="mx-4 pa-4 rounded-lg card-1 mt-sm-0"
 				>
-					<h2 class="text-center titulo-card-sobre  rounded-xl text-white">{{ title }}</h2>
-					<p class="pa-4 pa-sm-16 pb-2 text-body-1 text-grey-darken-2 text-sm-h6 text-lg-h6">
+					<h2 class="text-center titulo-card-sobre  rounded-lg text-white text-sm-h6 text-body-2">{{ title }}</h2>
+					<p class="pa-4 pa-sm-8 text-grey-darken-2 text-body-2 text-sm-body-2 text-center">
 						{{ text }}
 					</p>
 					<v-img
 						:src="image"
 						height="200"
-						class="slide-image imagen mt-12 mt-sm-0 mb-sm-12"
+						class="slide-image imagen mt-4 mt-sm-4 mb-sm-12"
 						:class="animation"
 						hover
 					></v-img>
@@ -33,16 +32,15 @@
 
 .card-1 {
 	min-height: 100%;
-	background-color: rgba(255, 255, 255, 0.43);
-	backdrop-filter: blur(15px);
 	border: 1px solid transparent !important;
 	animation: 1s apareciendo 1s forwards;
 	opacity: 0;
+  background-color: white;
 }
 
 .titulo-card-sobre {
-	padding: 0.5rem;
-	background-color: #90A4AE;
+	padding: 0.3rem;
+	background-color: #303f6c;
 	margin-bottom: 1rem;
 	opacity: 0;
 	animation: 1s apareciendo 2s forwards;

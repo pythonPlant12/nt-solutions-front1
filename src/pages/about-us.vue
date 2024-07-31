@@ -25,83 +25,23 @@
     </div>
 
   </div>
-  <v-container>
+  <v-container id="elementosSobreNosotros">
     <v-row justify="center">
-      <v-col cols="12" md="12" lg="10">
-        <v-timeline side="end">
-          <v-timeline-item size="small">
+      <v-col cols="12" lg="10">
+        <v-timeline side="end" class="timeline">
+          <v-timeline-item size="small" dot-color="var(--gold)" v-for="card in aboutUsCards">
             <sobreNosotros-componenteCard
-                :title="title1"
-                :text="text1"
-                :image="image1"
+                :title="card.title"
+                :text="card.text"
+                :image="card.image"
                 :animation="animation1"
             />
           </v-timeline-item>
 
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title2"
-                :text="text2"
-                :image="image2"
-                :animation="animation1"
-            />
-          </v-timeline-item>
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title1"
-                :text="text1"
-                :image="image1"
-                :animation="animation1"
-            />
-          </v-timeline-item>
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title3"
-                :text="text3"
-                :image="image3"
-                :animation="animation1"
-            />
-          </v-timeline-item>
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title4"
-                :text="text4"
-                :image="image4"
-                :animation="animation1"
-            />
-          </v-timeline-item>
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title5"
-                :text="text5"
-                :image="image5"
-                :animation="animation1"
-            />
-          </v-timeline-item>
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title5"
-                :text="text5"
-                :image="image5"
-                :animation="animation1"
-            />
-          </v-timeline-item>
-          <v-timeline-item size="small">
-            <sobreNosotros-componenteCard
-                :title="title6"
-                :text="text6"
-                :image="image6"
-                :animation="animation1"
-            />
-          </v-timeline-item>
         </v-timeline>
       </v-col>
     </v-row>
   </v-container>
-  <div id="elementosSobreNosotros">
-
-
-  </div>
 </template>
 <style scoped>
 .main-div {
@@ -148,7 +88,7 @@
 }
 
 .timeline {
-  max-width: 800px;
+  margin: 0 0 0 -20px;
 }
 
 @keyframes apareciendoFondoPantalla {
@@ -176,36 +116,47 @@ export default {
           icon: 'mdi-alert-circle',
         },
       ],
-      title1: "Líderes en la Revolución Digital Global",
-      text1:
-          "Forjamos el camino hacia la revolución digital desde el epicentro de la innovación. Nuestra empresa lidera con tecnologías avanzadas que transforman la manera en que el mundo abraza la innovación.",
-      image1: "/css/pictures/sobreNosotros-card1.png",
+      aboutUsCards: [
+        {
+          title: "Líderes en la Revolución Digital Global",
+          text:
+              "Forjamos el camino hacia la revolución digital desde el epicentro de la innovación. Nuestra empresa lidera con tecnologías avanzadas que transforman la manera en que el mundo abraza la innovación.",
+          image: "/css/pictures/sobreNosotros-card1.png",
+        },
+        {
+          title: "Arquitectos de Soluciones Transformadoras",
+          text:
+              "En el corazón de la tecnología, diseñamos soluciones que trascienden fronteras. Guiados por una visión global, llevamos la excelencia a cada rincón del planeta a través de implementaciones de última generación.",
+          image: "/css/pictures/sobreNosotros-card2.png",
+
+        },
+        {
+          title: "Innovación como Pilar Fundamental",
+          text:
+              "Nuestra historia se construye con líneas de innovación que cruzan continentes. Desde el epicentro de la acción, generamos un impacto positivo en el mundo mediante tecnologías que eliminan las barreras geográficas.",
+          image: "/css/pictures/sobreNosotros-card3.png",
+        },
+        {
+          title: "Conectando Horizontes con Tecnología Avanzada",
+          text:
+              "Enlazamos horizontes, conectando continentes con tecnologías avanzadas. Somos la fuerza impulsora detrás de una nueva era digital, llevando la esencia de innovación y calidad a todos los rincones del globo.",
+          image: "/css/pictures/sobreNosotros-card4.png",
+
+        },
+        {
+          title: "Estrategas de la Transformación Digital",
+          text:
+              "Desde el epicentro de la estrategia digital, trazamos la ruta hacia el futuro. Nuestra presencia global es testimonio de una dedicación inflexible a la excelencia tecnológica, marcando el camino para la próxima era digital.",
+          image: "/css/pictures/sobreNosotros-card5.png",
+        },
+        {
+          title: "Embajadores de la Excelencia Tecnológica",
+          text:
+              "Como embajadores de la excelencia tecnológica, actuamos desde el epicentro de la innovación. Nuestra identidad se forja en el compromiso con la calidad, la innovación y la creación de un impacto significativo en la forma en que el mundo adopta la tecnología.",
+          image: "",
+        }
+      ],
       animation1: "moviendose",
-
-      title2: "Arquitectos de Soluciones Transformadoras",
-      text2:
-          "En el corazón de la tecnología, diseñamos soluciones que trascienden fronteras. Guiados por una visión global, llevamos la excelencia a cada rincón del planeta a través de implementaciones de última generación.",
-      image2: "/css/pictures/sobreNosotros-card2.png",
-
-      title3: "Innovación como Pilar Fundamental",
-      text3:
-          "Nuestra historia se construye con líneas de innovación que cruzan continentes. Desde el epicentro de la acción, generamos un impacto positivo en el mundo mediante tecnologías que eliminan las barreras geográficas.",
-      image3: "/css/pictures/sobreNosotros-card3.png",
-
-      title4: "Conectando Horizontes con Tecnología Avanzada",
-      text4:
-          "Enlazamos horizontes, conectando continentes con tecnologías avanzadas. Somos la fuerza impulsora detrás de una nueva era digital, llevando la esencia de innovación y calidad a todos los rincones del globo.",
-      image4: "/css/pictures/sobreNosotros-card4.png",
-
-      title5: "Estrategas de la Transformación Digital",
-      text5:
-          "Desde el epicentro de la estrategia digital, trazamos la ruta hacia el futuro. Nuestra presencia global es testimonio de una dedicación inflexible a la excelencia tecnológica, marcando el camino para la próxima era digital.",
-      image5: "/css/pictures/sobreNosotros-card5.png",
-
-      title6: "Embajadores de la Excelencia Tecnológica",
-      text6:
-          "Como embajadores de la excelencia tecnológica, actuamos desde el epicentro de la innovación. Nuestra identidad se forja en el compromiso con la calidad, la innovación y la creación de un impacto significativo en la forma en que el mundo adopta la tecnología.",
-      image6: "",
     };
   },
   methods: {
