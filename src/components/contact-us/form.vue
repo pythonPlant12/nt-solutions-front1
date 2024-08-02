@@ -58,100 +58,107 @@
           ></v-select>
 
           <v-btn @click="handleReset" class="mb-6 mx-4"> Limpiar formulario</v-btn>
-        </v-sheet>
-      </template>
-
-      <template v-slot:item.2>
-        <h3 class="text-h6">Servicio solicitado</h3>
-
-        <br/>
-        <v-card class="mx-auto" max-width="1440">
-          <v-divider></v-divider>
-
-          <v-list lines="three" select-strategy="classic" class="mb-8">
-            <v-list-subheader>General</v-list-subheader>
-
-            <v-list-item value="web">
-              <template v-slot:prepend="{ isActive }">
-                <v-list-item-action start>
-                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-                </v-list-item-action>
-              </template>
-
-              <v-list-item-title>Desarrollo Web a Medida</v-list-item-title>
-
-              <v-list-item-subtitle> Transformamos Ideas en Realidad Digital</v-list-item-subtitle>
-            </v-list-item>
-
-            <v-list-item value="webDesign">
-              <template v-slot:prepend="{ isActive }">
-                <v-list-item-action start>
-                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-                </v-list-item-action>
-              </template>
-
-              <v-list-item-title>Soluciones de Diseño Web</v-list-item-title>
-
-              <v-list-item-subtitle> Diseños Atractivos para un Mundo Digital</v-list-item-subtitle>
-            </v-list-item>
-
-            <v-list-item value="arquitecturasWeb">
-              <template v-slot:prepend="{ isActive }">
-                <v-list-item-action start>
-                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-                </v-list-item-action>
-              </template>
-
-              <v-list-item-title>Arquitecturas de Web Apps</v-list-item-title>
-
-              <v-list-item-subtitle>
-                Construimos Arquitecturas Escalables para la Innovación
-              </v-list-item-subtitle>
-            </v-list-item>
-            <v-list-item value="e-commerce">
-              <template v-slot:prepend="{ isActive }">
-                <v-list-item-action start>
-                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-                </v-list-item-action>
-              </template>
-
-              <v-list-item-title>Comercio Electrónico a Medida</v-list-item-title>
-
-              <v-list-item-subtitle>
-                Desbloqueamos el Éxito en Ventas Minoristas en Línea
-              </v-list-item-subtitle>
-            </v-list-item>
-            <v-list-item value="database">
-              <template v-slot:prepend="{ isActive }">
-                <v-list-item-action start>
-                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-                </v-list-item-action>
-              </template>
-
-              <v-list-item-title>Bases de Datos</v-list-item-title>
-
-              <v-list-item-subtitle> Almacena datos de manera segura</v-list-item-subtitle>
-            </v-list-item>
-            <v-list-item value="marketing">
-              <template v-slot:prepend="{ isActive }">
-                <v-list-item-action start>
-                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-                </v-list-item-action>
-              </template>
-
-              <v-list-item-title>Marketing Digital Estratégico</v-list-item-title>
-
-              <v-list-item-subtitle> Amplifica tu Presencia en Línea</v-list-item-subtitle>
-            </v-list-item>
-          </v-list>
           <v-container class="d-flex justify-center justify-center mb-2">
             <!--           For submitting form add to v-btn  @click="sendTestRequest()"-->
             <v-btn style="background-color: var(--blue); color: white;" type="submit" :loading="loadingFormButton">
               Enviar
             </v-btn>
           </v-container>
-        </v-card>
+
+        </v-sheet>
       </template>
+
+<!--      <template v-slot:item.2>-->
+<!--        <h3 class="text-h6">Servicio solicitado</h3>-->
+
+<!--        <br/>-->
+<!--        <v-card class="mx-auto" max-width="1440">-->
+<!--          <v-divider></v-divider>-->
+
+<!--          <v-list lines="three" select-strategy="classic" class="mb-8">-->
+<!--            <v-list-subheader>General</v-list-subheader>-->
+
+<!--            <v-list-item value="web">-->
+<!--              <template v-slot:prepend="{ isActive }">-->
+<!--                <v-list-item-action start>-->
+<!--                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>-->
+<!--                </v-list-item-action>-->
+<!--              </template>-->
+
+<!--              <v-list-item-title>Desarrollo Web a Medida</v-list-item-title>-->
+
+<!--              <v-list-item-subtitle> Transformamos Ideas en Realidad Digital</v-list-item-subtitle>-->
+<!--            </v-list-item>-->
+
+<!--            <v-list-item value="webDesign">-->
+<!--              <template v-slot:prepend="{ isActive }">-->
+<!--                <v-list-item-action start>-->
+<!--                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>-->
+<!--                </v-list-item-action>-->
+<!--              </template>-->
+
+<!--              <v-list-item-title>Soluciones de Diseño Web</v-list-item-title>-->
+
+<!--              <v-list-item-subtitle> Diseños Atractivos para un Mundo Digital</v-list-item-subtitle>-->
+<!--            </v-list-item>-->
+
+<!--            <v-list-item value="arquitecturasWeb">-->
+<!--              <template v-slot:prepend="{ isActive }">-->
+<!--                <v-list-item-action start>-->
+<!--                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>-->
+<!--                </v-list-item-action>-->
+<!--              </template>-->
+
+<!--              <v-list-item-title>Arquitecturas de Web Apps</v-list-item-title>-->
+
+<!--              <v-list-item-subtitle>-->
+<!--                Construimos Arquitecturas Escalables para la Innovación-->
+<!--              </v-list-item-subtitle>-->
+<!--            </v-list-item>-->
+<!--            <v-list-item value="e-commerce">-->
+<!--              <template v-slot:prepend="{ isActive }">-->
+<!--                <v-list-item-action start>-->
+<!--                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>-->
+<!--                </v-list-item-action>-->
+<!--              </template>-->
+
+<!--              <v-list-item-title>Comercio Electrónico a Medida</v-list-item-title>-->
+
+<!--              <v-list-item-subtitle>-->
+<!--                Desbloqueamos el Éxito en Ventas Minoristas en Línea-->
+<!--              </v-list-item-subtitle>-->
+<!--            </v-list-item>-->
+<!--            <v-list-item value="database">-->
+<!--              <template v-slot:prepend="{ isActive }">-->
+<!--                <v-list-item-action start>-->
+<!--                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>-->
+<!--                </v-list-item-action>-->
+<!--              </template>-->
+
+<!--              <v-list-item-title>Bases de Datos</v-list-item-title>-->
+
+<!--              <v-list-item-subtitle> Almacena datos de manera segura</v-list-item-subtitle>-->
+<!--            </v-list-item>-->
+<!--            <v-list-item value="marketing">-->
+<!--              <template v-slot:prepend="{ isActive }">-->
+<!--                <v-list-item-action start>-->
+<!--                  <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>-->
+<!--                </v-list-item-action>-->
+<!--              </template>-->
+
+<!--              <v-list-item-title>Marketing Digital Estratégico</v-list-item-title>-->
+
+<!--              <v-list-item-subtitle> Amplifica tu Presencia en Línea</v-list-item-subtitle>-->
+<!--            </v-list-item>-->
+<!--          </v-list>-->
+<!--          <v-container class="d-flex justify-center justify-center mb-2">-->
+<!--            &lt;!&ndash;           For submitting form add to v-btn  @click="sendTestRequest()"&ndash;&gt;-->
+<!--            <v-btn style="background-color: var(&#45;&#45;blue); color: white;" type="submit" :loading="loadingFormButton">-->
+<!--              Enviar-->
+<!--            </v-btn>-->
+<!--          </v-container>-->
+<!--        </v-card>-->
+<!--      </template>-->
     </v-stepper>
   </form>
 </template>
@@ -162,8 +169,8 @@
 </style>
 
 <script setup>
-import { ref } from 'vue';
-import { useField, useForm } from 'vee-validate';
+import {ref} from 'vue';
+import {useField, useForm} from 'vee-validate';
 
 const emit = defineEmits(['formSubmitted'])
 
@@ -214,7 +221,7 @@ const {handleSubmit, handleReset} = useForm({
 
 const loadingFormButton = ref(false);
 const step = ref(1);
-const items = ref(['Contacto', 'Servicios']);
+const items = ref(['Contacto']);
 
 const name = useField('name');
 const phone = useField('phone');

@@ -7,15 +7,17 @@
       </h2>
       <div>
         <div class="d-flex justify-center">
-          <v-img max-width="500" src="/css/animations/gif/secondScreen.gif" alt="mundo digital" fetchpriority="high"></v-img>
+          <v-img max-width="500"
+                 src="/css/animations/gif/secondScreen.gif"
+                 alt="mundo digital"
+                 fetchpriority="high"
+          ></v-img>
         </div>
         <p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
-          Si estás aquí es porque valoras la excelencia en la presencia digital de tu negocio. En
-          nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino
-          también soluciones tecnológicas personalizadas para potenciar el rendimiento de tu
-          empresa. Desde la implementación de bases de datos hasta la creación de portales
-          especializados, nuestro compromiso es impulsar tu éxito en línea. Con enfoque en el
-          posicionamiento web y SEO, nos esforzamos por llevar tu presencia digital a nuevas
+          En nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino también soluciones
+          tecnológicas personalizadas para potenciar el rendimiento de tu empresa. Desde la implementación de bases de
+          datos hasta la creación de portales especializados y tiendas online, nuestro compromiso es impulsar tu éxito
+          en línea. Con enfoque en el posicionamiento web y SEO, nos esforzamos por llevar tu presencia digital a nuevas
           alturas.
         </p>
       </div>

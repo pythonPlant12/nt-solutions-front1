@@ -41,7 +41,7 @@
         </template>
 
         <v-card-text class="bg-surface-light pt-4">
-          Proximamente nos pondremos en contacto con usted para darle seguimiento a su solicitud.
+          Proximamente nos pondremos en contacto contigo para darle seguimiento a su solicitud.
         </v-card-text>
 
         <template v-slot:actions>
