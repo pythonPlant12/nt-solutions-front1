@@ -171,7 +171,6 @@ export default {
     loading: false,
   }),
   methods: {
-
     login() {
       this.loading = true;
       setTimeout(() => {
