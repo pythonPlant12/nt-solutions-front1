@@ -1,10 +1,10 @@
 <template>
   <v-alert
       border="top"
-      type="info"
+      type="error"
       variant="outlined"
   >
-    El inicio de sesión está deshabilitado debido a mejoras en la plataforma interna.
+    <span style="color: var(--gold);">El inicio de sesión está deshabilitado debido a mejoras en la plataforma interna.</span>
   </v-alert>
   <div class="pruebaGradientWindow d-flex flex-column justify-content-center">
     <div>
