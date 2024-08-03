@@ -1,4 +1,10 @@
 <template>
+  <v-alert
+      border="top"
+      type="warning"
+  >
+    El inicio de sesión está deshabilitado debido a mejoras en la plataforma interna.
+  </v-alert>
   <div class="pruebaGradientWindow d-flex flex-column justify-content-center">
     <div>
       <v-container class="mt-sm-6 mt-xl-12 mb- primer-slide-container">
@@ -83,6 +89,7 @@
                     size="large"
                     type="submit"
                     variant="tonal"
+                    disabled="true"
                     rounded="xl"
                     block
                     style="background-color: var(--blue); color: white;"
@@ -143,6 +150,7 @@
   color: var(--gold);
   border: 1px solid var(--gold);
 }
+
 .log-in-icon:hover {
   background-color: var(--blue);
   color: white;
@@ -192,7 +200,6 @@ export default {
         }),
       });
       const data = await response;
-      console.log(data);
     },
     // async postToBackendAuth() {
     // 	const response = await fetch(process.env.BACKEND_API + "auth/token/", {
