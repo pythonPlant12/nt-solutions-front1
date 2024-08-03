@@ -1,7 +1,8 @@
 <template>
   <v-alert
       border="top"
-      type="warning"
+      type="info"
+      variant="outlined"
   >
     El inicio de sesión está deshabilitado debido a mejoras en la plataforma interna.
   </v-alert>
