@@ -734,7 +734,9 @@ export default {
     // });
   },
   mounted() {
-    this.cookiesAceptadas = false;
+    setTimeout(() => {
+      this.cookiesAceptadas = false;
+    }, 5000);
     this.activeBtn = this.$route.path;
     const selectElement = (element) => document.querySelector(element);
     selectElement(".mobile-menu").addEventListener("click", () => {
