@@ -17,6 +17,7 @@
     "@nuxtjs/google-fonts": "^3.1.0",
     "nuxt": "^3.8.1",
     "nuxt-gsap-module": "^2.0.0",
+    "nuxt-viewport": "^2.1.5",
     "sass": "^1.69.5",
     "vite-plugin-vuetify": "^1.0.2",
     "vue": "^3.4.27",

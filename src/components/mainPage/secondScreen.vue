@@ -3,7 +3,7 @@
   <v-sheet>
     <v-card class="mx-sm-16 mx-4 px-2 mt-16" rounded="xl" elevation="24">
       <h2 class="titulo text-h3 font-weight-black text-center mt-16">
-        Mundo digital a tu alcance
+        Mundo digital
       </h2>
       <div>
         <div class="d-flex justify-center">
@@ -146,8 +146,6 @@
 </template>
 
 <style>
-
-
 .prueba1 {
   display: flex;
   margin-top: 2rem;
@@ -255,14 +253,14 @@
   }
 }
 
-@media screen and (max-width: 668) {
+@media screen and (max-width: 668px) {
   .titulo {
-    font-size: 1rem !important;
+    font-size: 1.8rem !important;
     color: var(--three);
   }
 
   .texto {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 }
 </style>

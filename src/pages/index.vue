@@ -1,6 +1,6 @@
 <!-- ! TEMPLATE -->
 
-<template>
+<template id="indexId">
   <div class="main-div" ref="mainDiv">
     <video ref="videoElement" autoplay muted loop playsinline id="backgroundVideo">
       <source src="/index-main.mp4" type="video/mp4">
@@ -24,6 +24,9 @@
         <span style="color: white;">Conocer más</span>
       </v-btn>
     </div>
+  </div>
+  <div id="firstScreen" class="mt-8" ref="firstScreen">
+    <mainPage-firstScreen/>
   </div>
   <div id="segundoElementoHtml" class="mt-16" ref="segundoElemento">
     <mainPage-secondScreen/>
@@ -119,13 +122,11 @@
 <!-- ! SCRIPT -->
 
 <script>
-import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Import the ScrollToPlugin
 import { ref } from "vue";
-
+import { gsap } from 'gsap'
 // Register the plugin
 gsap.registerPlugin(ScrollToPlugin);
-
 export default {
   mounted() {
   },
@@ -148,7 +149,7 @@ export default {
       // smoother.scrollTo(segundoElemento)
       gsap.to(window, {
         duration: 0.4,
-        scrollTo: {y: "#segundoElementoHtml", offsetY: 80},
+        scrollTo: {y: "#firstScreen", offsetY: 80},
       });
     },
   },

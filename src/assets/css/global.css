@@ -15,7 +15,7 @@ html, body {
     --four: #6f6866 !important;
     --five: #38302e !important;
     --six: #8e8d8da7 !important;
-    --seven: #f1f1f1a7 !important;
+    --seven: rgba(248, 248, 248, 0.65) !important;
     --blue: #072146 !important;
     --gold: #936d24 !important;
     --blue-dark: #162659 !important;

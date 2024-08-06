@@ -784,7 +784,6 @@ export default {
       this.snackbar = true;
     },
   },
-
   computed: {},
 };
 </script>

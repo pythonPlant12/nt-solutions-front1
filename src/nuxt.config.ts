@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     transpile: ['vuetify', 'gsap', 'mdi-vue'],
   },
   plugins: [
-    {src: '~/plugins/vue3-lottie.js', mode: 'client'}
+    {src: '~/plugins/vue3-lottie.js', mode: 'client'},
   ],
   modules: [
     (_options, nuxt) => {
@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     },
     '@hypernym/nuxt-gsap',
     '@nuxtjs/google-fonts',
+    'nuxt-viewport'
     // 'nuxt-vue3-google-signin'
     //... here we will add another modules
   ],
