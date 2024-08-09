@@ -3,8 +3,8 @@
 <template id="indexId">
   <div class="main-div" ref="mainDiv">
     <video ref="videoElement" autoplay muted loop playsinline id="backgroundVideo">
-      <source src="/index-main.mp4" type="video/mp4">
-      Your browser does not support the video tag. Try downloading the video <a href="/index-main.mp4">here</a>.
+      <source src="/index-main.webm" type="video/webm">
+      Your browser does not support the video tag. Try downloading the video <a href="/index-main.webm">here</a>.
     </video>
     <div class="overlay-content">
       <h1 class="overlay-title">tu BUSINESS <br>
