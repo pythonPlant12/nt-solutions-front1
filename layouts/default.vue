@@ -29,11 +29,6 @@
                 <span class="line line-bottom"></span>
               </div>
             </li>
-            <li class="nav-item">
-              <NuxtLink to="/">
-                <v-img src="/css/pictures/logo.png" class="nav-link nav-link-logo"></v-img>
-              </NuxtLink>
-            </li>
 
             <li class="nav-item">
               <NuxtLink to="/" class="nav-link nav-link-mobile" @click.prevent="cerrarMenu()"
@@ -463,6 +458,13 @@ header {
     padding: 0;
   }
 
+  .hero {
+    height: 100rem;
+    background-size: auto 100rem;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
   .nav-list {
     margin-top: -1.5rem;
   }
@@ -631,11 +633,6 @@ header {
     padding: 10.5rem 5rem;
     z-index: 10;
     box-sizing: border-box;
-    transition: opacity 0.3s;
-  }
-
-  .active {
-    opacity: 0;
     transition: opacity 0.3s;
   }
 
