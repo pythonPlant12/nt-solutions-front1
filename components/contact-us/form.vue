@@ -58,11 +58,10 @@
               label="Tamaño de empresa"
           ></v-select>
 
-          <v-btn @click="handleReset" class="mb-6 mx-4 mt-2"> Limpiar formulario</v-btn>
+          <v-btn text="Limpiar formulario" @click="handleReset" class="mb-6 mx-4 mt-2"></v-btn>
           <v-container class="d-flex justify-center justify-center mb-2">
             <!--           For submitting form add to v-btn  @click="sendTestRequest()"-->
-            <v-btn style="background-color: var(--blue); color: white;" type="submit" :loading="loadingFormButton">
-              Enviar
+            <v-btn text="Enviar" style="background-color: var(--blue); color: white;" type="submit" :loading="loadingFormButton">
             </v-btn>
           </v-container>
 

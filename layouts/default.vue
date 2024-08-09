@@ -13,19 +13,6 @@
               <span class="line line-buttom1"></span>
             </div>
           </li>
-          <!--          <NuxtLink to="/">-->
-          <!--            <v-img-->
-          <!--                src="/css/pictures/logo.png"-->
-          <!--                class="nav-link nav-link-logo logo-moviendose"-->
-          <!--                width="50"-->
-          <!--            ></v-img>-->
-          <!--          </NuxtLink>-->
-
-          <!--            <NuxtLink to="/log-in"-->
-          <!--            >-->
-          <!--              <v-icon icon="mdi mdi-account-box-outline" ref="nav-link-bag" class="nav-link nav-link-bag"></v-icon-->
-          <!--              >-->
-          <!--            </NuxtLink>-->
         </ul>
         <NuxtLink to="/" class="title-heading-nav nav-list-mobile gradient-text bold">NT SOLUTIONS</NuxtLink>
         <!-- /.nav-list nav-list-mobile -->
@@ -230,87 +217,90 @@
           <h4 class="mb-4 mx-2" style="color: var(--gold)">MENÚ</h4>
           <ul style="list-style-type: none">
             <li>
-              <v-btn
-                  append-icon="mdi mdi-domain"
-                  size="small"
-                  variant="text"
-                  rounded="lg"
-                  class="boton"
-              >
-                <NuxtLink to="/"></NuxtLink>
-                NT Solutions
-              </v-btn
-              >
+              <NuxtLink to="/">
+                <v-btn
+                    append-icon="mdi mdi-domain"
+                    size="small"
+                    variant="text"
+                    rounded="lg"
+                    class="boton"
+                >
+                  NT Solutions
+                </v-btn>
+              </NuxtLink>
             </li>
             <li>
-              <v-btn
-                  append-icon="mdi mdi-database-cog"
-                  size="small"
-                  variant="text"
-                  rounded="lg"
-                  class="boton"
-              >
-                <NuxtLink to="/services"></NuxtLink>
-                Servicios
-              </v-btn
-              >
+              <NuxtLink to="/services">
+                <v-btn
+                    append-icon="mdi mdi-database-cog"
+                    size="small"
+                    variant="text"
+                    rounded="lg"
+                    class="boton"
+                >
+                  Servicios
+                </v-btn>
+              </NuxtLink>
             </li>
             <li>
-              <v-btn
-                  append-icon="mdi mdi-wifi-settings"
-                  size="small"
-                  variant="text"
-                  rounded="lg"
-                  class="boton"
-              >
-                <NuxtLink to="/tecnologies"></NuxtLink>
-                Tecnologías
-              </v-btn
-              >
+              <NuxtLink to="/tecnologies">
+                <v-btn
+                    append-icon="mdi mdi-wifi-settings"
+                    size="small"
+                    variant="text"
+                    rounded="lg"
+                    class="boton"
+                >
+                  Tecnologías
+                </v-btn>
+              </NuxtLink>
             </li>
             <li>
-              <v-btn
-                  append-icon="mdi mdi-information-variant"
-                  size="small"
-                  variant="text"
-                  rounded="lg"
-                  class="boton"
-              >
-                <NuxtLink to="/about-us"></NuxtLink>
-                Sobre Nosotros
-              </v-btn
-              >
+              <NuxtLink to="/about-us">
+                <v-btn
+                    append-icon="mdi mdi-information-variant"
+                    size="small"
+                    variant="text"
+                    rounded="lg"
+                    class="boton"
+                >
+                  Sobre Nosotros
+                </v-btn>
+              </NuxtLink>
             </li>
             <li>
-              <v-btn
-                  append-icon="mdi-account-eye-outline"
-                  variant="text"
-                  size="small"
-                  rounded="lg"
-                  class="boton"
-              >
-                <NuxtLink to="/privacy-policy"></NuxtLink>
-                Política de privacidad
-              </v-btn
-              >
+              <NuxtLink class="boton" to="/privacy-policy">
+                <v-btn
+                    append-icon="mdi-account-eye-outline"
+                    variant="text"
+                    size="small"
+                    rounded="lg"
+                    class="boton"
+                >Política de privacidad
+                </v-btn>
+              </NuxtLink>
             </li>
             <li>
+              <NuxtLink class="boton" to="/log-in">
               <v-btn
                   append-icon="mdi mdi-lock-check"
                   variant="outlined"
                   size="small"
                   rounded="lg"
-                  class="boton boton-sign-in mx-2"
+                  class="boton boton-sign-in ml-2 mb-2"
               >Log In
               </v-btn>
+             </NuxtLink>
+              <NuxtLink class="boton" to="/sign-up">
               <v-btn
                   append-icon="mdi mdi-account-check"
                   variant="outlined"
                   size="small"
                   rounded="lg"
-                  class="boton boton-sign-up"
+                  class="boton boton-sign-up ml-2"
               ><b class="text-white">Sign up</b></v-btn
               >
+              </NuxtLink>
             </li>
           </ul>
         </v-col>
@@ -377,8 +367,7 @@
 }
 
 .boton {
-  padding: 0.5rem !important;
-  padding-right: 1rem !important;
+  color: black;
 }
 
 .boton-sign-up {
@@ -445,19 +434,8 @@ header {
   transition: opacity 3s;
 }
 
-.logo-moviendose {
-  transition: opacity 3s;
-  animation: 10s logoMoviendose infinite;
-}
-
 .active .nav-link-logo {
   display: none;
-}
-
-.nav-link-bag {
-  align-self: center;
-  width: 1.4rem;
-  height: 4.4rem;
 }
 
 .active .nav-list-larger .nav-item {
@@ -479,13 +457,6 @@ header {
     transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
     height 0.3s cubic-bezier(0.32, 0.08, 0.24, 1);
     display: block; /* Use flexbox */
-  }
-
-  .hero {
-    height: 100rem;
-    background-size: auto 100rem;
-    background-position: bottom center;
-    background-repeat: no-repeat;
   }
 
   header .container {
@@ -624,23 +595,6 @@ header {
 
   .title-heading-nav {
     position: absolute;
-    //background: linear-gradient(
-    //    to right,
-    //    rgb(7, 33, 70),
-    //    rgb(33, 36, 77),
-    //    rgb(53, 38, 83),
-    //    rgb(72, 39, 85),
-    //    rgb(142, 59, 64),
-    //    rgb(149, 70, 56),
-    //    rgb(152, 82, 48),
-    //    rgb(151, 95, 41),
-    //    rgb(148, 109, 36)
-    //);
-    //background-size: 300% 300%;
-    //-webkit-background-clip: text;
-    //-webkit-text-fill-color: transparent;
-    //background-clip: text;
-    //animation: gradient-animation 5s infinite;
     color: var(--blue);
     right: 2.2rem;
     top: 1.9rem;
@@ -680,7 +634,7 @@ header {
     transition: opacity 0.3s;
   }
 
-  .active .nav-link-bag {
+  .active {
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -693,32 +647,6 @@ header {
 
   .nav-list-larger .nav-item:nth-child(9) {
     border-bottom: none;
-  }
-
-  .title-heading {
-    font-size: 4.4rem;
-  }
-
-  .hero {
-    height: 100rem;
-    background-size: auto 100rem;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-  }
-
-  .title-sub-heading {
-    font-size: 2.4rem;
-    color: white;
-  }
-
-  .cta-link:nth-child(2) {
-    margin-left: 2rem;
-  }
-
-  .title-heading-watch {
-    height: 6.2rem;
-    /* background-image: url("images/hero/watch/logo_watch_medium.png"); */
-    background-size: auto 6.2rem;
   }
 }
 
