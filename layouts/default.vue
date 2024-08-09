@@ -13,22 +13,21 @@
               <span class="line line-buttom1"></span>
             </div>
           </li>
-          <NuxtLink to="/">
-            <v-img
-                src="/css/pictures/logo.png"
-                class="nav-link nav-link-logo logo-moviendose"
-                width="50"
-            ></v-img>
-          </NuxtLink>
+          <!--          <NuxtLink to="/">-->
+          <!--            <v-img-->
+          <!--                src="/css/pictures/logo.png"-->
+          <!--                class="nav-link nav-link-logo logo-moviendose"-->
+          <!--                width="50"-->
+          <!--            ></v-img>-->
+          <!--          </NuxtLink>-->
 
-          <li class="nav-item">
-            <NuxtLink to="/log-in"
-            >
-              <v-icon icon="mdi mdi-account-box-outline" ref="nav-link-bag" class="nav-link nav-link-bag"></v-icon
-              >
-            </NuxtLink>
-          </li>
+          <!--            <NuxtLink to="/log-in"-->
+          <!--            >-->
+          <!--              <v-icon icon="mdi mdi-account-box-outline" ref="nav-link-bag" class="nav-link nav-link-bag"></v-icon-->
+          <!--              >-->
+          <!--            </NuxtLink>-->
         </ul>
+        <NuxtLink to="/" class="title-heading-nav nav-list-mobile gradient-text bold">NT SOLUTIONS</NuxtLink>
         <!-- /.nav-list nav-list-mobile -->
         <!-- ! Navigation List of Options Bar COMPUTER -->
         <ul class="nav-list nav-list-larger larger-mobile">
@@ -521,7 +520,7 @@ header {
 
   /* ! Lines of mobile menu trigger */
   .mobile-menu {
-    margin-left: 2rem;
+    margin-top: -4px;
     position: relative;
     z-index: 15;
     width: 100%;
@@ -538,7 +537,7 @@ header {
     width: 1.5rem;
     height: 2.5px;
     border-radius: 20rem;
-    background-color: #5f5a5a;
+    background-color: var(--gold);
     color: #5f5a5a;
     transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   }
@@ -621,6 +620,43 @@ header {
   .nav {
     position: relative;
     padding: 2rem !important;
+  }
+
+  .title-heading-nav {
+    position: absolute;
+    //background: linear-gradient(
+    //    to right,
+    //    rgb(7, 33, 70),
+    //    rgb(33, 36, 77),
+    //    rgb(53, 38, 83),
+    //    rgb(72, 39, 85),
+    //    rgb(142, 59, 64),
+    //    rgb(149, 70, 56),
+    //    rgb(152, 82, 48),
+    //    rgb(151, 95, 41),
+    //    rgb(148, 109, 36)
+    //);
+    //background-size: 300% 300%;
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+    //background-clip: text;
+    //animation: gradient-animation 5s infinite;
+    color: var(--blue);
+    right: 2.2rem;
+    top: 1.9rem;
+    font-weight: bold;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
   }
 
   .nav-link {
