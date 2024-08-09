@@ -1,0 +1,26 @@
+services:
+  nt-solutions-front1:
+    extends:
+      file: prod/docker-compose.yaml
+      service: nt-solutions-front1
+    env_file: ../.env
+    build:
+      context: ../
+      dockerfile: ./environment/Dockerfile
+      target: ${TARGET}
+      args:
+        - USER_ID=${USER_ID}
+        - GROUPD_ID=${GROUPD_ID}
+        - USER=${USER}
+    user: "${USER_ID}:${GROUPD_ID}"
+    ports:
+      - 3000:3000
+    volumes:
+      - ../:/code
+    networks:
+      - nt-solutions-front1-network
+
+networks:
+    nt-solutions-front1-network:
+        driver: bridge
+        name: nt-solutions-front1-network

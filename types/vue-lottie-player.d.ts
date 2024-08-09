@@ -1,0 +1,1 @@
+declare module '~/src/types/vue-lottie-player';
