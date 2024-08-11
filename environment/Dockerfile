@@ -23,7 +23,7 @@ WORKDIR /code
 COPY --chown=$USER:GROUPD_ID . .
 #LOCAL OR DEVELOPMENT BUILD
 FROM common AS base-stage
-#RUN npm install
+RUN npm install
 CMD npm run dev
 #PROD OR PRE BUILD
 FROM common as builder
@@ -32,5 +32,5 @@ RUN npm run build
 #PROD OR PRE FINAL
 FROM --platform=linux/amd64 node:20.16.0-slim as final-stage
 COPY --from=builder /code/.output ./
-CMD node ./server/index.msj
+CMD node ./server/index.mjs
 

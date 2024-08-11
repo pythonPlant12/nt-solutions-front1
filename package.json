@@ -22,6 +22,8 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
+  },
+  "dependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
     "@mdi/font": "^7.4.47",
     "@nuxt/devtools": "latest",
@@ -34,9 +36,7 @@
     "vue": "^3.4.27",
     "vue-lottie-player": "^0.1.9",
     "vue-router": "^4.2.5",
-    "vuetify": "^3.4.2"
-  },
-  "dependencies": {
+    "vuetify": "^3.4.2",
     "@lordicon/element": "^1.4.2",
     "@nuxt/kit": "^3.12.4",
     "boxicons": "^2.1.4",
