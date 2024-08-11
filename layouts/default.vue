@@ -149,7 +149,7 @@
                     variant="outlined"
                     size="small"
                     rounded="lg"
-                    class="boton boton-sign-up"
+                    class="boton boton-sign-up ml-2"
                 ><b class="text-white">Sign up</b></v-btn
                 >
               </NuxtLink>
@@ -353,7 +353,7 @@
   </footer>
 </template>
 
-<style>
+<style lang="scss">
 .footer {
   background-color: white;
   z-index: 200 !important;
@@ -363,6 +363,11 @@
 
 .boton {
   color: black;
+}
+header {
+  .boton {
+    padding: 1rem;
+  }
 }
 
 .boton-sign-up {
@@ -441,7 +446,10 @@ header {
   animation: fadeIn 1s ease-in;
   opacity: 1;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
   visibility: visible;
 }
 
