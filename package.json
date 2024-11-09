@@ -43,7 +43,7 @@
     "sass": "^1.69.5",
     "vee-validate": "^4.11.8",
     "vite-plugin-vuetify": "^1.0.2",
-    "vue": "^3.4.27",
+    "vue": "^3.5.12",
     "vue-lottie-player": "^0.1.9",
     "vue-router": "^4.2.5",
     "vue3-lottie": "^3.3.0",
@@ -54,6 +54,9 @@
     "**/*.{js, jsx, ts, tsx, vue}": [
       "npm run lint --fix"
     ]
+  },
+  "resolutions": {
+    "nuxt": "3.13.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.10.0",
