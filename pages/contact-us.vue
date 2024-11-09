@@ -9,41 +9,51 @@
     </v-row>
   </v-container>
   <v-container class="mb-10">
-    <v-row class="d-flex justify-center">
-      <contact-us-form @formSubmitted="handleSubmittedForm" class="formulario"/>
-    </v-row>
-    <v-dialog
-        v-model="dialog"
-        width="auto"
-    >
-      <v-card
-          class="mx-auto"
-          prepend-icon="mdi-card-account-mail"
-          subtitle="Gracias por ponerse en contacto"
-          max-width="400"
+    <div>
+      <v-row class="d-flex justify-center">
+        <contact-us-form class="formulario" @form-submitted="handleSubmittedForm"/>
+      </v-row>
+      <v-dialog
+          v-model="dialog"
+          width="auto"
       >
-        <template v-slot:title>
-          <span class="font-weight-black" style="color: var(--blue)">Solicitud enviada</span>
-        </template>
+        <v-card
+            class="mx-auto"
+            prepend-icon="mdi-card-account-mail"
+            subtitle="Gracias por ponerse en contacto"
+            max-width="400"
+        >
+          <template #title>
+            <span class="font-weight-black" style="color: var(--blue)">Solicitud enviada</span>
+          </template>
 
-        <v-card-text class="pt-4">
-          Proximamente contactaremos contigo para darle seguimiento a tu solicitud.
-        </v-card-text>
+          <v-card-text class="pt-4">
+            Proximamente contactaremos contigo para darle seguimiento a tu solicitud.
+          </v-card-text>
 
-        <template v-slot:actions>
-          <v-btn
-              style="color: var(--blue)"
-              class="ms-auto"
-              variant="tonal"
-              text="Ok"
-              @click="dialog = false"
-          ></v-btn>
-        </template>
-      </v-card>
-    </v-dialog>
+          <template #actions>
+            <v-btn
+                style="color: var(--blue)"
+                class="ms-auto"
+                variant="tonal"
+                text="Ok"
+                @click="dialog = false"
+            />
+          </template>
+        </v-card>
+      </v-dialog>
+    </div>
   </v-container>
 
 </template>
+<script setup>
+const dialog = ref(false)
+
+function handleSubmittedForm() {
+  // This also can receive one param
+  dialog.value = true;
+}
+</script>
 <style>
 .primer-slide-container {
   opacity: 0;
@@ -61,11 +71,4 @@
   }
 }
 </style>
-<script setup>
-let dialog = ref(false)
-
-function handleSubmittedForm(submitted) {
-  dialog.value = true;
-}
-</script>
 

@@ -16,6 +16,32 @@
 </template>
 
 
+<script>
+let observer;
+export default {
+  data: () => ({
+    length: 3,
+    onboarding: 0,
+  }),
+  mounted() {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show')
+        } else {
+          entry.target.classList.remove('show')
+        }
+      });
+    })
+
+    const hiddenElements = document.querySelectorAll('.tecnologiasCard');
+    hiddenElements.forEach((element) => observer.observe(element))
+  },
+};
+</script>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 <style>
 .tecnologias-card {
   display: flex;
@@ -69,29 +95,3 @@
 }
 
 </style>
-
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-<script>
-let observer;
-export default {
-  data: () => ({
-    length: 3,
-    onboarding: 0,
-  }),
-  mounted() {
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show')
-        } else {
-          entry.target.classList.remove('show')
-        }
-      });
-    })
-
-    const hiddenElements = document.querySelectorAll('.tecnologiasCard');
-    hiddenElements.forEach((element) => observer.observe(element))
-  },
-};
-</script>

@@ -2,6 +2,11 @@ import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
   //...
+  runtimeConfig: {
+    public: {
+      backendApi: process.env.NUXT_PUBLIC_BACKEND_SERVICE
+    }
+  },
   app: {
     head: {
       title: 'NT Solutions',
@@ -21,7 +26,12 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
         }
+
       ],
       htmlAttrs: {
         lang: 'es'
@@ -44,15 +54,15 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({autoImport: true}))
       })
     },
+    '@pinia/nuxt',
     '@hypernym/nuxt-gsap',
     '@nuxtjs/google-fonts',
     'nuxt-viewport',
-    // 'nuxt-vue3-google-signin'
     //... here we will add another modules
   ],
-  // googleSignIn: {
-  //   clientId: process.env.GOOGLE_CLIENT_ID_FRONT,
-  // },
+  googleSignIn: {
+    clientId: '863302209216-rai2sit9kda2v7dlmsgcgepkijpl1kt2.apps.googleusercontent.com',
+  },
   css: [
     '~/assets/css/global.css', // Include the global CSS file
   ],

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {onMounted, Ref} from "vue";
+import type { Ref} from "vue";
+import {onMounted} from "vue";
 
-const viewport = useViewport()
-let clientesSatisfechosNum: Ref = ref(0);
-let clientesSatisfechosPorc: Ref = ref(0);
-let eCommerceMondatosNum: Ref = ref(0);
-let aumentoVentasPorc: Ref = ref(0);
+const clientesSatisfechosNum: Ref = ref(0);
+const clientesSatisfechosPorc: Ref = ref(0);
+const eCommerceMondatosNum: Ref = ref(0);
+const aumentoVentasPorc: Ref = ref(0);
 onMounted(() => {
   setupObserver()
 })

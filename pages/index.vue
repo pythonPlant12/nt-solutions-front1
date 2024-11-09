@@ -1,8 +1,8 @@
 <!-- ! TEMPLATE -->
 
 <template id="indexId">
-  <div class="main-div" ref="mainDiv">
-    <video ref="videoElement" autoplay muted loop playsinline id="backgroundVideo">
+  <div ref="mainDiv" class="main-div">
+    <video id="backgroundVideo" ref="videoElement" autoplay muted loop playsinline>
       <source src="/index-main.webm" type="video/webm">
       Your browser does not support the video tag. Try downloading the video <a href="/index-main.webm">here</a>.
     </video>
@@ -13,25 +13,62 @@
     </div>
     <div class="carousel-button">
       <v-btn
-          @click="moverAlSegundoElemento()"
           :ripple="false"
           stacked
           rounded="lg"
           elevation="24"
           size="large"
           color="#936d24"
+          @click="moverAlSegundoElemento()"
       >
         <span style="color: white;">Conocer más</span>
       </v-btn>
     </div>
   </div>
-  <div id="firstScreen" class="mt-8" ref="firstScreen">
+  <div id="firstScreen" ref="firstScreen" class="mt-8">
     <mainPage-firstScreen/>
   </div>
-  <div id="segundoElementoHtml" class="mt-16" ref="segundoElemento">
+  <div id="segundoElementoHtml" ref="segundoElemento" class="mt-16">
     <mainPage-secondScreen/>
   </div>
 </template>
+
+<script>
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Import the ScrollToPlugin
+import { ref } from "vue";
+import { gsap } from 'gsap'
+// Register the plugin
+gsap.registerPlugin(ScrollToPlugin);
+export default {
+  setup() {
+    const options = ref({
+      loop: true,
+      autoplay: true,
+    });
+    return {
+      options,
+    };
+  },
+  data() {
+    return {};
+  },
+  mounted() {
+  },
+  methods: {
+    moverAlSegundoElemento() {
+      // const segundoElemento = this.$refs.segundoElementoHtml;
+      // Utilizando $refs accedemos al elemento html,
+      // smoother.scrollTo(segundoElemento)
+      gsap.to(window, {
+        duration: 0.4,
+        scrollTo: {y: "#firstScreen", offsetY: 80},
+      });
+    },
+  },
+};
+</script>
+
+<!-- ! SCRIPT -->
 
 <style scoped>
 .main-div {
@@ -118,40 +155,3 @@
   }
 }
 </style>
-
-<!-- ! SCRIPT -->
-
-<script>
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Import the ScrollToPlugin
-import { ref } from "vue";
-import { gsap } from 'gsap'
-// Register the plugin
-gsap.registerPlugin(ScrollToPlugin);
-export default {
-  mounted() {
-  },
-  data() {
-    return {};
-  },
-  setup() {
-    const options = ref({
-      loop: true,
-      autoplay: true,
-    });
-    return {
-      options,
-    };
-  },
-  methods: {
-    moverAlSegundoElemento() {
-      // const segundoElemento = this.$refs.segundoElementoHtml;
-      // Utilizando $refs accedemos al elemento html,
-      // smoother.scrollTo(segundoElemento)
-      gsap.to(window, {
-        duration: 0.4,
-        scrollTo: {y: "#firstScreen", offsetY: 80},
-      });
-    },
-  },
-};
-</script>

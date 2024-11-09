@@ -1,118 +1,51 @@
 <template>
-  <div class="main-div">
-    <img src="/css/pictures/about-us/about-us-1.jpg"
-         alt="Imagen sobre nosotros"
-         id="about-us-main-image"
-         fetchpriority="high"
-    >
-    <div class="overlay-content">
-      <h2 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h2>
-    </div>
-    <div class="overlay-button">
-      <v-btn
-          class="main-button"
-          @click="moverAlSegundoElemento()"
-          :ripple="false"
-          stacked
-          rounded="lg"
-          color="white"
-          @mouseenter="setElevation(24)"
-          @mouseleave="setElevation(4)"
+  <div>
+    <div class="main-div">
+      <img
+          id="about-us-main-image"
+          src="/css/pictures/about-us/about-us-1.jpg"
+          alt="Imagen sobre nosotros"
+          fetchpriority="high"
       >
-        <span style="color: var(--gold);">Quienes somos</span>
-      </v-btn>
+      <div class="overlay-content">
+        <h2 class="overlay-title main-title">Nos preocupamos por el bienestar empresarial, personal y laboral</h2>
+      </div>
+      <div class="overlay-button">
+        <v-btn
+            class="main-button"
+            :ripple="false"
+            stacked
+            rounded="lg"
+            color="white"
+            @click="moverAlSegundoElemento()"
+            @mouseenter="setElevation(24)"
+            @mouseleave="setElevation(4)"
+        >
+          <span style="color: var(--gold);">Quienes somos</span>
+        </v-btn>
+      </div>
+
     </div>
+    <v-container id="elementosSobreNosotros">
+      <v-row justify="center">
+        <v-col cols="12" lg="10">
+          <v-timeline side="end" class="timeline">
+            <v-timeline-item v-for="card in aboutUsCards" size="small" dot-color="white">
+              <sobreNosotros-componenteCard
+                  :title="card.title"
+                  :text="card.text"
+                  :image="card.image"
+                  :animation="animation1"
+                  class="sobreNosotrosComponentCard hidden"
+              />
+            </v-timeline-item>
 
+          </v-timeline>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
-  <v-container id="elementosSobreNosotros">
-    <v-row justify="center">
-      <v-col cols="12" lg="10">
-        <v-timeline side="end" class="timeline">
-          <v-timeline-item size="small" v-for="card in aboutUsCards" dot-color="white">
-            <sobreNosotros-componenteCard
-                :title="card.title"
-                :text="card.text"
-                :image="card.image"
-                :animation="animation1"
-                class="sobreNosotrosComponentCard hidden"
-            />
-          </v-timeline-item>
-
-        </v-timeline>
-      </v-col>
-    </v-row>
-  </v-container>
 </template>
-<style scoped>
-.main-div {
-  position: relative;
-  transition: opacity 0.5s ease;
-}
-
-#about-us-main-image {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* Cover the whole screen without distortion */
-}
-
-.overlay-content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-  min-width: 300px;
-}
-
-.overlay-button {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-  min-width: 100px;
-}
-
-.overlay-title {
-  color: white;
-  font-size: 2rem;
-  text-shadow: 4px 4px 20px rgb(0, 0, 0);
-}
-
-.main-title {
-  animation: apareciendoFondoPantalla 2s forwards;
-  opacity: 0;
-}
-
-.show {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
-
-.timeline {
-  margin: 0 0 0 -20px;
-}
-
-.sobreNosotrosComponentCard {
-  margin-left: -20px;
-}
-
-.hidden {
-  opacity: 0;
-  transition: all 1s;
-  transform: translateX(-3rem);
-}
-
-@keyframes apareciendoFondoPantalla {
-  to {
-    opacity: 1;
-  }
-}
-</style>
-
 <script>
 import gsap from "gsap";
 
@@ -205,3 +138,73 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.main-div {
+  position: relative;
+  transition: opacity 0.5s ease;
+}
+
+#about-us-main-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Cover the whole screen without distortion */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  min-width: 300px;
+}
+
+.overlay-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  min-width: 100px;
+}
+
+.overlay-title {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 4px 4px 20px rgb(0, 0, 0);
+}
+
+.main-title {
+  animation: apareciendoFondoPantalla 2s forwards;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.timeline {
+  margin: 0 0 0 -20px;
+}
+
+.sobreNosotrosComponentCard {
+  margin-left: -20px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-3rem);
+}
+
+@keyframes apareciendoFondoPantalla {
+  to {
+    opacity: 1;
+  }
+}
+</style>

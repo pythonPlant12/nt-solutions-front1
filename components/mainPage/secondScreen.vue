@@ -30,11 +30,12 @@
       </h2>
       <div>
         <div class="d-flex justify-center">
-          <v-img max-width="500"
+          <v-img
+max-width="500"
                  src="/css/animations/gif/secondScreen.gif"
                  alt="mundo digital"
                  fetchpriority="high"
-          ></v-img>
+          />
         </div>
         <p class="texto text-sm-h6 text-caption mb-8 mb-sm-4 mt-8 mx-4 mx-sm-16 text-grey-darken-1">
           En nuestra plataforma, te ofrecemos no solo servicios de diseño web vanguardistas, sino también soluciones
@@ -65,8 +66,8 @@
       PREGUNTAS FRECUENTES
     </h3>
 
-    <v-expansion-panels class="pa-sm-4 px-0">
-      <v-expansion-panel v-for="(message, i) in messages" :key="i" hide-actions rounded="xl" ref="vExpansionPanel">
+    <v-expansion-panels>
+      <v-expansion-panel v-for="(message, i) in messages" :key="i" ref="vExpansionPanel" hide-actions rounded="xl">
         <v-expansion-panel-title>
           <v-row align="center" class="spacer" no-gutters>
             <v-col class="text-no-wrap text-left" cols="5" sm="3">
@@ -80,12 +81,114 @@
 
         <v-expansion-panel-text>
           <h3 class="text-h6 text-center subtitulo">{{ message.excerpt }}</h3>
-          <v-card-text v-text="message.text" class="text-center"></v-card-text>
+          <v-card-text class="text-center" v-text="message.text"/>
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
   </v-sheet>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    buttonElevation: 4,
+    model: null,
+    show: false,
+    items: [
+      {
+        nombre: "Google",
+        img: "/css/pictures/carousel-2/google.png",
+      },
+      {
+        nombre: "Pinterest",
+        img: "/css/pictures/carousel-2/pinterest.png",
+      },
+      {
+        nombre: "Facebook",
+        img: "/css/pictures/carousel-2/facebook.png",
+      },
+      {
+        nombre: "Netflix",
+        img: "/css/pictures/carousel-2/netflix.png",
+      },
+      {
+        nombre: "Spotify",
+        img: "/css/pictures/carousel-2/spotify.png",
+      },
+      {
+        nombre: "Youtube",
+        img: "/css/pictures/carousel-2/youtube.png",
+      },
+      {
+        nombre: "X",
+        img: "/css/pictures/carousel-2/x.png",
+      },
+      {
+        nombre: "Instagram",
+        img: "/css/pictures/carousel-2/instagram.png",
+      },
+      {
+        nombre: "Postgres",
+        img: "/css/pictures/carousel-2/postgresql.png",
+      },
+    ],
+    messages: [
+      {
+        avatar: "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
+        name: "John Leider",
+        title: "Desarrollo Web Personalizado",
+        color: "var(--three)",
+        excerpt: "¿Cómo beneficia un desarrollo web personalizado a mi empresa?",
+        text: "El desarrollo web personalizado ofrece soluciones adaptadas a las necesidades específicas, proporcionando flexibilidad y eficacia para un sitio web único.",
+        tag: 1,
+      },
+      {
+        icon: "mdi-account-multiple",
+        name: "Servicios Especializados",
+        excerpt: "¿Cuáles son las ventajas de elegir servicios especializados?",
+        tag: 2,
+        total: 3,
+        title: "Servicios Especializados",
+        text: "Optar por servicios especializados garantiza un enfoque centrado en las necesidades únicas de tu empresa, brindando soluciones más adaptadas que las plataformas estándar.",
+      },
+      {
+        icon: "mdi-tag",
+        name: "Promos",
+        color: "var(--three)",
+        tag: 3,
+        total: 4,
+        title: "SEO Personalizado",
+        excerpt: "¿Ofrecen servicios de SEO personalizados para mejorar la visibilidad?",
+        text: "Sí, la integración de estrategias de SEO personalizadas aumenta la visibilidad del sitio web, mejorando el ranking en los motores de búsqueda y atrayendo más tráfico orgánico.",
+      },
+      {
+        icon: "mdi-tag",
+        name: "Promos",
+        tag: 4,
+        total: 4,
+        title: "Comercio Electrónico Adaptable",
+        excerpt: "¿Pueden incorporar funcionalidades de comercio electrónico específicas?",
+        text: "Absolutamente, el desarrollo personalizado permite la integración de soluciones de comercio electrónico adaptadas a las necesidades específicas de tu empresa.",
+      },
+      {
+        color: "var(--three)",
+        icon: "mdi-tag",
+        name: "Promos",
+        tag: 5,
+        total: 4,
+        title: "Promoción Digital Integral",
+        excerpt: "¿Cómo se promocionan los sitios web empresariales desarrollados?",
+        text: "Empleamos estrategias de marketing digital integral, incluyendo redes sociales, contenido atractivo y publicidad en línea, para aumentar la visibilidad de los servicios en línea.",
+      },
+    ],
+    lorem:
+        "Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.",
+  }),
+  mounted() {
+  },
+  methods: {},
+};
+</script>
 
 <style>
 /* SCSS */
@@ -218,105 +321,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  data: () => ({
-    buttonElevation: 4,
-    model: null,
-    show: false,
-    items: [
-      {
-        nombre: "Google",
-        img: "/css/pictures/carousel-2/google.png",
-      },
-      {
-        nombre: "Pinterest",
-        img: "/css/pictures/carousel-2/pinterest.png",
-      },
-      {
-        nombre: "Facebook",
-        img: "/css/pictures/carousel-2/facebook.png",
-      },
-      {
-        nombre: "Netflix",
-        img: "/css/pictures/carousel-2/netflix.png",
-      },
-      {
-        nombre: "Spotify",
-        img: "/css/pictures/carousel-2/spotify.png",
-      },
-      {
-        nombre: "Youtube",
-        img: "/css/pictures/carousel-2/youtube.png",
-      },
-      {
-        nombre: "X",
-        img: "/css/pictures/carousel-2/x.png",
-      },
-      {
-        nombre: "Instagram",
-        img: "/css/pictures/carousel-2/instagram.png",
-      },
-      {
-        nombre: "Postgres",
-        img: "/css/pictures/carousel-2/postgresql.png",
-      },
-    ],
-    messages: [
-      {
-        avatar: "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
-        name: "John Leider",
-        title: "Desarrollo Web Personalizado",
-        color: "var(--three)",
-        excerpt: "¿Cómo beneficia un desarrollo web personalizado a mi empresa?",
-        text: "El desarrollo web personalizado ofrece soluciones adaptadas a las necesidades específicas, proporcionando flexibilidad y eficacia para un sitio web único.",
-        tag: 1,
-      },
-      {
-        icon: "mdi-account-multiple",
-        name: "Servicios Especializados",
-        excerpt: "¿Cuáles son las ventajas de elegir servicios especializados?",
-        tag: 2,
-        total: 3,
-        title: "Servicios Especializados",
-        text: "Optar por servicios especializados garantiza un enfoque centrado en las necesidades únicas de tu empresa, brindando soluciones más adaptadas que las plataformas estándar.",
-      },
-      {
-        icon: "mdi-tag",
-        name: "Promos",
-        color: "var(--three)",
-        tag: 3,
-        total: 4,
-        title: "SEO Personalizado",
-        excerpt: "¿Ofrecen servicios de SEO personalizados para mejorar la visibilidad?",
-        text: "Sí, la integración de estrategias de SEO personalizadas aumenta la visibilidad del sitio web, mejorando el ranking en los motores de búsqueda y atrayendo más tráfico orgánico.",
-      },
-      {
-        icon: "mdi-tag",
-        name: "Promos",
-        tag: 4,
-        total: 4,
-        title: "Comercio Electrónico Adaptable",
-        excerpt: "¿Pueden incorporar funcionalidades de comercio electrónico específicas?",
-        text: "Absolutamente, el desarrollo personalizado permite la integración de soluciones de comercio electrónico adaptadas a las necesidades específicas de tu empresa.",
-      },
-      {
-        color: "var(--three)",
-        icon: "mdi-tag",
-        name: "Promos",
-        tag: 5,
-        total: 4,
-        title: "Promoción Digital Integral",
-        excerpt: "¿Cómo se promocionan los sitios web empresariales desarrollados?",
-        text: "Empleamos estrategias de marketing digital integral, incluyendo redes sociales, contenido atractivo y publicidad en línea, para aumentar la visibilidad de los servicios en línea.",
-      },
-    ],
-    lorem:
-        "Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.",
-  }),
-  mounted() {
-  },
-  methods: {},
-};
-</script>

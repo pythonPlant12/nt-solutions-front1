@@ -17,11 +17,22 @@
 		</p>
 		</v-col>
 		<v-col md="5" cols="10" class="mx-md-12 descripcion-title">
-			<v-img src="/css/pictures/slide1-docker-logo.png" height="400" class="slide-image"></v-img>
+			<v-img src="/css/pictures/slide1-docker-logo.png" height="400" class="slide-image"/>
 		</v-col>
 	</v-row>
 </v-card>
 </template>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<script>
+export default {
+	data: () => ({
+		length: 3,
+		onboarding: 0,
+	}),
+};
+</script>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
@@ -41,14 +52,3 @@
 }
 
 </style>
-
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-<script>
-export default {
-	data: () => ({
-		length: 3,
-		onboarding: 0,
-	}),
-};
-</script>

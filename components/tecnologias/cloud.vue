@@ -11,7 +11,7 @@
 					src="/css/pictures/slide1-allcloud-logo.png"
 					height="400"
 					class="slide-image"
-				></v-img>
+				/>
 			</v-col>
 			<v-col md="5" cols="10" class="mx-md-12 mt-16 mt-sm-0">
 				<h2 class="text-sm-h3 pb-16 mx-sm-4" style="color: var(--gold)">Tecnologías Cloud</h2>
@@ -24,6 +24,17 @@
 		</v-row>
 	</v-card>
 </template>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<script>
+export default {
+	data: () => ({
+		length: 3,
+		onboarding: 0,
+	}),
+};
+</script>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
@@ -43,14 +54,3 @@
 }
 
 </style>
-
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-<script>
-export default {
-	data: () => ({
-		length: 3,
-		onboarding: 0,
-	}),
-};
-</script>

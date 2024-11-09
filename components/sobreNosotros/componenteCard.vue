@@ -1,7 +1,7 @@
 <template>
 	<v-sheet class="d-sm-flex align-sm-center justify-sm-center">
 		<v-row class="primer-row row-1 mt-sm-0 mb-12">
-			<v-spacer></v-spacer>
+			<v-spacer/>
 			<v-col cols="12" md="10" class="my-4">
 				<v-card
 					elevation="24"
@@ -17,13 +17,19 @@
 						class="slide-image imagen mt-4 mt-sm-4 mb-sm-12"
 						:class="animation"
 						hover
-					></v-img>
+					/>
 				</v-card>
 			</v-col>
-			<v-spacer></v-spacer>
+			<v-spacer/>
 		</v-row>
 	</v-sheet>
 </template>
+
+<script>
+export default {
+	props: ["title", "text", "image", "animation"],
+};
+</script>
 
 <style>
 .row-1 {
@@ -75,9 +81,3 @@
 	}
 }
 </style>
-
-<script>
-export default {
-	props: ["title", "text", "image", "animation"],
-};
-</script>

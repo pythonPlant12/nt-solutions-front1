@@ -6,7 +6,7 @@
 		avatar="/css/pictures/logo.png"
 		stacked
 	>
-		<template v-slot:text>
+		<template #text>
 			Bienvenido/a a <b style="color: var(--blue)">NT Solutions</b>, una empresa dedicada
 			al desarrollo de páginas web. Valoramos la privacidad de nuestros usuarios y clientes y nos
 			comprometemos a proteger la información personal que puedan proporcionarnos. La presente
@@ -19,12 +19,11 @@
 			servicios en línea.
 		</template>
 
-		<template v-slot:actions>
+		<template #actions>
 			<v-dialog v-model="dialog" max-width="700">
-				<template v-slot:activator="{ props }">
+				<template #activator="{ props }">
 					<v-btn
 						class="text-none"
-						color="var(--blue)"
 						rounded="lg"
 						variant="tonal"
 						v-bind="props"
@@ -66,7 +65,7 @@
 							hide-details
 							inline
 							inset
-						></v-switch>
+						/>
 
 						<p class="mb-4">
 							Estas cookies recopilan información sobre cómo los visitantes utilizan nuestro sitio
@@ -86,7 +85,7 @@
 							hide-details
 							inline
 							inset
-						></v-switch>
+						/>
 
 						<p class="mb-16">
 							Estas cookies se utilizan para mostrar anuncios relevantes para usted y sus intereses.
@@ -95,7 +94,7 @@
 						</p>
 					</v-card-text>
 
-					<v-divider></v-divider>
+					<v-divider/>
 
 					<v-card-actions class="justify-center px-6 py-3">
 						<v-btn
@@ -123,7 +122,6 @@
 
 			<v-btn
 				class="text-none ms-4"
-				color="var(--blue)"
 				rounded="lg"
 				variant="tonal"
 				@click="aceptarCookies()"
@@ -133,16 +131,6 @@
 		</template>
 	</v-banner>
 </template>
-
-<style>
-.cookies {
-	position: fixed !important;
-  background-color: white !important;
-	border-top: 1px solid gray !important;
-	bottom: 0rem;
-	z-index: 205;
-}
-</style>
 
 <script>
 export default {
@@ -162,3 +150,13 @@ export default {
 	},
 };
 </script>
+
+<style>
+.cookies {
+	position: fixed !important;
+  background-color: white !important;
+	border-top: 1px solid gray !important;
+	bottom: 0rem;
+	z-index: 205;
+}
+</style>
