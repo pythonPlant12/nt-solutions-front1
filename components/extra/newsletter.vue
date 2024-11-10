@@ -28,8 +28,9 @@ const loading = ref(false)
 const {handleSubmit} = useForm({
   validationSchema: {
     email(value) {
-      if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true;
-      return "Correo electrónico tiene que tener formato válido, por ejemplo: mail@gmail.com";
+      // if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true;
+      return true;
+      // return "Correo electrónico tiene que tener formato válido, por ejemplo: mail@gmail.com";
     }
   }
 })

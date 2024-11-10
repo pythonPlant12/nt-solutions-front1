@@ -1,162 +1,163 @@
 <template>
-	<!-- ? COOKIES BANNER -->
-	<v-banner
-		v-if="cookiesNoAceptadas"
-		class="cookies"
-		avatar="/css/pictures/logo.png"
-		stacked
-	>
-		<template #text>
-			Bienvenido/a a <b style="color: var(--blue)">NT Solutions</b>, una empresa dedicada
-			al desarrollo de páginas web. Valoramos la privacidad de nuestros usuarios y clientes y nos
-			comprometemos a proteger la información personal que puedan proporcionarnos. La presente
-			describe
+  <!-- ? COOKIES BANNER -->
+  <v-banner
+      v-if="cookiesNoAceptadas"
+      class="cookies"
+      avatar="/css/pictures/logo.png"
+      stacked
+  >
+    <template #text>
+      Bienvenido/a a <b style="color: var(--blue)">NT Solutions</b>, una empresa dedicada
+      al desarrollo de páginas web. Valoramos la privacidad de nuestros usuarios y clientes y nos
+      comprometemos a proteger la información personal que puedan proporcionarnos. La presente
+      describe
+      <nuxt-link to="/privacy-policy"><strong style="color: var(--blue)">Política de Privacidad</strong></nuxt-link
+      >
+      cómo recopilamos, utilizamos y compartimos la información que obtenemos a través de nuestros
+      servicios en línea.
+    </template>
 
-			<nuxt-link to="/privacy-policy"
-			><b style="color: var(--blue)">Política de Privacidad</b></nuxt-link
-			>
-			cómo recopilamos, utilizamos y compartimos la información que obtenemos a través de nuestros
-			servicios en línea.
-		</template>
-
-		<template #actions>
-			<v-dialog v-model="dialog" max-width="700">
-				<template #activator="{ props }">
-					<v-btn
-						class="text-none"
-						rounded="lg"
-						variant="tonal"
-						v-bind="props"
-					>
-						Configurar Cookies
-					</v-btn>
-				</template>
-
-				<v-card title="Configuración de los Cookies">
-					<v-card-text>
-						<h4>Cookies</h4>
-						<p class="pb-4">
-							Utilizamos cookies y tecnologías similares para mejorar la experiencia del usuario y
-							personalizar el contenido. Al utilizar nuestro sitio web, usted acepta el uso de
-							cookies de acuerdo con esta Política de Privacidad. Las cookies son pequeños archivos
-							de datos que se almacenan en su dispositivo cuando visita nuestro sitio web.
-							Utilizamos tres tipos de cookies:
-						</p>
-
-						<v-list-subheader class="font-weight-black text-high-emphasis"
-							>Cookies Necesarias (Required Cookies)</v-list-subheader
-						>
-
-						<p class="mb-4">
-							Estas cookies son esenciales para el funcionamiento básico de nuestro sitio web. Le
-							permiten navegar por el sitio y utilizar funciones clave, como acceder a áreas
-							seguras.
-						</p>
-
-						<v-list-subheader class="font-weight-black text-high-emphasis"
-							>Cookies de Rendimiento (Performance Cookies)</v-list-subheader
-						>
-
-						<v-switch
-							v-model="performance"
-							:label="performance ? 'On' : 'Off'"
-							color="var(--blue)"
-							density="compact"
-							hide-details
-							inline
-							inset
-						/>
-
-						<p class="mb-4">
-							Estas cookies recopilan información sobre cómo los visitantes utilizan nuestro sitio
-							web, como las páginas que visitan con más frecuencia. Nos ayudan a mejorar el
-							rendimiento y la eficiencia de nuestro sitio.
-						</p>
-
-						<v-list-subheader class="font-weight-black text-high-emphasis"
-							>Cookies Publicitarias (Advertising Cookies)</v-list-subheader
-						>
-
-						<v-switch
-							v-model="advertising"
-							:label="advertising ? 'On' : 'Off'"
-							color="var(--blue)"
-							density="compact"
-							hide-details
-							inline
-							inset
-						/>
-
-						<p class="mb-16">
-							Estas cookies se utilizan para mostrar anuncios relevantes para usted y sus intereses.
-							También pueden ser utilizadas para realizar un seguimiento de la eficacia de nuestras
-							campañas publicitarias.
-						</p>
-					</v-card-text>
-
-					<v-divider/>
-
-					<v-card-actions class="justify-center px-6 py-3">
-						<v-btn
-							class="flex-grow-1 text-none"
-							color="var(--blue)"
-							rounded="lg"
+    <template #actions>
+      <v-dialog v-model="dialog" max-width="700">
+        <template #activator="{ props }">
+          <v-btn
+              class="text-none"
+              rounded="lg"
               variant="tonal"
-							@click="dialog = false; aceptarCookies()"
-						>
-							Rechazar todas
-						</v-btn>
+              v-bind="props"
+          >
+            Configurar Cookies
+          </v-btn>
+        </template>
 
-						<v-btn
-							class="flex-grow-1 text-none"
-							color="var(--blue)"
-							rounded="lg"
-              variant="tonal"
-							@click="dialog = false; aceptarCookies()"
-						>
-							Guardar y aceptar
-						</v-btn>
-					</v-card-actions>
-				</v-card>
-			</v-dialog>
+        <v-card title="Configuración de los Cookies">
+          <v-card-text>
+            <h4>Cookies</h4>
+            <p class="pb-4">
+              Utilizamos cookies y tecnologías similares para mejorar la experiencia del usuario y
+              personalizar el contenido. Al utilizar nuestro sitio web, usted acepta el uso de
+              cookies de acuerdo con esta Política de Privacidad. Las cookies son pequeños archivos
+              de datos que se almacenan en su dispositivo cuando visita nuestro sitio web.
+              Utilizamos tres tipos de cookies:
+            </p>
 
-			<v-btn
-				class="text-none ms-4"
-				rounded="lg"
-				variant="tonal"
-				@click="aceptarCookies()"
-			>
-				Aceptar Cookies
-			</v-btn>
-		</template>
-	</v-banner>
+            <v-list-subheader class="font-weight-black text-high-emphasis"
+            >Cookies Necesarias (Required Cookies)
+            </v-list-subheader
+            >
+
+            <p class="mb-4">
+              Estas cookies son esenciales para el funcionamiento básico de nuestro sitio web. Le
+              permiten navegar por el sitio y utilizar funciones clave, como acceder a áreas
+              seguras.
+            </p>
+
+            <v-list-subheader class="font-weight-black text-high-emphasis"
+            >Cookies de Rendimiento (Performance Cookies)
+            </v-list-subheader
+            >
+
+            <v-switch
+                v-model="performance"
+                :label="performance ? 'On' : 'Off'"
+                color="var(--blue)"
+                density="compact"
+                hide-details
+                inline
+                inset
+            />
+
+            <p class="mb-4">
+              Estas cookies recopilan información sobre cómo los visitantes utilizan nuestro sitio
+              web, como las páginas que visitan con más frecuencia. Nos ayudan a mejorar el
+              rendimiento y la eficiencia de nuestro sitio.
+            </p>
+
+            <v-list-subheader class="font-weight-black text-high-emphasis"
+            >Cookies Publicitarias (Advertising Cookies)
+            </v-list-subheader
+            >
+
+            <v-switch
+                v-model="advertising"
+                :label="advertising ? 'On' : 'Off'"
+                color="var(--blue)"
+                density="compact"
+                hide-details
+                inline
+                inset
+            />
+
+            <p class="mb-16">
+              Estas cookies se utilizan para mostrar anuncios relevantes para usted y sus intereses.
+              También pueden ser utilizadas para realizar un seguimiento de la eficacia de nuestras
+              campañas publicitarias.
+            </p>
+          </v-card-text>
+
+          <v-divider/>
+
+          <v-card-actions class="justify-center px-6 py-3">
+            <v-btn
+                class="flex-grow-1 text-none"
+                color="var(--blue)"
+                rounded="lg"
+                variant="tonal"
+                @click="dialog = false; aceptarCookies()"
+            >
+              Rechazar todas
+            </v-btn>
+
+            <v-btn
+                class="flex-grow-1 text-none"
+                color="var(--blue)"
+                rounded="lg"
+                variant="tonal"
+                @click="dialog = false; aceptarCookies()"
+            >
+              Guardar y aceptar
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
+      <v-btn
+          class="text-none ms-4"
+          rounded="lg"
+          variant="tonal"
+          @click="aceptarCookies()"
+      >
+        Aceptar Cookies
+      </v-btn>
+    </template>
+  </v-banner>
 </template>
 
 <script>
 export default {
-	data() {
-		return {
-			dialog: false,
-			advertising: true,
-			performance: true,
-			cookiesNoAceptadas: true,
-		};
-	},
-	methods: {
-		aceptarCookies() {
-			this.cookiesNoAceptadas = false;
-			this.$emit("aceptarCookies", false);
-		},
-	},
+  data() {
+    return {
+      dialog: false,
+      advertising: true,
+      performance: true,
+      cookiesNoAceptadas: true,
+    };
+  },
+  methods: {
+    aceptarCookies() {
+      this.cookiesNoAceptadas = false;
+      this.$emit("aceptarCookies", false);
+    },
+  },
 };
 </script>
 
 <style>
 .cookies {
-	position: fixed !important;
+  position: fixed !important;
   background-color: white !important;
-	border-top: 1px solid gray !important;
-	bottom: 0rem;
-	z-index: 205;
+  border-top: 1px solid gray !important;
+  bottom: 0rem;
+  z-index: 205;
 }
 </style>

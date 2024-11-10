@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   //...
   runtimeConfig: {
     public: {
-      backendApi: process.env.NUXT_PUBLIC_BACKEND_SERVICE
+      backendApi: process.env.API_URL
     }
   },
   app: {

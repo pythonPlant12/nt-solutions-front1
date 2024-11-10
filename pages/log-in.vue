@@ -11,7 +11,12 @@
           </v-card>
           <div class="d-flex justify-space-around">
             <a href="#">
-              <img src="public/icons/social-media/facebook.svg" alt="Facebook" width="30" height="30" class="log-in-icon">
+              <img src="public/icons/social-media/facebook.svg"
+                   alt="Facebook"
+                   width="30"
+                   height="30"
+                   class="log-in-icon"
+              >
             </a>
             <a href="#">
               <img src="public/icons/social-media/x.svg" alt="Facebook" width="28" height="28">
@@ -118,11 +123,13 @@ watch([email, password], () => {
 
   // Then check email format
   if (email.value) {
-    const isValidEmail = /^[a-z0-9.-]+@[a-z.-]+\.[a-z]+$/i.test(email.value);
+    //TODO: AGREGAR _ y otros signos a REGEX
+    // const isValidEmail = /^[a-z0-9.-]+@[a-z.-]+\.[a-z]+$/i.test(email.value);
     // If email is invalid, disable button
-    if (!isValidEmail) {
-      logInDisabled.value = true;
-    }
+    logInDisabled.value = false;
+    // if (!isValidEmail) {
+    //   logInDisabled.value = true;
+    // }
   }
 })
 
