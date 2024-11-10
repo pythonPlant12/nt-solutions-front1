@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
+    baseURL: '/',
     head: {
       title: 'NT Solutions',
       ogTitle: 'NT Solutions',
