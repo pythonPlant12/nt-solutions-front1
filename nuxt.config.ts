@@ -45,6 +45,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify', 'gsap', 'mdi-vue'],
   },
+  nitro: {
+    preset: 'node-server'
+  },
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
