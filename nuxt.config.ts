@@ -45,9 +45,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify', 'gsap', 'mdi-vue'],
   },
-  plugins: [
-    {src: '~/plugins/vue3-lottie.js', mode: 'client'},
-  ],
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
